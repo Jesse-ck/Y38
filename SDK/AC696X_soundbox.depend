@@ -1,0 +1,4008 @@
+# depslib dependency file v1.0
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\audio_digital_vol.c
+	"audio_digital_vol.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\audio_digital_vol.h
+	"generic/typedef.h"
+	"os/os_type.h"
+	"os/os_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\typedef.h
+	"asm/cpu.h"
+	"generic/errno-base.h"
+	"string.h"
+	"strings.h"
+	"system/malloc.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\cpu.h
+	"br25.h"
+	"csfr.h"
+	"asm/irq.h"
+	"generic/printf.h"
+	"system/generic/log.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\br25.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\csfr.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\irq.h
+	"asm/hwi.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\hwi.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\printf.h
+	<stdarg.h>
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\log.h
+	"system/generic/printf.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\errno-base.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\malloc.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\os_type.h
+	"FreeRTOS/FreeRTOS.h"
+	"FreeRTOS/semphr.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\freertos.h
+	"FreeRTOSConfig.h"
+	"projdefs.h"
+	"portable.h"
+	<reent.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\freertosconfig.h
+	"pi32v2/portmacro.h"
+	"pi32_lto/portmacro.h"
+	"q32s/portmacro.h"
+	"printf.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\pi32v2\portmacro.h
+	"asm/cpu.h"
+	<stdint.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\pi32_lto\portmacro.h
+	"asm/cpu.h"
+	<stdint.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\q32s\portmacro.h
+	"asm/cpu.h"
+	<stdint.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\projdefs.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\portable.h
+	"deprecated_definitions.h"
+	"portmacro.h"
+	"mpu_wrappers.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\deprecated_definitions.h
+	"..\..\Source\portable\owatcom\16bitdos\pc\portmacro.h"
+	"..\..\Source\portable\owatcom\16bitdos\flsh186\portmacro.h"
+	"../portable/GCC/ATMega323/portmacro.h"
+	"../portable/IAR/ATMega323/portmacro.h"
+	"../../Source/portable/MPLAB/PIC24_dsPIC/portmacro.h"
+	"../../Source/portable/MPLAB/PIC24_dsPIC/portmacro.h"
+	"../../Source/portable/MPLAB/PIC18F/portmacro.h"
+	"../../Source/portable/MPLAB/PIC32MX/portmacro.h"
+	"libFreeRTOS/Include/portmacro.h"
+	"../../Source/portable/SDCC/Cygnal/portmacro.h"
+	"../../Source/portable/GCC/ARM7_LPC2000/portmacro.h"
+	"portmacro.h"
+	"../../Source/portable/GCC/ARM7_LPC23xx/portmacro.h"
+	"..\..\Source\portable\IAR\MSP430\portmacro.h"
+	"../../Source/portable/GCC/MSP430F449/portmacro.h"
+	"../../Source/portable/Rowley/MSP430F449/portmacro.h"
+	"..\..\Source\portable\RVDS\ARM7_LPC21xx\portmacro.h"
+	"../../Source/portable/GCC/ARM7_AT91SAM7S/portmacro.h"
+	"..\..\Source\portable\IAR\AtmelSAM7S64\portmacro.h"
+	"..\..\Source\portable\IAR\AtmelSAM9XE\portmacro.h"
+	"..\..\Source\portable\IAR\LPC2000\portmacro.h"
+	"..\..\Source\portable\IAR\STR71x\portmacro.h"
+	"..\..\Source\portable\IAR\STR75x\portmacro.h"
+	"..\..\Source\portable\GCC\STR75x\portmacro.h"
+	"..\..\Source\portable\IAR\STR91x\portmacro.h"
+	"../../Source/portable/GCC/H8S2329/portmacro.h"
+	"../../Source/portable/GCC/ARM7_AT91FR40008/portmacro.h"
+	"../../Source/portable/RVDS/ARM_CM3/portmacro.h"
+	"../../Source/portable/GCC/ARM_CM3/portmacro.h"
+	"../../Source/portable/GCC/ARM_CM3/portmacro.h"
+	"../../Source/portable/IAR/ARM_CM3/portmacro.h"
+	"../../Source/portable/IAR/ARM_CM3/portmacro.h"
+	"../../Source/portable/CodeWarrior/HCS12/portmacro.h"
+	"../../Source/portable/GCC/MicroBlaze/portmacro.h"
+	"..\..\Source\portable\Paradigm\Tern_EE\small\portmacro.h"
+	"../../Source/portable/GCC/HCS12/portmacro.h"
+	"../../Source/portable/GCC/MCF5235/portmacro.h"
+	"../../../Source/portable/GCC/ColdFire_V2/portmacro.h"
+	"../../Source/portable/CodeWarrior/ColdFire_V2/portmacro.h"
+	"../../Source/portable/GCC/PPC405_Xilinx/portmacro.h"
+	"../../Source/portable/GCC/PPC440_Xilinx/portmacro.h"
+	"..\..\Source\portable\Softune\MB96340\portmacro.h"
+	"frconfig.h"
+	"..\portable\BCC\16BitDOS\PC\prtmacro.h"
+	"frconfig.h"
+	"..\portable\BCC\16BitDOS\flsh186\prtmacro.h"
+	"portmacro.h"
+	"portmacro.h"
+	"portmacro.h"
+	"portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/V850ES/portmacro.h"
+	"../../Source/portable/IAR/78K0R/portmacro.h"
+	"../../Source/portable/IAR/78K0R/portmacro.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\mpu_wrappers.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\semphr.h
+	"queue.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\freertos\queue.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\os_api.h
+	"generic/typedef.h"
+	"os/os_cpu.h"
+	"os/os_error.h"
+	"os/os_type.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\os_cpu.h
+	"asm/cpu.h"
+	"jiffies.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\jiffies.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\os\os_error.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\ble\le_rcsp_adv_module.c
+	"system/app_core.h"
+	"system/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"btstack/btstack_task.h"
+	"btstack/ble_api.h"
+	"btstack/bluetooth.h"
+	"btstack/le_user.h"
+	"user_cfg.h"
+	"vm.h"
+	"app_power_manage.h"
+	"btcontroller_modules.h"
+	"JL_rcsp_api.h"
+	"rcsp_adv_bluetooth.h"
+	"bt_common.h"
+	"bt_tws.h"
+	"3th_profile_api.h"
+	"btstack/avctp_user.h"
+	"app_chargestore.h"
+	"le_common.h"
+	"le_rcsp_adv_module.h"
+	"btcrypt.h"
+	"charge_box/charge_box.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\app_core.h
+	"typedef.h"
+	"generic/list.h"
+	"system/event.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\list.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\event.h
+	"generic/typedef.h"
+	"generic/list.h"
+	"generic/rect.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\rect.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\includes.h
+	"init.h"
+	"event.h"
+	"malloc.h"
+	"spinlock.h"
+	"task.h"
+	"timer.h"
+	"wait.h"
+	"app_core.h"
+	"database.h"
+	"fs/fs.h"
+	"power_manage.h"
+	"syscfg_id.h"
+	"bank_switch.h"
+	"generic/includes.h"
+	"device/includes.h"
+	"asm/includes.h"
+	"device/sdio_host_init.h"
+	"crypto_toolbox/crypto.h"
+	"crypto_toolbox/Crypto_hash.h"
+	"crypto_toolbox/hmac.h"
+	"crypto_toolbox/sha256.h"
+	"crypto_toolbox/bigint.h"
+	"crypto_toolbox/bigint_impl.h"
+	"crypto_toolbox/ecdh.h"
+	"crypto_toolbox/micro-ecc/uECC.h"
+	"crypto_toolbox/aes_cmac.h"
+	"crypto_toolbox/rijndael.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\init.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\spinlock.h
+	"typedef.h"
+	"cpu.h"
+	"irq.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\cpu.h
+	<asm/cpu.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\irq.h
+	"asm/irq.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\task.h
+	"os/os_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\timer.h
+	"typedef.h"
+	"generic/list.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\wait.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\database.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\fs\fs.h
+	"generic/typedef.h"
+	"generic/list.h"
+	"generic/ioctl.h"
+	"generic/atomic.h"
+	"system/task.h"
+	"system/malloc.h"
+	"system/sys_time.h"
+	"stdarg.h"
+	"fs_file_name.h"
+	"sdfile.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\ioctl.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\atomic.h
+	"cpu.h"
+	"irq.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\sys_time.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\fs\fs_file_name.h
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\fs\sdfile.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\power_manage.h
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\syscfg_id.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\bank_switch.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\includes.h
+	"errno-base.h"
+	"typedef.h"
+	"ascii.h"
+	"atomic.h"
+	"ioctl.h"
+	"cpu.h"
+	"gpio.h"
+	"irq.h"
+	"jiffies.h"
+	"list.h"
+	"printf.h"
+	"rect.h"
+	"version.h"
+	"lbuf.h"
+	"lbuf_lite.h"
+	"circular_buf.h"
+	"index.h"
+	"debug_lite.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\ascii.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\gpio.h
+	"asm/gpio.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\gpio.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\version.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\lbuf.h
+	"typedef.h"
+	"list.h"
+	"system/spinlock.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\lbuf_lite.h
+	"typedef.h"
+	"list.h"
+	"system/spinlock.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\circular_buf.h
+	"typedef.h"
+	"system/spinlock.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\index.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\generic\debug_lite.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\includes.h
+	"device.h"
+	"ioctl_cmds.h"
+	"key_driver.h"
+	"iokey.h"
+	"irkey.h"
+	"adkey.h"
+	"touch_key.h"
+	"rdec_key.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\device.h
+	"generic/typedef.h"
+	"generic/list.h"
+	"generic/atomic.h"
+	"device/ioctl_cmds.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\ioctl_cmds.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\key_driver.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\iokey.h
+	"typedef.h"
+	"device/device.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\irkey.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\adkey.h
+	"typedef.h"
+	"asm/adc_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\adc_api.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\touch_key.h
+	"typedef.h"
+	"asm/plcnt.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\plcnt.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\rdec_key.h
+	"typedef.h"
+	"asm/rdec.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\rdec.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\includes.h
+	"asm/cpu.h"
+	"asm/crc16.h"
+	"asm/clock.h"
+	"asm/uart.h"
+	"asm/uart_dev.h"
+	"asm/gpio.h"
+	"asm/spiflash.h"
+	"asm/csfr.h"
+	"asm/power_interface.h"
+	"asm/efuse.h"
+	"asm/wdt.h"
+	"asm/debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\crc16.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\clock.h
+	"typedef.h"
+	"clock_hw.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\clock_hw.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\uart.h
+	"device/uart.h"
+	"device/device.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\uart.h
+	"typedef.h"
+	"device/device.h"
+	"generic/ioctl.h"
+	"system/task.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\uart_dev.h
+	"typedef.h"
+	"os/os_api.h"
+	"jiffies.h"
+	"irq.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\spiflash.h
+	"device/device.h"
+	"device/spiflash.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\spiflash.h
+	"typedef.h"
+	"generic/list.h"
+	"generic/ioctl.h"
+	"device/device.h"
+	"system/task.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\power_interface.h
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\efuse.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\wdt.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\debug.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\sdio_host_init.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\crypto.h
+	"endian.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\endian.h
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\crypto_hash.h
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\hmac.h
+	"crypto.h"
+	"sha256.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\sha256.h
+	"crypto.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\bigint.h
+	"bigint_impl.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\bigint_impl.h
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\ecdh.h
+	"bigint_impl.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\micro-ecc\uecc.h
+	<stdint.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\aes_cmac.h
+	<stdint.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\crypto_toolbox\rijndael.h
+	<stdint.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\app_config.h
+	"board_config.h"
+	"btcontroller_mode.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_config.h
+	"board_ac696x_demo_cfg.h"
+	"board_ac6969d_demo_cfg.h"
+	"board_ac696x_lighter_cfg.h"
+	"board_ac696x_tws_box.h"
+	"board_ac696x_tws.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac696x_demo_cfg.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac6969d_demo_cfg.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac696x_lighter_cfg.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac696x_tws_box.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac696x_tws.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\btcontroller_mode.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\app_action.h
+	"app_config.h"
+	"system/app_core.h"
+	"common/user_msg.h"
+	"bt_tws.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\common\user_msg.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\bt_tws.h
+	"classic/tws_api.h"
+	"classic/tws_event.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\classic\tws_api.h
+	"typedef.h"
+	"classic/tws_event.h"
+	"classic/tws_local_media_sync.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\classic\tws_event.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\classic\tws_local_media_sync.h
+	"generic/list.h"
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\btstack_task.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\ble_api.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\bluetooth.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\le_user.h
+	"btstack/ble_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\user_cfg.h
+	"typedef.h"
+	"app_config.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\vm.h
+	"ioctl.h"
+	"device/device.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\app_power_manage.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\btcontroller_modules.h
+	"hci_transport.h"
+	"btcontroller_mode.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\hci_transport.h
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\ai_stack\jl_rcsp\jl_rcsp_api.h
+	"typedef.h"
+	"uart.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp_adv\rcsp_adv_bluetooth.h
+	"app_config.h"
+	"typedef.h"
+	"system/event.h"
+	"le_common.h"
+	"spp_user.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\ble\include\le_common.h
+	"typedef.h"
+	<stdint.h>
+	"btstack/le_user.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\edr\include\spp_user.h
+	"typedef.h"
+	"bt_common.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\include\bt_common.h
+	<stdint.h>
+	"app_config.h"
+	"lib_profile_cfg.h"
+	"bt_profile_cfg.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\config\include\bt_profile_cfg.h
+	"app_config.h"
+	"btcontroller_modules.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\common\3th_profile_api.h
+	<string.h>
+	<stdint.h>
+	"le_common.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\avctp_user.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\charge\include\app_chargestore.h
+	"typedef.h"
+	"system/event.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\ble\include\le_rcsp_adv_module.h
+	<stdint.h>
+	"bt_common.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp_adv\btcrypt.h
+	<string.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\charge_box\charge_box.h
+	"typedef.h"
+	"system/event.h"
+	"device/chargebox.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\chargebox.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\ble\le_rcsp_demo.c
+	"system/app_core.h"
+	"system/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"btstack/btstack_task.h"
+	"btstack/ble_api.h"
+	"btstack/bluetooth.h"
+	"btstack/le_user.h"
+	"user_cfg.h"
+	"vm.h"
+	"app_power_manage.h"
+	"btcontroller_modules.h"
+	"JL_rcsp_api.h"
+	"rcsp_bluetooth.h"
+	"bt_common.h"
+	"bt_tws.h"
+	"3th_profile_api.h"
+	"bt_profile_cfg.h"
+	"le_rcsp_demo.h"
+	"le_common.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp\rcsp_bluetooth.h
+	"typedef.h"
+	"le_common.h"
+	"spp_user.h"
+	"system/event.h"
+	"rcsp_msg.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp\rcsp_msg.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\ble\include\le_rcsp_demo.h
+	<stdint.h>
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\ble\le_streamer_demo.c
+	<stdint.h>
+	<stdlib.h>
+	<string.h>
+	"system/app_core.h"
+	"system/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"btstack/ble_data_types.h"
+	"btstack/ble_api.h"
+	"btstack/bluetooth.h"
+	"btstack/le_user.h"
+	"le_common.h"
+	"bt_common.h"
+	"le_streamer_demo.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\ble_data_types.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\ble\include\le_streamer_demo.h
+	<stdint.h>
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\ble\le_trans_data.c
+	"system/app_core.h"
+	"system/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"btstack/btstack_task.h"
+	"btstack/ble_api.h"
+	"btstack/bluetooth.h"
+	"btstack/le_user.h"
+	"user_cfg.h"
+	"vm.h"
+	"btcontroller_modules.h"
+	"bt_common.h"
+	"3th_profile_api.h"
+	"le_trans_data.h"
+	"le_common.h"
+	"rcsp_bluetooth.h"
+	"JL_rcsp_api.h"
+	"ble_data_types.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\ble\include\le_trans_data.h
+	<stdint.h>
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\charge\app_charge.c
+	"app_config.h"
+	"asm/charge.h"
+	"asm/pwm_led.h"
+	"asm/power_interface.h"
+	"ui_manage.h"
+	"system/event.h"
+	"system/app_core.h"
+	"system/includes.h"
+	"app_action.h"
+	"asm/wdt.h"
+	"app_power_manage.h"
+	"app_chargestore.h"
+	"btstack/avctp_user.h"
+	"app_action.h"
+	"app_main.h"
+	"bt_tws.h"
+	"usb/otg.h"
+	"bt_common.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\charge.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\pwm_led.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\ui_manage.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\app_main.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\otg.h
+	"asm/usb.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\usb.h
+	"typedef.h"
+	"generic/ioctl.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\debug.h
+	"asm/cpu.h"
+	"generic/typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\charge\app_chargestore.c
+	"init.h"
+	"app_config.h"
+	"system/includes.h"
+	"asm/charge.h"
+	"asm/chargestore.h"
+	"user_cfg.h"
+	"app_chargestore.h"
+	"device/vm.h"
+	"btstack/avctp_user.h"
+	"app_power_manage.h"
+	"app_action.h"
+	"app_main.h"
+	"app_charge.h"
+	"classic/tws_api.h"
+	"update.h"
+	"bt_ble.h"
+	"bt_tws.h"
+	"app_action.h"
+	"bt_common.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\chargestore.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\charge\include\app_charge.h
+	"typedef.h"
+	"system/event.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\update\update.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\bt_ble.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\debug_lite\debug_lite.c
+	"app_config.h"
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\detection.c
+	"system/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"gpio.h"
+	"app_main.h"
+	"update.h"
+	"user_cfg.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\edr\spp_trans_data.c
+	"app_config.h"
+	"app_action.h"
+	"system/includes.h"
+	"spp_user.h"
+	"string.h"
+	"circular_buf.h"
+	"spp_trans_data.h"
+	"bt_common.h"
+	"spp_trans_data.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\edr\include\spp_trans_data.h
+	"typedef.h"
+	"bt_common.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\edr\spp_user.c
+	"system/includes.h"
+	"spp_user.h"
+	"string.h"
+	"circular_buf.h"
+	"btstack/avctp_user.h"
+	"app_config.h"
+	"classic/tws_api.h"
+	"bt_common.h"
+	"3th_profile_api.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\encode\encode_write_file.c
+	"encode_write.h"
+	"file_operate/file_operate.h"
+	"file_operate/file_bs_deal.h"
+	"audio_enc.h"
+	"file_operate/file_operate.h"
+	"media/audio_base.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\encode\encode_write.h
+	"app_config.h"
+	"system/includes.h"
+	"system/os/os_cpu.h"
+	"system/fs/fs.h"
+	"storage_dev/storage_dev.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\storage_dev\storage_dev.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\file_operate\file_operate.h
+	"system/fs/fs.h"
+	"storage_dev/storage_dev.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\file_operate\file_bs_deal.h
+	"fs/fs.h"
+	"storage_dev/storage_dev.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_enc.h
+	"generic/typedef.h"
+	"storage_dev/storage_dev.h"
+	"media/includes.h"
+	"audio_enc_file.h"
+	"audio_enc_tws.h"
+	"audio_enc_recoder.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\includes.h
+	"media/audio_decoder.h"
+	"media/audio_encoder.h"
+	"media/mixer.h"
+	"media/automute.h"
+	"asm/cpu_includes.h"
+	"asm/dac.h"
+	"asm/audio_adc.h"
+	"asm/audio_src.h"
+	"asm/audio_spdif.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\audio_decoder.h
+	"generic/typedef.h"
+	"generic/list.h"
+	"media/audio_base.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\audio_base.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\audio_encoder.h
+	"generic/typedef.h"
+	"generic/list.h"
+	"media/audio_base.h"
+	"os/os_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\mixer.h
+	"generic/typedef.h"
+	"generic/list.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\automute.h
+	"generic/typedef.h"
+	"generic/list.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\asm\cpu_includes.h
+	"asm/audio_adc.h"
+	"asm/audio_linein.h"
+	"asm/audio_src.h"
+	"dac.h"
+	"asm/hw_eq.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\asm\audio_adc.h
+	"generic/typedef.h"
+	"generic/list.h"
+	"generic/atomic.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\asm\audio_linein.h
+	"generic/typedef.h"
+	"asm/audio_adc.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\asm\audio_src.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\asm\dac.h
+	"generic/typedef.h"
+	"generic/atomic.h"
+	"os/os_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\asm\hw_eq.h
+	"generic/typedef.h"
+	"generic/list.h"
+	"os/os_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\asm\audio_spdif.h
+	"generic/typedef.h"
+	"generic/list.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_enc_file.h
+	"media/audio_encoder.h"
+	"storage_dev/storage_dev.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_enc_tws.h
+	"media/audio_encoder.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_enc_recoder.h
+	"media/audio_encoder.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\file_operate\file_api.c
+	"app_config.h"
+	"system/includes.h"
+	"system/os/os_cpu.h"
+	"file_operate/file_operate.h"
+	"file_operate/file_bs_deal.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\file_operate\file_bs_deal.c
+	"file_bs_deal.h"
+	"uart.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\file_operate\file_operate.c
+	"app_config.h"
+	"system/includes.h"
+	"system/os/os_cpu.h"
+	"file_operate/file_operate.h"
+	"file_operate/file_bs_deal.h"
+	"asm/sdmmc.h"
+	"update/update.h"
+	"update/update_loader_download.h"
+	"system/event.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\sdmmc.h
+	"device/sdmmc.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\sdmmc.h
+	"generic/typedef.h"
+	"generic/ioctl.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\update\update_loader_download.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm\bk1080\bk1080.c
+	"app_config.h"
+	"system/includes.h"
+	"fm/fm_manage.h"
+	"BK1080.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\fm\fm_manage.h
+	"printf.h"
+	"cpu.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+	"timer.h"
+	"app_config.h"
+	"event.h"
+	"system/includes.h"
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\iic_hw.h
+	"system/generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\iic_soft.h
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\fm\bk1080\bk1080.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm\fm_inside\fm_inside.c
+	"app_config.h"
+	"system/includes.h"
+	"fm/fm_manage.h"
+	"asm/fm_inside_api.h"
+	"asm/dac.h"
+	"audio_config.h"
+	"media/audio_base.h"
+	"overlay_code.h"
+	"clock_cfg.h"
+	"fm_inside.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\fm_inside_api.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\audio_config.h
+	"app_config.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\overlay_code.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\clock_cfg.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\fm\fm_inside\fm_inside.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm\fm_manage.c
+	"app_config.h"
+	"system/includes.h"
+	"fm/fm_manage.h"
+	"rda5807/RDA5807.h"
+	"bk1080/BK1080.h"
+	"qn8035/QN8035.h"
+	"fm_inside/fm_inside.h"
+	"asm/audio_linein.h"
+	"audio_config.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\fm\rda5807\rda5807.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\fm\qn8035\qn8035.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm\qn8035\qn8035.c
+	"app_config.h"
+	"system/includes.h"
+	"fm/fm_manage.h"
+	"QN8035.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm\rda5807\rda5807.c
+	"app_config.h"
+	"system/includes.h"
+	"fm/fm_manage.h"
+	"RDA5807.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm_emitter\ac3433\ac3433.c
+	"app_config.h"
+	"system/includes.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"ac3433.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\fm_emitter\fm_emitter_manage.h
+	"printf.h"
+	"cpu.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+	"timer.h"
+	"app_config.h"
+	"event.h"
+	"system/includes.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\fm_emitter\ac3433\ac3433.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm_emitter\fm_emitter_manage.c
+	"app_config.h"
+	"circular_buf.h"
+	"system/includes.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"ac3433/ac3433.h"
+	"qn8007/qn8007.h"
+	"qn8027/qn8027.h"
+	"fm_inside/fm_emitter_inside.h"
+	"audio_config.h"
+	"audio_digital_vol.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\fm_emitter\qn8007\qn8007.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\fm_emitter\qn8027\qn8027.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\fm_emitter\fm_inside\fm_emitter_inside.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm_emitter\fm_inside\fm_emitter_inside.c
+	"app_config.h"
+	"system/includes.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"fm_emitter_inside.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm_emitter\qn8007\qn8007.c
+	"app_config.h"
+	"system/includes.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"qn8007.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\fm_emitter\qn8027\qn8027.c
+	"app_config.h"
+	"system/includes.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"qn8027.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\gsensor\da230.c
+	"gSensor/EPMotion.h"
+	"gSensor/da230.h"
+	"gSensor/gSensor_manage.h"
+	"app_config.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\gsensor\epmotion.h
+	"mira_std.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\gsensor\mira_std.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\gsensor\da230.h
+	"typedef.h"
+	"mira_std.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\gsensor\gsensor_manage.h
+	"printf.h"
+	"cpu.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+	"timer.h"
+	"app_config.h"
+	"event.h"
+	"system/includes.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\gsensor\gsensor_manage.c
+	"gSensor/gSensor_manage.h"
+	"device/device.h"
+	"app_config.h"
+	"debug.h"
+	"key_event_deal.h"
+	"btstack/avctp_user.h"
+	"app_main.h"
+	"tone_player.h"
+	"user_cfg.h"
+	"bt_tws.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\key_event_deal.h
+	"typedef.h"
+	"event.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\tone_player.h
+	"app_config.h"
+	"audio_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\gsensor\sc7a20.c
+	"gSensor/SC7A20.h"
+	"gSensor/gSensor_manage.h"
+	"app_config.h"
+	"gSensor/SC7A20.h"
+	"math.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\gsensor\sc7a20.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\key\adkey.c
+	"key_driver.h"
+	"adkey.h"
+	"gpio.h"
+	"system/event.h"
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\key\adkey_rtcvdd.c
+	"includes.h"
+	"key_driver.h"
+	"adkey.h"
+	"gpio.h"
+	"system/event.h"
+	"app_config.h"
+	"asm/power/p33.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\power\p33.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\key\ctmu_touch_key.c
+	"key_driver.h"
+	"app_config.h"
+	"asm/ctmu.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\ctmu.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\key\iokey.c
+	"key_driver.h"
+	"iokey.h"
+	"gpio.h"
+	"system/event.h"
+	"app_config.h"
+	"asm/clock.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\key\irkey.c
+	"key_driver.h"
+	"irkey.h"
+	"gpio.h"
+	"asm/irflt.h"
+	"app_config.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\irflt.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\key\key_driver.c
+	"device/key_driver.h"
+	"system/event.h"
+	"system/init.h"
+	"iokey.h"
+	"adkey.h"
+	"irkey.h"
+	"touch_key.h"
+	"system/timer.h"
+	"asm/power_interface.h"
+	"app_config.h"
+	"rdec_key.h"
+	"irSensor/ir_manage.h"
+	"debug.h"
+	"asm/ctmu.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\key\rdec_key.c
+	"key_driver.h"
+	"gpio.h"
+	"system/event.h"
+	"app_config.h"
+	"audio_config.h"
+	"rdec_key.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\key\slidekey.c
+	"key_driver.h"
+	"slidekey.h"
+	"gpio.h"
+	"system/event.h"
+	"app_config.h"
+	"asm/clock.h"
+	"app_action.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\include\slidekey.h
+	"typedef.h"
+	"asm/adc_api.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\key\touch_key.c
+	"touch_key.h"
+	"key_driver.h"
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\music\music_decrypt.c
+	"system/app_core.h"
+	"system/includes.h"
+	"app_config.h"
+	"music/music_decrypt.h"
+	"system/fs/fs.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\music\music_decrypt.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\music\music_id3.c
+	"system/app_core.h"
+	"system/includes.h"
+	"app_config.h"
+	"music/music_id3.h"
+	"system/fs/fs.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\music\music_id3.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\norflash\norflash.c
+	"norflash.h"
+	"app_config.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\include\norflash.h
+	"device/device.h"
+	"ioctl_cmds.h"
+	"asm/spi.h"
+	"printf.h"
+	"gpio.h"
+	"device_drive.h"
+	"malloc.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\spi.h
+	"typedef.h"
+	"generic/ioctl.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\device\device_drive.h
+	"typedef.h"
+	"errno-base.h"
+	"ioctl.h"
+	"os/os_api.h"
+	<pthread.h>
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\power_manage\app_power_manage.c
+	"system/includes.h"
+	"app_power_manage.h"
+	"app_main.h"
+	"app_config.h"
+	"app_action.h"
+	"asm/charge.h"
+	"ui_manage.h"
+	"tone_player.h"
+	"asm/adc_api.h"
+	"btstack/avctp_user.h"
+	"user_cfg.h"
+	"asm/charge.h"
+	"bt_tws.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\sine_make.c
+	"system/includes.h"
+	"tone_player.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\storage_dev\dev_preprocessor.c
+	"app_config.h"
+	"system/includes.h"
+	"system/os/os_api.h"
+	"asm/sdmmc.h"
+	"usb/otg.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\storage_dev\storage_dev.c
+	"app_config.h"
+	"system/includes.h"
+	"system/os/os_cpu.h"
+	"storage_dev/storage_dev.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\common\3th_profile_api.c
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	"typedef.h"
+	"3th_profile_api.h"
+	"bt_tws.h"
+	"key_event_deal.h"
+	"system/timer.h"
+	"btstack/frame_queque.h"
+	"btstack/dueros_dma.h"
+	"dma_deal.h"
+	"btstack/avctp_user.h"
+	"tm_gma_deal.h"
+	"gma.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\frame_queque.h
+	<string.h>
+	<stdint.h>
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\dueros_dma.h
+	<string.h>
+	<stdint.h>
+	"dueros_dma_pb.h"
+	"dueros_platform.h"
+	"typedef.h"
+	"frame_queque.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\dueros_dma_pb.h
+	<string.h>
+	<stdint.h>
+	"dma_protobuf.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\dma_protobuf.h
+	<string.h>
+	<stdint.h>
+	<limits.h>
+	<stddef.h>
+	<stdint.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\dueros_platform.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\dma_deal\dma_deal.h
+	<string.h>
+	<stdint.h>
+	"btstack/dueros_dma_pb.h"
+	"btstack/dueros_platform.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\tm_gma_deal.h
+	"tm_gma_type.h"
+	"tm_gma.h"
+	"tm_frame_mg.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\tm_gma_type.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\tm_gma.h
+	"tm_gma_type.h"
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\tm_frame_mg.h
+	"typedef.h"
+	"tm_gma_type.h"
+	"btstack/frame_queque.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\gma.h
+	"tm_frame_mg.h"
+	"gws_gma_hw.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\gws_gma_hw.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\common\custom_cfg.c
+	"board_config.h"
+	"custom_cfg.h"
+	"app_config.h"
+	"rcsp_user_update.h"
+	"rcsp_adv_user_update.h"
+	"app_config.h"
+	"fs.h"
+	"uart.h"
+	<string.h>
+	"flash_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\common\custom_cfg.h
+	"typedef.h"
+	<string.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp\rcsp_user_update.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp_adv\rcsp_adv_user_update.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\dma_deal\dma_deal.c
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	"typedef.h"
+	"btstack/dueros_dma.h"
+	"btstack/dueros_dma_pb.h"
+	"btstack/dueros_platform.h"
+	"system/task.h"
+	"os/os_api.h"
+	"app_config.h"
+	"app_action.h"
+	"generic/lbuf.h"
+	"user_cfg.h"
+	"btstack/avctp_user.h"
+	"tone_player.h"
+	"key_event_deal.h"
+	"event.h"
+	"key_event_deal.h"
+	"dma_deal.h"
+	"classic/tws_local_media_sync.h"
+	"bt_tws.h"
+	"bt_common.h"
+	"3th_profile_api.h"
+	"system/timer.h"
+	"spp_user.h"
+	"btstack/frame_queque.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp\rcsp_bluetooth.c
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	"app_config.h"
+	"rcsp_bluetooth.h"
+	"string.h"
+	"JL_rcsp_api.h"
+	"JL_rcsp_protocol.h"
+	"JL_rcsp_packet.h"
+	"spp_user.h"
+	"btstack/avctp_user.h"
+	"system/timer.h"
+	"app_core.h"
+	"rcsp_user_update.h"
+	"spp_user.h"
+	"rcsp_msg.h"
+	"app_config.h"
+	"app_action.h"
+	"custom_cfg.h"
+	"file_operate/file_operate.h"
+	"rcsp_bs_api.h"
+	"key_event_deal.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"ui/ui_api.h"
+	"audio_eq.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\ai_stack\jl_rcsp\jl_rcsp_protocol.h
+	"typedef.h"
+	"JL_rcsp_packet.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\ai_stack\jl_rcsp\jl_rcsp_packet.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp\rcsp_bs_api.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\ui\ui_api.h
+	"app_config.h"
+	"ui/ui_common.h"
+	"ui/led7/led7_driver.h"
+	"ui/lcd_seg/lcd_seg3x9_driver.h"
+	"ui/lcd_spi/lcd_drive.h"
+	"music/music_ui.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\ui\ui_common.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\ui\led7\led7_driver.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\ui\lcd_seg\lcd_seg3x9_driver.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\ui\lcd_spi\lcd_drive.h
+	"asm/spi.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\music\music_ui.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\audio_eq.h
+	"typedef.h"
+	"asm/hw_eq.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp\rcsp_bs_api.c
+	"app_config.h"
+	"rcsp_bs_api.h"
+	"file_operate/file_bs_deal.h"
+	"rcsp_bluetooth.h"
+	"rcsp_msg.h"
+	"rcsp_bluetooth.h"
+	"string.h"
+	"JL_rcsp_api.h"
+	"JL_rcsp_protocol.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_bluetooth.c
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	"string.h"
+	"JL_rcsp_api.h"
+	"JL_rcsp_protocol.h"
+	"JL_rcsp_packet.h"
+	"spp_user.h"
+	"btstack/avctp_user.h"
+	"system/timer.h"
+	"app_core.h"
+	"user_cfg.h"
+	"asm/pwm_led.h"
+	"ui_manage.h"
+	"key_event_deal.h"
+	"syscfg_id.h"
+	"classic/tws_api.h"
+	"event.h"
+	"bt_tws.h"
+	"rcsp_adv_user_update.h"
+	"le_rcsp_adv_module.h"
+	"rcsp_adv_bluetooth.h"
+	"adv_setting_common.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp_adv\rcsp_adv_setting\adv_setting_common.h
+	"typedef.h"
+	"event.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_setting\adv_bt_name_setting.c
+	"app_config.h"
+	"syscfg_id.h"
+	"le_rcsp_adv_module.h"
+	"adv_bt_name_setting.h"
+	"adv_setting_common.h"
+	"rcsp_adv_tws_sync.h"
+	"rcsp_adv_opt.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp_adv\rcsp_adv_setting\rcsp_adv_tws_sync.h
+	"classic/tws_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp_adv\rcsp_adv_setting\rcsp_adv_opt.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_setting\adv_key_setting.c
+	"app_config.h"
+	"syscfg_id.h"
+	"key_event_deal.h"
+	"le_rcsp_adv_module.h"
+	"adv_key_setting.h"
+	"adv_setting_common.h"
+	"rcsp_adv_tws_sync.h"
+	"rcsp_adv_opt.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_setting\adv_led_setting.c
+	"app_config.h"
+	"syscfg_id.h"
+	"asm/pwm_led.h"
+	"user_cfg.h"
+	"ui_manage.h"
+	"le_rcsp_adv_module.h"
+	"adv_led_setting.h"
+	"adv_setting_common.h"
+	"rcsp_adv_tws_sync.h"
+	"rcsp_adv_opt.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_setting\adv_mic_setting.c
+	"app_config.h"
+	"syscfg_id.h"
+	"le_rcsp_adv_module.h"
+	"adv_mic_setting.h"
+	"adv_setting_common.h"
+	"rcsp_adv_tws_sync.h"
+	"rcsp_adv_opt.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp_adv\rcsp_adv_setting\adv_mic_setting.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_setting\adv_time_stamp_setting.c
+	"app_config.h"
+	"syscfg_id.h"
+	"rcsp_adv_bluetooth.h"
+	"JL_rcsp_protocol.h"
+	"le_rcsp_adv_module.h"
+	"adv_time_stamp_setting.h"
+	"adv_setting_common.h"
+	"rcsp_adv_tws_sync.h"
+	"rcsp_adv_opt.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp_adv\rcsp_adv_setting\adv_time_stamp_setting.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_setting\adv_work_setting.c
+	"app_config.h"
+	"syscfg_id.h"
+	"le_rcsp_adv_module.h"
+	"adv_work_setting.h"
+	"adv_setting_common.h"
+	"rcsp_adv_tws_sync.h"
+	"rcsp_adv_opt.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\jl_rcsp_adv\rcsp_adv_setting\adv_work_setting.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_setting\rcsp_adv_opt.c
+	"app_config.h"
+	"syscfg_id.h"
+	"le_rcsp_adv_module.h"
+	"rcsp_adv_bluetooth.h"
+	"rcsp_adv_opt.h"
+	"adv_setting_common.h"
+	"rcsp_adv_tws_sync.h"
+	"adv_time_stamp_setting.h"
+	"adv_bt_name_setting.h"
+	"adv_key_setting.h"
+	"adv_led_setting.h"
+	"adv_mic_setting.h"
+	"adv_work_setting.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_setting\rcsp_adv_tws_sync.c
+	"app_config.h"
+	"rcsp_adv_tws_sync.h"
+	"adv_setting_common.h"
+	"rcsp_adv_opt.h"
+	"adv_time_stamp_setting.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\jl_rcsp_adv\rcsp_adv_user_update.c
+	"rcsp_adv_user_update.h"
+	"app_config.h"
+	"uart.h"
+	"system/timer.h"
+	"update.h"
+	"custom_cfg.h"
+	"btstack/avctp_user.h"
+	"JL_rcsp_packet.h"
+	"JL_rcsp_protocol.h"
+	"rcsp_adv_bluetooth.h"
+	"update_loader_download.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\tm_gma_protocol\tm_frame_mg\tm_frame_mg.c
+	"tm_frame_mg.h"
+	"generic/lbuf.h"
+	"tm_gma_hw_driver.h"
+	"uart.h"
+	"btstack/frame_queque.h"
+	"gma_include.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\tm_gma_hw_driver.h
+	"typedef.h"
+	"tm_gma.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\gma_include.h
+	"btstack/avctp_user.h"
+	"system/task.h"
+	"os/os_api.h"
+	"app_config.h"
+	"app_action.h"
+	"generic/lbuf.h"
+	"user_cfg.h"
+	"btstack/avctp_user.h"
+	"tone_player.h"
+	"key_event_deal.h"
+	"event.h"
+	"key_event_deal.h"
+	"dma_deal.h"
+	"classic/tws_local_media_sync.h"
+	"bt_tws.h"
+	"bt_common.h"
+	"3th_profile_api.h"
+	"system/timer.h"
+	"btstack/frame_queque.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\tm_gma_protocol\tm_gma\tm_gma.c
+	<string.h>
+	"tm_gma.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\tm_gma_protocol\tm_gma_app\gma.c
+	<stdlib.h>
+	<stdint.h>
+	<string.h>
+	"gma_include.h"
+	"gma.h"
+	"sha256.h"
+	"aes.h"
+	"tm_frame_mg.h"
+	"generic/lbuf.h"
+	"tm_gma_hw_driver.h"
+	"init.h"
+	"tm_gma_deal.h"
+	"gma_license.h"
+	"adpcm.h"
+	"tm_ota.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\sha256.h
+	"gma_include.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\aes.h
+	"gma_include.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\gma_license.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\adpcm.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\include\tm_gma_protocol\tm_ota.h
+	"gma_include.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\tm_gma_protocol\tm_gma_deal\tm_gma_deal.c
+	"tm_gma_type.h"
+	"tm_frame_mg.h"
+	"tm_gma_hw_driver.h"
+	"btstack/avctp_user.h"
+	"gma.h"
+	"gma_include.h"
+	"tm_gma_hw_driver.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\third_party_profile\tm_gma_protocol\tm_gma_hw_driver\tm_gma_hw_driver.c
+	"tm_gma_type.h"
+	"tm_gma.h"
+	"tm_gma_hw_driver.h"
+	"cpu.h"
+	"uart.h"
+	"btstack/avctp_user.h"
+	"audio_config.h"
+	"app_power_manage.h"
+	"key_event_deal.h"
+	"gma_include.h"
+	"3th_profile_api.h"
+	"fmtx_api.h"
+	"btstack/avctp_user.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\uartpcmsender.c
+	"app_config.h"
+	"system/includes.h"
+	"asm/uart_dev.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\ui\ui_api.c
+	"includes.h"
+	"ui/ui_api.h"
+	"clock_cfg.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\ui\ui_server.c
+	"includes.h"
+	"ui/ui_api.h"
+	"ui/ui.h"
+	"os/os_api.h"
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui.h
+	"window.h"
+	"ui_button.h"
+	"ui_grid.h"
+	"ui_time.h"
+	"ui_camera.h"
+	"ui_pic.h"
+	"ui_text.h"
+	"ui_battery.h"
+	"ui_browser.h"
+	"ui_slider.h"
+	"ui_number.h"
+	<stdarg.h>
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\window.h
+	"ui/layer.h"
+	"ui/ui_core.h"
+	"ui/control.h"
+	"list.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\layer.h
+	"ui/layout.h"
+	"ui/control.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\layout.h
+	"ui/ui_core.h"
+	"ui/control.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_core.h
+	"typedef.h"
+	"rect.h"
+	"system/event.h"
+	"fs/fs.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\control.h
+	"ui/ui_core.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_button.h
+	"ui/control.h"
+	"ui/ui_core.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_grid.h
+	"ui/ui_core.h"
+	"ui/control.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_time.h
+	"ui/control.h"
+	"ui/ui_core.h"
+	"ui/p.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\p.h
+	"ui/ui_core.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_camera.h
+	"ui/control.h"
+	"ui/ui_core.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_pic.h
+	"ui/ui_core.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_text.h
+	"ui/ui_core.h"
+	"ui/control.h"
+	"font/font_all.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\font\font_all.h
+	"generic/typedef.h"
+	"font/font_sdfs.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\font\font_sdfs.h
+	"generic/typedef.h"
+	"fs/fs.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_battery.h
+	"ui/control.h"
+	"list.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_browser.h
+	"ui/ui_core.h"
+	"ui/control.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_slider.h
+	"ui/ui_core.h"
+	"ui/control.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\ui\ui\ui_number.h
+	"ui/control.h"
+	"ui/ui_core.h"
+	"ui/p.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\update.c
+	"update.h"
+	"update_loader_download.h"
+	"asm/crc16.h"
+	"asm/wdt.h"
+	"os/os_api.h"
+	"app_config.h"
+	"rcsp_user_update.h"
+	"rcsp_adv_user_update.h"
+	"custom_cfg.h"
+	"system/debug.h"
+	"tone_player.h"
+	"audio_config.h"
+	"asm/pwm_led.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\descriptor.c
+	"usb/device/usb_stack.h"
+	"usb/device/descriptor.h"
+	"usb/device/uac_audio.h"
+	"app_config.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\device\usb_stack.h
+	"typedef.h"
+	"asm/usb.h"
+	"usb/ch9.h"
+	"usb/usb_phy.h"
+	"usb/otg.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\ch9.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\usb_phy.h
+	"typedef.h"
+	"asm/usb.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\device\descriptor.h
+	"asm/usb.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\device\uac_audio.h
+	"asm/usb.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\hid.c
+	"os/os_api.h"
+	"usb/device/usb_stack.h"
+	"usb/device/hid.h"
+	"usb_config.h"
+	"app_config.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\device\hid.h
+	"typedef.h"
+	"asm/usb.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\usb\usb_config.h
+	"typedef.h"
+	"asm/usb.h"
+	"usb/device/usb_stack.h"
+	"usb/host/usb_host.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\host\usb_host.h
+	"system/task.h"
+	"device/device.h"
+	"asm/usb.h"
+	"usb/ch9.h"
+	"usb/usb_phy.h"
+	"usb_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\msd.c
+	"system/includes.h"
+	"usb/device/usb_stack.h"
+	"usb/device/msd.h"
+	"usb/scsi.h"
+	"usb_config.h"
+	"device/device.h"
+	"app_config.h"
+	"debug.h"
+	"system/includes.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\device\msd.h
+	"asm/usb.h"
+	"usb_stack.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\usb\scsi.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\msd_upgrade.c
+	"system/includes.h"
+	"usb/device/msd.h"
+	"usb/scsi.h"
+	"usb_config.h"
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\task_pc.c
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"app_config.h"
+	"app_action.h"
+	"os/os_api.h"
+	"device/sdmmc.h"
+	"usb/usb_config.h"
+	"usb/device/usb_stack.h"
+	"usb/device/hid.h"
+	"usb/device/msd.h"
+	"audio_config.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"media/audio_base.h"
+	"clock_cfg.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\server\server_core.h
+	"generic/typedef.h"
+	"system/task.h"
+	"spinlock.h"
+	"list.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\uac1.c
+	"system/includes.h"
+	"usb_config.h"
+	"usb/device/usb_stack.h"
+	"usb/device/uac_audio.h"
+	"app_config.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\uac_stream.c
+	"app_config.h"
+	"system/includes.h"
+	"printf.h"
+	"usb/usb_config.h"
+	"usb/device/usb_stack.h"
+	"usb/device/uac_audio.h"
+	"uac_stream.h"
+	"audio_config.h"
+	"usb_config.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\uac_stream.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\usb_device.c
+	"usb/device/usb_stack.h"
+	"usb_config.h"
+	"usb/device/msd.h"
+	"usb/scsi.h"
+	"usb/device/hid.h"
+	"usb/device/uac_audio.h"
+	"irq.h"
+	"init.h"
+	"gpio.h"
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\device\user_setup.c
+	"usb/device/usb_stack.h"
+	"usb_config.h"
+	"usb/device/msd.h"
+	"usb/scsi.h"
+	"usb/device/hid.h"
+	"usb/device/uac_audio.h"
+	"irq.h"
+	"init.h"
+	"gpio.h"
+	"app_config.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\usb_bulk_transfer.c
+	<string.h>
+	"jiffies.h"
+	"usb_config.h"
+	"usb_bulk_transfer.h"
+	"usb_ctrl_transfer.h"
+	"usb_storage.h"
+	"usb/host/usb_host.h"
+	"usb/usb_phy.h"
+	"app_config.h"
+	"device_drive.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\usb_bulk_transfer.h
+	"typedef.h"
+	"device/device.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\usb_ctrl_transfer.h
+	"usb/ch9.h"
+	"usb/usb_phy.h"
+	"device/device.h"
+	"usb_config.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\usb_storage.h
+	"system/task.h"
+	"device/device.h"
+	"usb/scsi.h"
+	"usb_bulk_transfer.h"
+	"usb/host/usb_host.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\usb_ctrl_transfer.c
+	"usb/host/usb_host.h"
+	"usb_ctrl_transfer.h"
+	"app_config.h"
+	"device_drive.h"
+	"gpio.h"
+	"usb/scsi.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\usb_host.c
+	"includes.h"
+	"app_config.h"
+	"device_drive.h"
+	"usb_config.h"
+	"usb/host/usb_host.h"
+	"usb/usb_phy.h"
+	"usb_ctrl_transfer.h"
+	"usb_storage.h"
+	"adb.h"
+	"aoa.h"
+	"hid.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\adb.h
+	"system/task.h"
+	"device/device.h"
+	"usb/scsi.h"
+	"usb_bulk_transfer.h"
+	"usb/host/usb_host.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\aoa.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\hid.h
+	"system/task.h"
+	"device/device.h"
+	"usb/scsi.h"
+	"usb_bulk_transfer.h"
+	"usb/host/usb_host.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\host\usb_storage.c
+	"asm/includes.h"
+	"system/timer.h"
+	"device/ioctl_cmds.h"
+	"usb/host/usb_host.h"
+	"usb_ctrl_transfer.h"
+	"usb_bulk_transfer.h"
+	"device_drive.h"
+	"usb_storage.h"
+	"usb_config.h"
+	"app_config.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\usb_config.c
+	"usb_config.h"
+	"usb/scsi.h"
+	"irq.h"
+	"init.h"
+	"gpio.h"
+	"app_config.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\common\usb\usb_host_config.c
+	"usb_config.h"
+	"usb/scsi.h"
+	"irq.h"
+	"init.h"
+	"gpio.h"
+	"app_config.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\config\app_config.c
+	"system/includes.h"
+	"app_config.h"
+	"config/config_interface.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\config\config_interface.h
+	"config/config_transport.h"
+	"config/config_target.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\config\config_transport.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\config\config_target.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\config\bt_profile_config.c
+	"system/includes.h"
+	"app_config.h"
+	"btcontroller_config.h"
+	"btstack/bt_profile_config.h"
+	"bt_common.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\port\br25\btcontroller_config.h
+	"btcontroller_modules.h"
+	"ble/ll_config.h"
+	"classic/lmp_config.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\ble\ll_config.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\classic\lmp_config.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btstack\bt_profile_config.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\config\ci_transport_uart.c
+	"system/includes.h"
+	"config/config_interface.h"
+	"system/event.h"
+	"app_online_cfg.h"
+	"asm/uart_dev.h"
+	"app_config.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\app_online_cfg.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\debug.c
+	"app_config.h"
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\aec\br25\audio_aec.c
+	"system/includes.h"
+	"app_config.h"
+	"audio_config.h"
+	"aec_user.h"
+	"media/includes.h"
+	"commproc.h"
+	"audio_eq.h"
+	"circular_buf.h"
+	"clock_cfg.h"
+	"debug.h"
+	"string.h"
+	"asm/crc16.h"
+	"app_main.h"
+	"tone_player.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\aec_user.h
+	"generic/typedef.h"
+	"user_cfg.h"
+	"commproc.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\commproc.h
+	"generic/typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\app_action.c
+	"app_action.h"
+	"app_main.h"
+	"app_core.h"
+	"key_event_deal.h"
+	"system/device/vm.h"
+	"os/os_api.h"
+	"system/timer.h"
+	"tone_player.h"
+	"ui/ui_api.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\app_api\app_debug_api.c
+	"app_api/app_debug_api.h"
+	"system/timer.h"
+	"system/includes.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\app_api\app_debug_api.h
+	"generic/typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\app_api\vm_api.c
+	"app_api/vm_api.h"
+	"asm/crc16.h"
+	"system/syscfg_id.h"
+	"system/os/os_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\app_api\vm_api.h
+	"generic/typedef.h"
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\app_main.c
+	"system/includes.h"
+	"btstack/btstack_task.h"
+	"app_config.h"
+	"app_action.h"
+	"asm/pwm_led.h"
+	"tone_player.h"
+	"ui_manage.h"
+	"gpio.h"
+	"app_main.h"
+	"asm/charge.h"
+	"update.h"
+	"app_power_manage.h"
+	"audio_config.h"
+	"app_charge.h"
+	"user_cfg.h"
+	"app_api/app_debug_api.h"
+	"bt_tws.h"
+	"charge_box/chargeIc_manage.h"
+	"charge_box/charge_det.h"
+	"charge_box/charge_ctrl.h"
+	"charge_box/wireless.h"
+	"clock_cfg.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\charge_box\chargeic_manage.h
+	"printf.h"
+	"cpu.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+	"timer.h"
+	"app_config.h"
+	"event.h"
+	"system/includes.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\charge_box\charge_det.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\charge_box\charge_ctrl.h
+	"event.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\charge_box\wireless.h
+	"device/wireless_charge.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\device\wireless_charge.h
+	"asm/includes.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac6969d_demo.c
+	"app_config.h"
+	"system/includes.h"
+	"media/includes.h"
+	"asm/sdmmc.h"
+	"asm/chargestore.h"
+	"asm/charge.h"
+	"asm/pwm_led.h"
+	"asm/rtc.h"
+	"tone_player.h"
+	"audio_config.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+	"gSensor/gSensor_manage.h"
+	"key_event_deal.h"
+	"user_cfg.h"
+	"linein/linein_dev.h"
+	"usb/otg.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"dev_manager.h"
+	"fm/fm_manage.h"
+	"asm/power/p33.h"
+	"debug.h"
+	"asm/ctmu.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\rtc.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\linein\linein_dev.h
+	"typedef.h"
+	"device/device.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\dev_manager.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac696x_demo.c
+	"app_config.h"
+	"system/includes.h"
+	"media/includes.h"
+	"asm/sdmmc.h"
+	"asm/chargestore.h"
+	"asm/charge.h"
+	"asm/pwm_led.h"
+	"asm/rtc.h"
+	"tone_player.h"
+	"audio_config.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+	"gSensor/gSensor_manage.h"
+	"key_event_deal.h"
+	"user_cfg.h"
+	"linein/linein_dev.h"
+	"usb/otg.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"dev_manager.h"
+	"fm/fm_manage.h"
+	"asm/power/p33.h"
+	"norflash.h"
+	"asm/spi.h"
+	"debug.h"
+	"asm/ctmu.h"
+	"common/user_msg.h"
+	"slidekey.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac696x_lighter.c
+	"app_config.h"
+	"system/includes.h"
+	"media/includes.h"
+	"asm/sdmmc.h"
+	"asm/chargestore.h"
+	"asm/charge.h"
+	"asm/pwm_led.h"
+	"asm/rtc.h"
+	"tone_player.h"
+	"audio_config.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+	"gSensor/gSensor_manage.h"
+	"key_event_deal.h"
+	"user_cfg.h"
+	"linein/linein_dev.h"
+	"usb/otg.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"dev_manager.h"
+	"fm/fm_manage.h"
+	"asm/power/p33.h"
+	"debug.h"
+	"asm/ctmu.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac696x_tws.c
+	"app_config.h"
+	"system/includes.h"
+	"media/includes.h"
+	"asm/sdmmc.h"
+	"asm/chargestore.h"
+	"asm/charge.h"
+	"asm/pwm_led.h"
+	"asm/rtc.h"
+	"tone_player.h"
+	"audio_config.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+	"gSensor/gSensor_manage.h"
+	"key_event_deal.h"
+	"user_cfg.h"
+	"linein/linein_dev.h"
+	"usb/otg.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"dev_manager.h"
+	"fm/fm_manage.h"
+	"asm/power/p33.h"
+	"debug.h"
+	"asm/ctmu.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\board\br25\board_ac696x_tws_box.c
+	"app_config.h"
+	"system/includes.h"
+	"media/includes.h"
+	"asm/sdmmc.h"
+	"asm/chargestore.h"
+	"asm/charge.h"
+	"asm/pwm_led.h"
+	"asm/rtc.h"
+	"tone_player.h"
+	"audio_config.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+	"gSensor/gSensor_manage.h"
+	"key_event_deal.h"
+	"user_cfg.h"
+	"linein/linein_dev.h"
+	"usb/otg.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"dev_manager.h"
+	"fm/fm_manage.h"
+	"asm/power/p33.h"
+	"debug.h"
+	"asm/ctmu.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\bt.c
+	"system/includes.h"
+	"media/includes.h"
+	"tone_player.h"
+	"app_config.h"
+	"app_action.h"
+	"btstack/avctp_user.h"
+	"btstack/ble_api.h"
+	"btstack/btstack_task.h"
+	"btctrler/btctrler_task.h"
+	"user_cfg.h"
+	"aec_user.h"
+	"lmp_api.h"
+	"audio_reverb.h"
+	"bt_common.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"bt_tws.h"
+	"bt_ble.h"
+	"app_chargestore.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"ui_manage.h"
+	"app_chargestore.h"
+	"app_online_cfg.h"
+	"app_main.h"
+	"app_power_manage.h"
+	"gSensor/gSensor_manage.h"
+	"key_event_deal.h"
+	"classic/tws_api.h"
+	"asm/pwm_led.h"
+	"vol_sync.h"
+	"math.h"
+	"dma_deal.h"
+	"rcsp_bluetooth.h"
+	"clock_cfg.h"
+	"rcsp_adv_bluetooth.h"
+	"loud_speaker.h"
+	"debug.h"
+	"ui/ui_style.h"
+	"ui/ui_style.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\btctrler_task.h
+	"typedef.h"
+	"system/task.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\btctrler\lmp_api.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\audio_reverb.h
+	"pitchshifter/pitchshifter_api.h"
+	"mono2stereo/reverb_mono2stero_api.h"
+	"reverb/reverb_api.h"
+	"asm/howling_api.h"
+	"audio_config.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\pitchshifter\pitchshifter_api.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\mono2stereo\reverb_mono2stero_api.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\reverb\reverb_api.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\asm\howling_api.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\vol_sync.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\loud_speaker.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\bt_ble.c
+	"system/app_core.h"
+	"system/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"btstack/btstack_task.h"
+	"btstack/ble_api.h"
+	"user_cfg.h"
+	"vm.h"
+	"app_power_manage.h"
+	"btcontroller_modules.h"
+	"app_chargestore.h"
+	"btstack/avctp_user.h"
+	"bt_common.h"
+	"le_common.h"
+	"bt_ble.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\bt_decode.c
+	"system/includes.h"
+	"media/includes.h"
+	"btstack/avctp_user.h"
+	"app_config.h"
+	"audio_config.h"
+	"aec_user.h"
+	"bt_tws.h"
+	"classic/tws_api.h"
+	"app_online_cfg.h"
+	"app_main.h"
+	"app_online_cfg.h"
+	"debug.h"
+	"media/audio_decoder.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\bt_emitter.c
+	"system/app_core.h"
+	"system/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"btstack/btstack_task.h"
+	"user_cfg.h"
+	"vm.h"
+	"btcontroller_modules.h"
+	"btstack/avctp_user.h"
+	"app_main.h"
+	"media/includes.h"
+	"key_event_deal.h"
+	"rcsp_bluetooth.h"
+	"audio_config.h"
+	"audio_digital_vol.h"
+	"audio_enc.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\bt_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\bt_led7_ui.c
+	"includes.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"btstack/avctp_user.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\bt_tws.c
+	"system/includes.h"
+	"media/includes.h"
+	"device/vm.h"
+	"tone_player.h"
+	"app_config.h"
+	"app_action.h"
+	"btstack/avctp_user.h"
+	"btstack/btstack_task.h"
+	"user_cfg.h"
+	"bt_tws.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"ui_manage.h"
+	"app_chargestore.h"
+	"app_online_cfg.h"
+	"app_main.h"
+	"app_power_manage.h"
+	"audio_config.h"
+	"user_cfg.h"
+	"btcontroller_config.h"
+	"asm/pwm_led.h"
+	"bt_common.h"
+	"bt_ble.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\key\ac6952e_lighter_bt_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\key\ac695x_charging_bin_bt_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\key\ac695x_ui_charging_bt_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\key\ac695x_ui_demo_bt_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\key\ac6969d_demo_bt_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\key\ac696x_demo_bt_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\key\ac696x_lighter_bt_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\key_event_deal.c
+	"key_event_deal.h"
+	"btstack/avctp_user.h"
+	"event.h"
+	"app_power_manage.h"
+	"app_main.h"
+	"tone_player.h"
+	"audio_config.h"
+	"user_cfg.h"
+	"system/timer.h"
+	"vol_sync.h"
+	"media/includes.h"
+	"app_action.h"
+	"app_config.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"bt_tws.h"
+	"audio_reverb.h"
+	"loud_speaker.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\media_sync.c
+	"app_config.h"
+	"media/includes.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\bt\vol_sync.c
+	"typedef.h"
+	"app_main.h"
+	"app_config.h"
+	"vol_sync.h"
+	"tone_player.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\charge_box\box.c
+	<stdlib.h>
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"app_config.h"
+	"app_action.h"
+	"tone_player.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"app_main.h"
+	"clock_cfg.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\charge_box\box_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\charge_box\charge_box.c
+	"app_config.h"
+	"system/includes.h"
+	"charge_box/charge_box.h"
+	"user_cfg.h"
+	"device/vm.h"
+	"app_action.h"
+	"app_main.h"
+	"charge_box/chargeIc_manage.h"
+	"charge_box/charge_ctrl.h"
+	"device/chargebox.h"
+	"asm/power/p33.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\charge_box\charge_box_ui.c
+	"typedef.h"
+	"asm/pwm_led.h"
+	"system/includes.h"
+	"charge_box/charge_ctrl.h"
+	"charge_box/chargeIc_manage.h"
+	"charge_box/charge_box_ui.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\charge_box\charge_box_ui.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\charge_box\charge_ctrl.c
+	"system/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"charge_box/chargeIc_manage.h"
+	"charge_box/charge_ctrl.h"
+	"charge_box/charge_box.h"
+	"charge_box/charge_det.h"
+	"charge_box/wireless.h"
+	"key_event_deal.h"
+	"device/chargebox.h"
+	"le_rcsp_adv_module.h"
+	"charge_box/charge_box_ui.h"
+	"asm/pwm_led.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\charge_box\charge_det.c
+	"gpio.h"
+	"system/event.h"
+	"app_config.h"
+	"charge_box/charge_det.h"
+	"charge_box/charge_box.h"
+	"charge_box/charge_ctrl.h"
+	"system/timer.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\charge_box\chargeic_manage.c
+	"charge_box/chargeIc_manage.h"
+	"device/device.h"
+	"app_config.h"
+	"app_main.h"
+	"user_cfg.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\charge_box\ic_self.c
+	"charge_box/chargeIc_manage.h"
+	"charge_box/charge_ctrl.h"
+	"charge_box/ic_self.h"
+	"app_config.h"
+	"app_main.h"
+	"charge_box/charge_box.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\charge_box\ic_self.h
+	"typedef.h"
+	"os/os_type.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\charge_box\wireless.c
+	"gpio.h"
+	"app_config.h"
+	"system/includes.h"
+	"device/wireless_charge.h"
+	"charge_box/charge_ctrl.h"
+	"asm/adc_api.h"
+	"charge_box/charge_box.h"
+	"device/chargebox.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\app_common.c
+	"common/app_common.h"
+	"app_action.h"
+	"app_main.h"
+	"key_event_deal.h"
+	"music/music.h"
+	"pc/pc.h"
+	"record/record.h"
+	"linein/linein.h"
+	"fm/fm.h"
+	"btstack/avctp_user.h"
+	"app_power_manage.h"
+	"app_chargestore.h"
+	"usb/otg.h"
+	"usb/host/usb_host.h"
+	<stdlib.h>
+	"bt_tws.h"
+	"app_api/app_debug_api.h"
+	"music/music_player_api.h"
+	"audio_config.h"
+	"common/power_off.h"
+	"common/user_msg.h"
+	"audio_config.h"
+	"audio_enc.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"common/fm_emitter_led7_ui.h"
+	"audio_reverb.h"
+	"app_charge.h"
+	"charge_box/charge_ctrl.h"
+	"device/chargebox.h"
+	"app_online_cfg.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\common\app_common.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\music\music.h
+	"music/music_player.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\music\music_player.h
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"media/audio_decoder.h"
+	"file_operate/file_operate.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\pc\pc.h
+	"system/event.h"
+	"music/music_player.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\record\record.h
+	"generic/typedef.h"
+	"app_config.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\linein\linein.h
+	"system/event.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\fm\fm.h
+	"system/event.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\music\music_player_api.h
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"media/audio_decoder.h"
+	"file_operate/file_operate.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\common\power_off.h
+	"generic/typedef.h"
+	"app_config.h"
+	"event.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\common\fm_emitter_led7_ui.h
+	"generic/typedef.h"
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\app_common_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\fm_emitter_led7_ui.c
+	"common/fm_emitter_led7_ui.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\key\ac6952e_lighter_app_common_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\key\ac695x_charging_bin_app_common_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\key\ac695x_ui_charging_app_common_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\key\ac695x_ui_demo_app_common_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\key\ac6969d_demo_app_common_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\key\ac696x_demo_app_common_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\key\ac696x_lighter_app_common_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\power_off.c
+	"common/power_off.h"
+	"bt_tws.h"
+	<stdlib.h>
+	"app_power_manage.h"
+	"app_chargestore.h"
+	"btstack/avctp_user.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\common\power_on.c
+	"system/includes.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"tone_player.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"app_main.h"
+	"ui_manage.h"
+	"vm.h"
+	"app_chargestore.h"
+	"user_cfg.h"
+	"ui/ui_api.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\dev_manager.c
+	"dev_manager.h"
+	<stdlib.h>
+	"system/app_core.h"
+	"system/includes.h"
+	"app_config.h"
+	"slidekey.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\fm.c
+	"fm_server.h"
+	"loud_speaker.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\fm_server.h
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"tone_player.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"app_main.h"
+	"app_online_cfg.h"
+	"app_power_manage.h"
+	"gSensor/gSensor_manage.h"
+	"ui_manage.h"
+	"vm.h"
+	"app_chargestore.h"
+	"key_event_deal.h"
+	"asm/pwm_led.h"
+	"user_cfg.h"
+	"fm/fm.h"
+	"fm/fm_manage.h"
+	"fm_rw.h"
+	"ui/ui_api.h"
+	"audio_reverb.h"
+	"clock_cfg.h"
+	"includes.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\fm_rw.h
+	"fm/fm_manage.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\fm_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\fm_led7_ui.c
+	"ui/ui_api.h"
+	"fm/fm_manage.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\fm_rw.c
+	"system/includes.h"
+	"syscfg_id.h"
+	"fm/fm.h"
+	"fm/fm_manage.h"
+	"fm_rw.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\fm_server.c
+	"fm_server.h"
+	"loud_speaker.h"
+	"ui/ui_style.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\key\ac695x_ui_charging_fm_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\key\ac6969d_demo_fm_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fm\key\ac696x_demo_fm_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\fs_test.c
+	"system/includes.h"
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\idle.c
+	"system/includes.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"tone_player.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"app_main.h"
+	"ui_manage.h"
+	"vm.h"
+	"app_chargestore.h"
+	"user_cfg.h"
+	"ui/ui_api.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\linein\key\ac6969d_demo_linein_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\linein\key\ac696x_demo_linein_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\linein\key\ac696x_lighter_linein_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\linein\linein.c
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"tone_player.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"app_main.h"
+	"app_online_cfg.h"
+	"app_power_manage.h"
+	"gSensor/gSensor_manage.h"
+	"ui_manage.h"
+	"vm.h"
+	"app_chargestore.h"
+	"key_event_deal.h"
+	"linein/linein_dev.h"
+	"linein/linein.h"
+	"asm/pwm_led.h"
+	"user_cfg.h"
+	"asm/audio_linein.h"
+	"audio_reverb.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"clock_cfg.h"
+	"loud_speaker.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\linein\linein_dev.c
+	"app_config.h"
+	"system/event.h"
+	"system/init.h"
+	"system/timer.h"
+	"asm/power_interface.h"
+	"asm/adc_api.h"
+	"linein/linein.h"
+	"linein/linein_dev.h"
+	"gpio.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\linein\linein_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\linein\linein_led7_ui.c
+	"system/includes.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\log_config\app_config.c
+	"system/includes.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\log_config\lib_btctrler_config.c
+	"app_config.h"
+	"system/includes.h"
+	"btcontroller_config.h"
+	"bt_common.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\log_config\lib_driver_config.c
+	"app_config.h"
+	"system/includes.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\log_config\lib_system_config.c
+	"app_config.h"
+	"system/includes.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\log_config\lib_update_config.c
+	"app_config.h"
+	"system/includes.h"
+	"update_loader_download.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\key\ac695x_ui_charging_music_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\key\ac695x_ui_demo_music_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\key\ac6969d_demo_music_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\key\ac696x_demo_music_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\key\ac696x_lighter_music_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\music.c
+	<stdlib.h>
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"app_config.h"
+	"app_action.h"
+	"tone_player.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"app_main.h"
+	"app_online_cfg.h"
+	"app_power_manage.h"
+	"gSensor/gSensor_manage.h"
+	"ui_manage.h"
+	"vm.h"
+	"app_chargestore.h"
+	"key_event_deal.h"
+	"music/music.h"
+	"asm/pwm_led.h"
+	"user_cfg.h"
+	"usb/otg.h"
+	"usb/host/usb_host.h"
+	"device/sdmmc.h"
+	"music/music_player_api.h"
+	"common/user_msg.h"
+	"pitchshifter/pitchshifter_api.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"audio_reverb.h"
+	"clock_cfg.h"
+	"loud_speaker.h"
+	"debug.h"
+	"ui/ui_style.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\music_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\music_led7_ui.c
+	"ui/ui_api.h"
+	"music/music_ui.h"
+	"fm_emitter/fm_emitter_manage.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\music_player.c
+	"app_config.h"
+	"music/music_player.h"
+	"app_action.h"
+	"audio_config.h"
+	"app_main.h"
+	"app_online_cfg.h"
+	"media/includes.h"
+	"app_api/vm_api.h"
+	"system/device/vm.h"
+	"clock_cfg.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\music\music_player_api.c
+	"music/music_player_api.h"
+	<stdlib.h>
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"app_config.h"
+	"app_action.h"
+	"tone_player.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"app_main.h"
+	"app_online_cfg.h"
+	"app_power_manage.h"
+	"gSensor/gSensor_manage.h"
+	"ui_manage.h"
+	"vm.h"
+	"app_chargestore.h"
+	"key_event_deal.h"
+	"music/music.h"
+	"asm/pwm_led.h"
+	"user_cfg.h"
+	"usb/otg.h"
+	"usb/host/usb_host.h"
+	"device/sdmmc.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"spi/nor_fs.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\system\spi\nor_fs.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\pc\key\ac6969d_demo_pc_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\pc\key\ac696x_demo_pc_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\pc\pc.c
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"tone_player.h"
+	"asm/charge.h"
+	"asm/usb.h"
+	"app_charge.h"
+	"app_main.h"
+	"app_online_cfg.h"
+	"app_power_manage.h"
+	"ui_manage.h"
+	"app_chargestore.h"
+	"key_event_deal.h"
+	"os/os_api.h"
+	"usb/usb_config.h"
+	"usb/device/usb_stack.h"
+	"usb/device/hid.h"
+	"usb/device/msd.h"
+	"uac_stream.h"
+	"pc/pc.h"
+	"user_cfg.h"
+	"device/sdmmc.h"
+	"pc/usb_msd.h"
+	"ui/ui_api.h"
+	"audio_reverb.h"
+	"clock_cfg.h"
+	"debug.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\pc\usb_msd.h
+	"system/includes.h"
+	"usb/device/msd.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\pc\pc_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\pc\pc_led7_ui.c
+	"ui/ui_api.h"
+	"system/includes.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\pc\usb_audio.c
+	"app_config.h"
+	"system/includes.h"
+	"uac_stream.h"
+	"media/audio_dev.h"
+	"media/effectrs_sync.h"
+	"usb/usb_config.h"
+	"usb/device/uac_audio.h"
+	"audio_config.h"
+	"tone_player.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\effectrs_sync.h
+	"generic/typedef.h"
+	"generic/list.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\record\key\ac6969d_demo_record_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\record\key\ac696x_demo_record_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\record\key\ac696x_lighter_record_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\record\record.c
+	"system/app_core.h"
+	"system/includes.h"
+	"server/server_core.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"tone_player.h"
+	"asm/charge.h"
+	"app_charge.h"
+	"app_main.h"
+	"app_online_cfg.h"
+	"app_power_manage.h"
+	"gSensor/gSensor_manage.h"
+	"ui_manage.h"
+	"vm.h"
+	"app_chargestore.h"
+	"key_event_deal.h"
+	"asm/pwm_led.h"
+	"user_cfg.h"
+	"record/record.h"
+	"storage_dev/storage_dev.h"
+	"file_operate/file_operate.h"
+	"audio_enc.h"
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"audio_reverb.h"
+	"clock_cfg.h"
+	"loud_speaker.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\record\record_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\record\record_led7_ui.c
+	"ui/ui_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\rtc\alarm.c
+	"system/includes.h"
+	"alarm.h"
+	"common/app_common.h"
+	"system/timer.h"
+	"app_main.h"
+	"tone_player.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\rtc\alarm.h
+	"typedef.h"
+	"system/includes.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\rtc\rtc.c
+	"app_config.h"
+	"key_event_deal.h"
+	"system/includes.h"
+	"tone_player.h"
+	"app_action.h"
+	"tone_player.h"
+	"media/includes.h"
+	"system/sys_time.h"
+	"ui/ui_api.h"
+	"alarm.h"
+	"audio_reverb.h"
+	"clock_cfg.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\rtc\rtc_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\rtc\rtc_led7_ui.c
+	"ui/ui_api.h"
+	"system/includes.h"
+	"system/sys_time.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\spdif\hdmi_cec_drv.c
+	"spdif/hdmi_cec.h"
+	"spdif/hdmi_cec_api.h"
+	"app_config.h"
+	"asm/clock.h"
+	"app_config.h"
+	"gpio.h"
+	"system/timer.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\spdif\hdmi_cec.h
+	"typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\spdif\hdmi_cec_api.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\spdif\key\ac6969d_demo_spdif_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\spdif\key\ac696x_demo_spdif_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\spdif\spdif.c
+	"app_config.h"
+	"key_event_deal.h"
+	"system/includes.h"
+	"tone_player.h"
+	"app_action.h"
+	"tone_player.h"
+	"media/includes.h"
+	"asm/audio_spdif.h"
+	"clock_cfg.h"
+	"ui/ui_api.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\spdif\spdif_key.c
+	"key_event_deal.h"
+	"key_driver.h"
+	"app_config.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\ui_manage.c
+	"ui_manage.h"
+	"asm/pwm_led.h"
+	"system/includes.h"
+	"app_config.h"
+	"user_cfg.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\user_cfg.c
+	"app_config.h"
+	"user_cfg.h"
+	"fs.h"
+	"string.h"
+	"system/includes.h"
+	"vm.h"
+	"btcontroller_config.h"
+	"app_main.h"
+	"media/includes.h"
+	"audio_config.h"
+	"asm/pwm_led.h"
+	"aec_user.h"
+	"app_power_manage.h"
+	"debug.h"
+	"fm_emitter/fm_emitter_manage.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\apps\soundbox\version.c
+	"system/includes.h"
+	"generic/log.h"
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\adc_api.c
+	"typedef.h"
+	"asm/clock.h"
+	"asm/adc_api.h"
+	"timer.h"
+	"init.h"
+	"asm/efuse.h"
+	"irq.h"
+	"asm/power/p33.h"
+	"asm/power_interface.h"
+	"jiffies.h"
+	"app_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_common\app_audio.c
+	"system/includes.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_action.h"
+	"app_main.h"
+	"audio_config.h"
+	"audio_digital_vol.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_common\audio_link.c
+	"asm/iis.h"
+	"gpio.h"
+	"media/includes.h"
+	"app_config.h"
+	"audio_link.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\iis.h
+	"generic/typedef.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_common\audio_link.h
+	"audio_config.h"
+	"asm/iis.h"
+	"system/includes.h"
+	"media/includes.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"classic/tws_api.h"
+	"btctrler/lmp_api.h"
+	"effectrs_sync.h"
+	"audio_eq.h"
+	"audio_drc.h"
+	"app_config.h"
+	"audio_config.h"
+	"aec_user.h"
+	"audio_enc.h"
+	"audio_dec.h"
+	"app_main.h"
+	"encode/encode_write.h"
+	"audio_digital_vol.h"
+	"common/Resample_api.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"asm/audio_spdif.h"
+	"clock_cfg.h"
+	"audio_link.h"
+	"audio_reverb.h"
+	"bt_tws.h"
+	"limiter_noiseGate_api.h"
+	"PLC.h"
+	"timer.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\audio_drc.h
+	"typedef.h"
+	"asm/sw_drc.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\cpu\br25\asm\sw_drc.h
+	"generic/typedef.h"
+	"generic/list.h"
+	"os/os_api.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec.h
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"asm/audio_src.h"
+	"audio_digital_vol.h"
+	"audio_dec_file.h"
+	"audio_dec_fm.h"
+	"audio_dec_linein.h"
+	"audio_dec_pc.h"
+	"audio_dec_local_tws.h"
+	"audio_dec_spdif.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_file.h
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"media/audio_decoder.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_fm.h
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"media/audio_decoder.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_linein.h
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"media/audio_decoder.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_pc.h
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"media/audio_decoder.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_local_tws.h
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"media/audio_decoder.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_spdif.h
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"media/audio_decoder.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\apps\soundbox\include\common\resample_api.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\limiter_noisegate_api.h
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\plc.h
+	"generic/typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_file.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"effectrs_sync.h"
+	"audio_eq.h"
+	"audio_drc.h"
+	"app_config.h"
+	"audio_config.h"
+	"audio_dec.h"
+	"app_config.h"
+	"app_main.h"
+	"classic/tws_api.h"
+	"music/music_decrypt.h"
+	"music/music_id3.h"
+	"pitchshifter/pitchshifter_api.h"
+	"mono2stereo/reverb_mono2stero_api.h"
+	"audio_enc.h"
+	"clock_cfg.h"
+	"audio_pitch.h"
+	"MIDI_DEC_API.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\audio_pitch.h
+	"pitchshifter/pitchshifter_api.h"
+	"mono2stereo/reverb_mono2stero_api.h"
+	"audio_config.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\midi_dec_api.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_fm.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"effectrs_sync.h"
+	"audio_eq.h"
+	"audio_drc.h"
+	"app_config.h"
+	"audio_config.h"
+	"audio_dec.h"
+	"app_config.h"
+	"app_main.h"
+	"audio_enc.h"
+	"audio_dec.h"
+	"clock_cfg.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_linein.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"effectrs_sync.h"
+	"audio_eq.h"
+	"audio_drc.h"
+	"app_config.h"
+	"audio_config.h"
+	"audio_dec.h"
+	"app_config.h"
+	"app_main.h"
+	"audio_enc.h"
+	"clock_cfg.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_local_tws.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"effectrs_sync.h"
+	"audio_eq.h"
+	"audio_drc.h"
+	"app_config.h"
+	"audio_config.h"
+	"audio_dec.h"
+	"app_config.h"
+	"app_main.h"
+	"audio_enc.h"
+	"clock_cfg.h"
+	"classic/tws_api.h"
+	"classic/tws_local_media_sync.h"
+	"app_action.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_pc.c
+	"uac_stream.h"
+	"app_config.h"
+	"audio_decoder.h"
+	"media/includes.h"
+	"audio_config.h"
+	"system/includes.h"
+	"audio_enc.h"
+	"audio_eq.h"
+	"audio_drc.h"
+	"app_config.h"
+	"audio_config.h"
+	"audio_dec.h"
+	"app_main.h"
+	"clock_cfg.h"
+	"ui/ui_api.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_dec_spdif.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"effectrs_sync.h"
+	"audio_eq.h"
+	"audio_drc.h"
+	"app_config.h"
+	"audio_config.h"
+	"audio_dec.h"
+	"app_config.h"
+	"app_main.h"
+	"audio_enc.h"
+	"clock_cfg.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_sync.c
+	"board_config.h"
+	"asm/dac.h"
+	"media/includes.h"
+	"effectrs_sync.h"
+	"asm/gpio.h"
+	"classic/tws_api.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\audio_usb_mic.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"device/uac_stream.h"
+	"audio_enc.h"
+	"app_main.h"
+	"aec_user.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_dec\tone_player.c
+	"system/includes.h"
+	"media/includes.h"
+	"tone_player.h"
+	"audio_config.h"
+	"app_main.h"
+	"file_operate/file_operate.h"
+	"fm_emitter/fm_emitter_manage.h"
+	"clock_cfg.h"
+	"audio_dec.h"
+	"app_action.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\audio_drc.c
+	"system/includes.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_online_cfg.h"
+	"audio_drc.h"
+	"clock_cfg.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\audio_eq.c
+	"system/includes.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_online_cfg.h"
+	"audio_eq.h"
+	"audio_drc.h"
+	"clock_cfg.h"
+	"debug.h"
+	"asm/sw_drc.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\audio_pitch.c
+	"system/includes.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_online_cfg.h"
+	"audio_drc.h"
+	"common/Resample_api.h"
+	"audio_pitch.h"
+	"clock_cfg.h"
+	"audio_config.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\audio_reverb.c
+	"system/includes.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_online_cfg.h"
+	"audio_drc.h"
+	"common/Resample_api.h"
+	"audio_reverb.h"
+	"clock_cfg.h"
+	"audio_config.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\eq_config.c
+	"system/includes.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_online_cfg.h"
+	"audio_eq.h"
+	"audio_eq_tab.h"
+	"audio_drc.h"
+	"debug.h"
+	"config/config_interface.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\audio_eq_tab.h
+	"system/includes.h"
+	"app_config.h"
+	"audio_eq.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_effect\loud_speaker.c
+	"system/includes.h"
+	"media/includes.h"
+	"app_config.h"
+	"app_online_cfg.h"
+	"audio_drc.h"
+	"audio_reverb.h"
+	"clock_cfg.h"
+	"audio_config.h"
+	"storage_dev/storage_dev.h"
+	"loud_speaker.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_enc.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"btctrler/lmp_api.h"
+	"aec_user.h"
+	"asm/audio_src.h"
+	"audio_enc.h"
+	"app_main.h"
+	"app_action.h"
+	"clock_cfg.h"
+	"audio_reverb.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_enc_file.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"encode/encode_write.h"
+	"asm/audio_src.h"
+	"audio_enc.h"
+	"app_main.h"
+	"app_action.h"
+	"clock_cfg.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_enc_recoder.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"asm/audio_src.h"
+	"audio_enc.h"
+	"app_main.h"
+	"app_action.h"
+	"encode/encode_write.h"
+	"audio_reverb.h"
+	"clock_cfg.h"
+	"audio_pitch.h"
+	"btstack/avctp_user.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_enc_tws.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"asm/audio_src.h"
+	"audio_enc.h"
+	"app_main.h"
+	"app_action.h"
+	"clock_cfg.h"
+	"sbc_enc.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\media\media_new\media\sbc_enc.h
+	<stddef.h>
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_opus_codec.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"btctrler/lmp_api.h"
+	"aec_user.h"
+	"asm/audio_src.h"
+	"audio_enc.h"
+	"app_main.h"
+	"btstack/avctp_user.h"
+	"clock_cfg.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\audio_enc\audio_sbc_codec.c
+	"asm/includes.h"
+	"media/includes.h"
+	"system/includes.h"
+	"btctrler/lmp_api.h"
+	"aec_user.h"
+	"asm/audio_src.h"
+	"audio_enc.h"
+	"app_main.h"
+	"btstack/avctp_user.h"
+	"clock_cfg.h"
+	"sbc_enc.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\charge.c
+	"asm/clock.h"
+	"timer.h"
+	"asm/power/p33.h"
+	"asm/charge.h"
+	"uart.h"
+	"device/device.h"
+	"asm/power_interface.h"
+	"system/event.h"
+	"asm/efuse.h"
+	"gpio.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\chargestore.c
+	"generic/typedef.h"
+	"generic/gpio.h"
+	"asm/power/p33.h"
+	"asm/hwi.h"
+	"asm/gpio.h"
+	"asm/clock.h"
+	"asm/chargestore.h"
+	"update.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\clock_manager.c
+	"system/includes.h"
+	"app_config.h"
+	"clock_cfg.h"
+	"asm/dac.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\iic_eeprom_test.c
+	"system/includes.h"
+	"media/includes.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\iic_hw.c
+	"asm/iic_hw.h"
+	"system/generic/gpio.h"
+	"system/generic/log.h"
+	"asm/clock.h"
+	"asm/cpu.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\iic_slave_test.c
+	"system/includes.h"
+	"media/includes.h"
+	"asm/iic_hw.h"
+	"asm/iic_soft.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\iic_soft.c
+	"asm/iic_soft.h"
+	"generic/gpio.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\irflt.c
+	"asm/includes.h"
+	"asm/irflt.h"
+	"timer.h"
+	"generic/gpio.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\mcpwm.c
+	"asm/mcpwm.h"
+	"asm/clock.h"
+	"asm/gpio.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\include_lib\driver\cpu\br25\asm\mcpwm.h
+	"typedef.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\overlay_code.c
+	"asm/includes.h"
+	"media/includes.h"
+	"overlay_code.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\plcnt.c
+	"system/includes.h"
+	"asm/plcnt.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\port_wkup.c
+	"typedef.h"
+	"irq.h"
+	"asm/gpio.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\pwm_led.c
+	"generic/gpio.h"
+	"asm/includes.h"
+	"asm/pwm_led.h"
+	"system/timer.h"
+	"board_config.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\setup.c
+	"asm/includes.h"
+	"asm/wdt.h"
+	"asm/debug.h"
+	"asm/efuse.h"
+	"asm/power/p33.h"
+	"system/task.h"
+	"timer.h"
+	"system/init.h"
+	"app_config.h"
+	"gpio.h"
+	"debug.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\spi.c
+	"system/debug.h"
+	"generic/gpio.h"
+	"asm/clock.h"
+	"asm/spi.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\spi_test.c
+	"system/includes.h"
+	"media/includes.h"
+	"asm/spi.h"
+	"generic/log.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\uart_dev.c
+	"asm/clock.h"
+	"asm/uart_dev.h"
+	"asm/cpu.h"
+	"generic/gpio.h"
+	"spinlock.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\uart_test.c
+	"system/includes.h"
+	"asm/uart_dev.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\ui_driver\lcd_seg\lcd_seg3x9_driver.c
+	"includes.h"
+	"app_config.h"
+	"ui/ui_api.h"
+	"lcd_seg3x9_driver_cfg.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\ui_driver\led7\led7_driver.c
+	"includes.h"
+	"app_config.h"
+	"system/device/vm.h"
+	"ui/ui_api.h"
+	"led7_driver_cfg.h"
+
+1595313591 f:\2020\amw\y-38\source_code\sdk\cpu\br25\ui_driver\led7\led7_driver_cfg.h
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\ui_driver\led_1888\led1888.c
+	"includes.h"
+	"app_config.h"
+	"ui/ui_api.h"
+	"LED1888.h"
+
+1595313591 source:f:\2020\amw\y-38\source_code\sdk\cpu\br25\ui_driver\ui_common.c
+	"includes.h"
+
