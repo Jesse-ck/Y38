@@ -229,7 +229,7 @@ void charge_key_scan(void *priv)
     }
 }
 #endif // TCFG_CHARGE_POWERON_ENABLE
-
+#include "user_fun.h"
 static int app_idle_tone_event_handler(struct device_event *dev)
 {
     int ret = false;
@@ -256,6 +256,7 @@ static int app_idle_tone_event_handler(struct device_event *dev)
             is_idle_flag = 1;
             idle_timer2_init();
 #else
+            user_power_off();
             power_set_soft_poweroff();
 #endif
 #endif

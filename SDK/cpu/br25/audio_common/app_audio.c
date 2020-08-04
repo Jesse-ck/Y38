@@ -599,7 +599,9 @@ void app_audio_mute(u8 value)
     }
 }
 
-
+#include "user_cfg.h"
+extern int tone_get_status();
+extern int tone_play_index(u8 index, u8 preemption);
 void app_audio_volume_up(u8 value)
 {
     s16 volume = 0;
@@ -609,6 +611,12 @@ void app_audio_volume_up(u8 value)
         app_var.music_volume += value;
         if (app_var.music_volume > get_max_sys_vol()) {
             app_var.music_volume = get_max_sys_vol();
+#if TCFG_MAX_VOL_PROMPT
+            if(!tone_get_status()){
+                STATUS *p_tone = get_tone_config();
+                tone_play_index(p_tone->max_vol, 1);
+            }
+#endif            
         }
         volume = app_var.music_volume;
         break;
@@ -624,6 +632,7 @@ void app_audio_volume_up(u8 value)
 #endif
         break;
     case APP_AUDIO_STATE_WTONE:
+        printf(">>>>>>>>>>> w tone  %d\n",app_var.wtone_volume);
 #if (APP_AUDIO_STATE_WTONE_BY_MUSIC == 1)
         app_var.wtone_volume = app_var.music_volume;
 #endif

@@ -35,7 +35,8 @@ static void ui_led7_show_music_time(void *hd, int sencond)
     ui_dis_var->dis->setXY(0, 0);
     ui_dis_var->dis->clear_icon(0xffff);
     ui_dis_var->dis->show_string(tmp_buf);
-    ui_dis_var->dis->flash_icon(LED7_2POINT);
+    // ui_dis_var->dis->flash_icon(LED7_2POINT);
+    ui_dis_var->dis->show_icon(LED7_2POINT);    
     ui_dis_var->dis->show_icon(LED7_PLAY);
     ui_dis_var->dis->show_icon(LED7_MP3);
     ui_dis_var->dis->lock(0);

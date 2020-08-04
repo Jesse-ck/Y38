@@ -38,6 +38,8 @@
 #define LOG_CLI_ENABLE
 #include "debug.h"
 
+#include "user_fun.h"
+#include "user_pa.h"
 
 extern struct dac_platform_data dac_data;
 
@@ -211,6 +213,7 @@ static int linein_volume_pp(void)
     return true;
 }
 
+
 // key
 extern u8 app_get_audio_state(void);
 extern u8 linein_key_event_get(struct key_event *key);
@@ -251,6 +254,8 @@ static int _key_event_opr(struct sys_event *event)
 #if TCFG_UI_ENABLE
         ui_menu_reflash(true);
 #endif
+        printf(">>>>>>>>>linein mute %d <<<<<<<<<<<<<<<<<\n",(__this->onoff));
+        user_manual_mute(!(__this->onoff));
         break;
     case  KEY_VOL_UP:
 #if (TCFG_LINEIN_INPUT_WAY != LINEIN_INPUT_WAY_ADC)
@@ -276,7 +281,7 @@ static int _key_event_opr(struct sys_event *event)
         ui_set_tmp_menu(MENU_MAIN_VOL, 1000, vol, NULL);
 #endif //TCFG_UI_ENABLE
 
-        log_info("vol+:%d\n", __this->volume);
+        printf(">>>>>>>> linein vol+:%d\n", __this->volume);
         break;
 
     case  KEY_VOL_DOWN:
@@ -296,7 +301,7 @@ static int _key_event_opr(struct sys_event *event)
         ui_set_tmp_menu(MENU_MAIN_VOL, 1000, vol, NULL);
 #endif //TCFG_UI_ENABLE
 
-        log_info("vol-:%d\n", __this->volume);
+        printf(">>>>>>>> linein vol:%d\n", __this->volume);
         break;
 
     default:
@@ -388,6 +393,7 @@ static void linein_app_init(void)
     log_info("linein_bt_back_flag == %d linein_last_onoff = %d\n", \
              linein_bt_back_flag, linein_last_onoff);
 
+    user_sys_auto_mute(0);
     if ((linein_bt_back_flag == 2) && (linein_last_onoff == 0)) {
         /* linein_volume_pp(); */
     } else {
@@ -404,6 +410,7 @@ static void linein_app_uninit(void)
 {
     linein_stop();
     tone_play_stop();
+    user_sys_auto_mute(1);
 }
 
 static int linein_state_machine(struct application *app, enum app_state state,
@@ -442,6 +449,8 @@ static int linein_state_machine(struct application *app, enum app_state state,
 #endif
         log_info("APP_STA_DESTROY\n");
         linein_app_uninit();
+
+        user_manual_mute(0);
         break;
     }
 

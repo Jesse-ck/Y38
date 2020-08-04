@@ -394,22 +394,25 @@ int app_earphone_key_event_handler(struct sys_event *event)
         user_send_cmd_prepare(USER_CTRL_AVCTP_OPID_NEXT, 0, NULL);
         break;
     case  KEY_VOL_UP:
+        printf("   KEY_VOL_UP  \n");
         if (get_call_status() == BT_CALL_ACTIVE && bt_sco_state() == 0) {
             break;
         }
-        r_printf("   KEY_VOL_UP  \n");
         volume_up();
+        printf(">>>>>> vol %d\n",app_audio_get_volume(APP_AUDIO_CURRENT_STATE));
 #if TCFG_UI_ENABLE
         vol = app_audio_get_volume(APP_AUDIO_CURRENT_STATE);
         ui_set_tmp_menu(MENU_MAIN_VOL, 1000, vol, NULL);
 #endif //TCFG_UI_ENABLE
         break;
     case  KEY_VOL_DOWN:
+        printf("   KEY_VOL_DOWN  \n");
         if (get_call_status() == BT_CALL_ACTIVE && bt_sco_state() == 0) {
             break;
         }
-        r_printf("   KEY_VOL_DOWN  \n");
+        
         volume_down();
+        printf(">>>>>> vol %d\n",app_audio_get_volume(APP_AUDIO_CURRENT_STATE));
 #if TCFG_UI_ENABLE
         vol = app_audio_get_volume(APP_AUDIO_CURRENT_STATE);
         ui_set_tmp_menu(MENU_MAIN_VOL, 1000, vol, NULL);

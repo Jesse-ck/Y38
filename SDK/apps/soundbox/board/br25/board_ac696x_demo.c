@@ -185,7 +185,7 @@ struct adc_platform_data adc_data = {
 	.mic_ldo_isel   = TCFG_AUDIO_ADC_LDO_SEL,
 /*MIC 是否省隔直电容：
     0: 不省电容  1: 省电容 */
-	.mic_capless    = 0,
+	.mic_capless    = 1,
 /*MIC免电容方案需要设置，影响MIC的偏置电压
     21:1.18K	20:1.42K 	19:1.55K 	18:1.99K 	17:2.2K 	16:2.4K 	15:2.6K		14:2.91K	13:3.05K 	12:3.5K 	11:3.73K
 	10:3.91K  	9:4.41K 	8:5.0K  	7:5.6K		6:6K		5:6.5K		4:7K		3:7.6K		2:8.0K		1:8.5K				*/
@@ -196,7 +196,7 @@ struct adc_platform_data adc_data = {
 /*MIC电容隔直模式使用内部mic偏置(PA2)*/
 	.mic_bias_inside = 1,
 /*保持内部mic偏置输出*/
-	.mic_bias_keep = 0,
+	.mic_bias_keep = 1,
 
 	// ladc 通道
     .ladc_num = ARRAY_SIZE(ladc_list),
@@ -273,16 +273,16 @@ const struct adkey_platform_data adkey_data = {
     .ad_channel = TCFG_ADKEY_AD_CHANNEL,                      //AD通道值
     .extern_up_en = TCFG_ADKEY_EXTERN_UP_ENABLE,              //是否使用外接上拉电阻
     .ad_value = {                                             //根据电阻算出来的电压值
-        TCFG_ADKEY_VOLTAGE0,
-        TCFG_ADKEY_VOLTAGE1,
-        TCFG_ADKEY_VOLTAGE2,
-        TCFG_ADKEY_VOLTAGE3,
-        TCFG_ADKEY_VOLTAGE4,
-        TCFG_ADKEY_VOLTAGE5,
-        TCFG_ADKEY_VOLTAGE6,
-        TCFG_ADKEY_VOLTAGE7,
-        TCFG_ADKEY_VOLTAGE8,
-        TCFG_ADKEY_VOLTAGE9,
+        TCFG_ADKEY_VOLTAGE0(TCFG_ADKEY_VDDIO),
+        TCFG_ADKEY_VOLTAGE1(TCFG_ADKEY_VDDIO),
+        TCFG_ADKEY_VOLTAGE2(TCFG_ADKEY_VDDIO),
+        TCFG_ADKEY_VOLTAGE3(TCFG_ADKEY_VDDIO),
+        TCFG_ADKEY_VOLTAGE4(TCFG_ADKEY_VDDIO),
+        TCFG_ADKEY_VOLTAGE5(TCFG_ADKEY_VDDIO),
+        TCFG_ADKEY_VOLTAGE6(TCFG_ADKEY_VDDIO),
+        TCFG_ADKEY_VOLTAGE7(TCFG_ADKEY_VDDIO),
+        TCFG_ADKEY_VOLTAGE8(TCFG_ADKEY_VDDIO),
+        TCFG_ADKEY_VOLTAGE9(TCFG_ADKEY_VDDIO),
     },
     .key_value = {                                             //AD按键各个按键的键值
         TCFG_ADKEY_VALUE0,
@@ -487,13 +487,13 @@ LED_PLATFORM_DATA_END()
 #if TCFG_UI_LED7_ENABLE
 LED7_PLATFORM_DATA_BEGIN(led7_data)
 	.pin_type = LED7_PIN7,
-    .pin_cfg.pin7.pin[0] = IO_PORTC_01,
-    .pin_cfg.pin7.pin[1] = IO_PORTC_02,
-    .pin_cfg.pin7.pin[2] = IO_PORTC_03,
-    .pin_cfg.pin7.pin[3] = IO_PORTC_04,
-    .pin_cfg.pin7.pin[4] = IO_PORTC_05,
-    .pin_cfg.pin7.pin[5] = IO_PORTB_06,
-    .pin_cfg.pin7.pin[6] = IO_PORTB_07,
+    .pin_cfg.pin7.pin[6] = IO_PORTC_04,
+    .pin_cfg.pin7.pin[5] = IO_PORTC_03,
+    .pin_cfg.pin7.pin[4] = IO_PORTC_02,
+    .pin_cfg.pin7.pin[3] = IO_PORTA_06,
+    .pin_cfg.pin7.pin[2] = IO_PORTA_05,
+    .pin_cfg.pin7.pin[1] = IO_PORTA_04,
+    .pin_cfg.pin7.pin[0] = IO_PORTA_03,
 LED7_PLATFORM_DATA_END()
 
 const struct ui_devices_cfg ui_cfg_data = {
@@ -786,7 +786,10 @@ u8 get_power_on_status(void)
 
 #if TCFG_ADKEY_ENABLE
     if (adkey_data.enable) {
-        if (adc_get_value(adkey_data.ad_channel) < 10) {
+        u32 value ;
+        value = adc_get_value(adkey_data.ad_channel);
+        // printf("ad value %d\n",value);
+        if (value < 100) {
             return 1;
         }
     }
@@ -871,18 +874,20 @@ void adkey_reuse_enter_callback(u32 ch)//adkey复用，把IO设置为adkey模式
 
 #endif
 }
-
+#include "user_fun.h"
 void uartSendInit();
 extern void alarm_init();
 extern void cfg_file_parse(u8 idx);
 void board_init()
 {
+    // user_fun_init();
+    user_fun_io_init();
+
     board_power_init();
     adc_vbg_init();
     adc_init();
     cfg_file_parse(0);
-
-
+    
 #if TCFG_CHARGE_ENABLE
     extern int charge_init(const struct dev_node *node, void *arg);
     charge_init(NULL, (void *)&charge_data);
@@ -1044,7 +1049,10 @@ void board_power_init(void)
 
 static void board_power_wakeup_init(void)
 {
+    printf(">>>>>>>>>> iiii 00\n");
     power_wakeup_init(&wk_param);
+    printf(">>>>>>>>>> iiii\n");
+    return ;
 #if TCFG_POWER_ON_NEED_KEY
     extern u8 power_reset_src;
     if ((power_reset_src & BIT(0)) || (power_reset_src & BIT(1))) {

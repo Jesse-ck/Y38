@@ -7,12 +7,12 @@
 
 
 #ifdef CONFIG_RELEASE_ENABLE
-#define LIB_DEBUG    0
+#define LIB_DEBUG    1
 #else
 #define LIB_DEBUG    1
 #endif
 
-#define CONFIG_DEBUG_ENABLE
+// #define CONFIG_DEBUG_ENABLE
 
 #ifndef CONFIG_DEBUG_ENABLE
 //#define CONFIG_DEBUG_LITE_ENABLE  //轻量级打印开关, 默认关闭
@@ -215,7 +215,7 @@
 //                                 AUDIO配置                                       //
 //*********************************************************************************//
 #if BT_SUPPORT_MUSIC_VOL_SYNC
-#define TCFG_MAX_VOL_PROMPT						 0
+#define TCFG_MAX_VOL_PROMPT						 1
 #else
 #define TCFG_MAX_VOL_PROMPT						 1
 #endif

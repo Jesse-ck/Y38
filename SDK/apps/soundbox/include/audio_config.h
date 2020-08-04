@@ -51,7 +51,7 @@
      TCFG_AUDIO_DAC_CONNECT_MODE == DAC_OUTPUT_DUAL_LR_DIFF)
 #define MAX_ANA_VOL             (21)
 #else
-#define MAX_ANA_VOL             (25)
+#define MAX_ANA_VOL             (30)
 #endif
 
 #else
@@ -67,7 +67,7 @@
 #endif
 
 #define SYS_DEFAULT_VOL         0//(SYS_MAX_VOL/2)
-#define SYS_DEFAULT_TONE_VOL    (18)//(SYS_MAX_VOL)
+#define SYS_DEFAULT_TONE_VOL    (25)//(SYS_MAX_VOL)
 
 //#define AUDIO_MIC_TEST
 
@@ -76,7 +76,7 @@
 extern u8 audio_dma_buffer[AUDIO_FIXED_SIZE];
 extern const u16 dig_vol_table[];
 
-#define APP_AUDIO_STATE_WTONE_BY_MUSIC 1//使能改宏，提示音音量使用music音量
+#define APP_AUDIO_STATE_WTONE_BY_MUSIC 0//使能改宏，提示音音量使用music音量
 
 
 #define APP_AUDIO_STATE_IDLE        0

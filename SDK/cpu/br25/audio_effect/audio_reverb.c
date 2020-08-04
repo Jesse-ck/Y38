@@ -52,13 +52,13 @@ REVERB_API_STRUCT *open_reverb(REVERB_PARM_SET *reverb_seting, u16 sample_rate)
     if (reverb_seting) {
         memcpy(&reverb_api_obj->parm, reverb_seting, sizeof(REVERB_PARM_SET));
     } else {
-        reverb_api_obj->parm.decayval = 2000;	//衰减系数 [0:4096]
-        reverb_api_obj->parm.deepval = 0;//4096;	  //调节混响深度，影响pre-delay;[0-4096],4096 代表max_ms
+        reverb_api_obj->parm.decayval = 1500;	//衰减系数 [0:4096]
+        reverb_api_obj->parm.deepval = 2048;//4096;	  //调节混响深度，影响pre-delay;[0-4096],4096 代表max_ms
         reverb_api_obj->parm.filtsize = 0;//4096;	//[0-4096],如果要回声效果 置0；混响效果建议4096
         reverb_api_obj->parm.wetgain = 4096;	//湿声增益：[0:4096]
-        reverb_api_obj->parm.drygain = 4096;	//干声增益: [0:4096]
+        reverb_api_obj->parm.drygain = 1000;	//干声增益: [0:4096]
         reverb_api_obj->parm.sr = 16000; //配置输入的采样率，影响need_buf 大小
-        reverb_api_obj->parm.max_ms = 120;	//所需要的最大延时，影响 need_buf 大小
+        reverb_api_obj->parm.max_ms = 200;	//所需要的最大延时，影响 need_buf 大小
         reverb_api_obj->parm.centerfreq_bandQ = 0;	//留声机音效，不需要置0
     }
     if (sample_rate) {

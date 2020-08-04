@@ -587,6 +587,9 @@ int audio_output_start(u32 sample_rate, u8 reset_rate)
     }
     app_audio_output_start();
 
+    JL_AUDIO->DAC_CON |= BIT(24);
+    SFR(JL_ANA->DAA_CON0,19,2,1);
+
 #if (defined(AUDIO_OUTPUT_AUTOMUTE) && (AUDIO_OUTPUT_AUTOMUTE == ENABLE))
     audio_automute_onoff(automute, 1, 0);
 #endif
@@ -2600,6 +2603,7 @@ void audio_automute_info(u8 ch, int energy, u32 mute_count, u32 unmute_count)
 }
 #endif
 
+#include "user_pa.h"
 void audio_automute_event_handler(u8 event, u8 channel)
 {
 
@@ -2621,7 +2625,7 @@ void audio_automute_event_handler(u8 event, u8 channel)
             }
             automute->mute_channel |= BIT(channel);
         }
-        //y_printf("audio auto_mute:%d-%d\n", channel, automute->mute_channel);
+        // printf("audio auto_mute:%d-%d\n", channel, automute->mute_channel);
         break;
     case AUDIO_EVENT_AUTO_UNMUTE:
         if (channel == automute->channels) {
@@ -2634,7 +2638,7 @@ void audio_automute_event_handler(u8 event, u8 channel)
             }
             automute->mute_channel &= ~BIT(channel);
         }
-        //y_printf("audio auto_unmute:%d-%d\n", channel, automute->mute_channel);
+        // printf("audio auto_unmute:%d-%d\n", channel, automute->mute_channel);
         break;
     }
 
@@ -2651,6 +2655,8 @@ void audio_automute_event_handler(u8 event, u8 channel)
         }
         automute->mute = 0;
     }
+    
+    user_pa_set_auto_mute(automute->mute);
 }
 
 

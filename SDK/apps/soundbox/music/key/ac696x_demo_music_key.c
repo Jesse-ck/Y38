@@ -66,8 +66,8 @@ static const u8 music_key_io_table[KEY_IO_NUM_MAX][KEY_EVENT_MAX] = {
 static const u8 music_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     [0] =
     {
-        /*SHORT*/ KEY_MUSIC_PP,
-        /*LONG*/  KEY_MUSIC_CHANGE_DEV,
+        /*SHORT*/ KEY_NULL,
+        /*LONG*/  KEY_NULL,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
         /*DOUBLE*/KEY_NULL,
@@ -75,7 +75,7 @@ static const u8 music_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     },
     [1] =
     {
-        /*SHORT*/ KEY_MUSIC_CHANGE_REPEAT,
+        /*SHORT*/ KEY_MUSIC_NEXT,
         /*LONG*/  KEY_NULL,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
@@ -84,7 +84,7 @@ static const u8 music_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     },
     [2] =
     {
-        /*SHORT*/ KEY_CHANGE_MODE,
+        /*SHORT*/ KEY_MUSIC_PREV,
         /*LONG*/  KEY_NULL,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
@@ -93,11 +93,11 @@ static const u8 music_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     },
     [3] =
     {
-        /*SHORT*/ KEY_MUSIC_PLAYE_NEXT_FOLDER,
+        /*SHORT*/ KEY_MUSIC_PP,
         /*LONG*/  KEY_NULL,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
-        /*DOUBLE*/KEY_SPEAKER_OPEN,
+        /*DOUBLE*/KEY_NULL,
         /*TRIBLE*/KEY_NULL,
     },
     [4] =

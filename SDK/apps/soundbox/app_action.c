@@ -45,9 +45,9 @@ static struct app_handle g_app_hdl = {0};
 static const char *app_next_list[] = {
     APP_NAME_BT		,
     APP_NAME_MUSIC	,
+    APP_NAME_LINEIN	,
     APP_NAME_FM		,
     APP_NAME_RECORD	,
-    APP_NAME_LINEIN	,
     APP_NAME_PC	,
     APP_NAME_RTC	,
     APP_NAME_SPDIF	,

@@ -89,8 +89,10 @@ void led7_show_icon(UI_LED7_ICON icon)
 /*----------------------------------------------------------------------------*/
 void led7_flash_icon(UI_LED7_ICON icon)
 {
+    // printf(">>>>>>bFlashIcon 0 %x\n",__this->led7_var.bFlashIcon);
     __this->led7_var.bFlashIcon |= icon;
     __this->led7_var.bShowIcon &= (~icon); //stop display
+    // printf(">>>>>>bFlashIcon %x\n",__this->led7_var.bFlashIcon);
 }
 
 /*----------------------------------------------------------------------------*/
@@ -431,7 +433,13 @@ static void __ui_led7_update_bShowbuf1(void)
                 for (i = 0; i < ARRAY_SIZE(led7_icon_seg2pin); i++) { //lookup icon exist
                     if (BIT(j) == led7_icon_seg2pin[i].icon) {
                         //look up the seg2pin table, set the pin should be output 0
-                        __this->led7_var.bShowBuff1[led7_icon_seg2pin[i].seg2pin.pinH] |= BIT(led7_icon_seg2pin[i].seg2pin.pinL);
+                        // __this->led7_var.bShowBuff1[led7_icon_seg2pin[i].seg2pin.pinH] |= BIT(led7_icon_seg2pin[i].seg2pin.pinL);
+                        if(BIT(j) == LED7_2POINT){
+                            __this->led7_var.bShowBuff1[led7_icon_seg2pin[i].seg2pin.pinH] |= BIT(5);
+                            __this->led7_var.bShowBuff1[led7_icon_seg2pin[i].seg2pin.pinH] |= BIT(led7_icon_seg2pin[i].seg2pin.pinL);
+                        }else{
+                            __this->led7_var.bShowBuff1[led7_icon_seg2pin[i].seg2pin.pinH] |= BIT(led7_icon_seg2pin[i].seg2pin.pinL);
+                        }                         
                     }
                 }
             }
@@ -444,8 +452,13 @@ static void __ui_led7_update_bShowbuf1(void)
                 if (BIT(j) & __this->led7_var.bFlashIcon) {
                     for (i = 0; i < ARRAY_SIZE(led7_icon_seg2pin); i++) { //lookup icon exist
                         if (BIT(j) == led7_icon_seg2pin[i].icon) {
-                            //look up the seg2pin table, set the pin should be output 0
-                            __this->led7_var.bShowBuff1[led7_icon_seg2pin[i].seg2pin.pinH] |= BIT(led7_icon_seg2pin[i].seg2pin.pinL);
+                            //look up the seg2pin table, set the pin should be output 0                            
+                            if(BIT(j) == LED7_2POINT){
+                                __this->led7_var.bShowBuff1[led7_icon_seg2pin[i].seg2pin.pinH] |= BIT(5);
+                                __this->led7_var.bShowBuff1[led7_icon_seg2pin[i].seg2pin.pinH] |= BIT(led7_icon_seg2pin[i].seg2pin.pinL);
+                            }else{
+                                __this->led7_var.bShowBuff1[led7_icon_seg2pin[i].seg2pin.pinH] |= BIT(led7_icon_seg2pin[i].seg2pin.pinL);
+                            }                        
                         }
                     }
                 }
@@ -468,6 +481,8 @@ static void __ui_led7_port_set_hz(u8 port)
     gpio_set_pull_down(port, 0);
     gpio_set_pull_up(port, 0);
     gpio_set_direction(port, 1);
+    gpio_set_hd(port, 0);
+    gpio_set_hd0(port, 0);
 }
 
 /*----------------------------------------------------------------------------*/
@@ -518,6 +533,7 @@ __attribute__((weak)) u8 led7_skip_vm_flag(void)
     return 1;
 }
 
+void user_fun_led_scan(u8 cnt);
 /*----------------------------------------------------------------------------*/
 /**@brief   LED扫描函数
    @param   void
@@ -557,6 +573,8 @@ static void __led7_scan(void *param)
                 gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[i], 0);
             }
         }
+        // user_fun_led_scan(cnt);
+        
         cnt = (cnt >= 6) ? 0 : cnt + 1;
     } else if (__this->user_data->pin_type == LED7_PIN13) {
         //pin_comh  cnt output L
@@ -820,6 +838,170 @@ void led7_test()
 }
 
 #endif /* for test code mcro */
+
+
+
+#define PIN1_H  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[0], 1)
+#define PIN1_L  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[0], 0)
+
+#define PIN2_H  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[1], 1)
+#define PIN2_L  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[1], 0)
+
+#define PIN3_H  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[2], 1)
+#define PIN3_L  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[2], 0)
+
+#define PIN4_H  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[3], 1)
+#define PIN4_L  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[3], 0)
+
+#define PIN5_H  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[4], 1)
+#define PIN5_L  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[4], 0)
+
+#define PIN6_H  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[5], 1)
+#define PIN6_L  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[5], 0)
+
+#define PIN7_H  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[6], 1)
+#define PIN7_L  gpio_direction_output(__this->user_data->pin_cfg.pin7.pin[6], 0)
+
+
+void user_fun_led_scan(const u8 cnt){
+    u8 *bufdat = __this->led7_var.bShowBuff;//__this->led7_var.bShowBuff
+    switch (cnt) {
+    case 0:
+        PIN1_L;
+        if (bufdat[0]&LED_A) {
+            PIN2_H;
+        }
+        if (bufdat[0]&LED_B) {
+            PIN3_H;
+        }
+        if (bufdat[0]&LED_C) {
+            PIN4_H;
+        }
+        if (bufdat[0]&LED_D) {
+            PIN5_H;
+        }
+        if (bufdat[0]&LED_E) {
+            PIN6_H;
+        }
+        if (bufdat[0]&LED_F) {
+            PIN7_H;
+        }
+        break;
+
+    case 1:
+        PIN2_L;
+        if (bufdat[1]&LED_A) {
+            PIN1_H;
+        }
+        if (bufdat[0]&LED_G) {
+            PIN3_H;
+        }
+        if (bufdat[0]&LED_H) {
+            PIN4_H;
+        }
+        if (bufdat[1]&LED_H) {
+            PIN5_H;
+        }
+        if (bufdat[2]&LED_H) {
+            PIN6_H;
+        }
+        break;
+
+    case 2:
+        PIN3_L;
+        if (bufdat[1]&LED_B) {
+            PIN1_H;
+        }
+        if (bufdat[1]&LED_G) {
+            PIN2_H;
+        }
+        if (bufdat[2]&LED_A) {
+            PIN4_H;
+        }
+        if (bufdat[2]&LED_B) {
+            PIN5_H;
+        }
+        if (bufdat[2]&LED_C) {
+            PIN6_H;
+        };
+        if (bufdat[2]&LED_D) {
+            PIN7_H;
+        };
+        break;
+    case 3:
+        PIN4_L;
+        if (bufdat[1]&LED_C) {
+            PIN1_H;
+        }
+        if (bufdat[3]&LED_H) {
+            PIN2_H;
+        }
+        if (bufdat[3]&LED_A) {
+            PIN3_H;
+        }
+        if (bufdat[2]&LED_E) {
+            PIN5_H;
+        }
+        if (bufdat[2]&LED_F) {
+            PIN6_H;
+        }
+        if (bufdat[2]&LED_G) {
+            PIN7_H;
+        }
+        break;
+
+    case 4:
+        PIN5_L;
+        if (bufdat[1]&LED_D) {\
+            PIN1_H;
+        }
+
+        if(__this->led7_var.bShowIcon &= LED7_2POINT){
+            PIN2_H;
+        }
+
+        if (bufdat[3]&LED_B) {\
+            PIN3_H;
+        }
+        if (bufdat[3]&LED_E) {\
+            PIN4_H;
+        }
+        break;
+
+    case 5:
+        PIN6_L;
+        if (bufdat[1]&LED_E) {
+            PIN1_H;
+        }
+        
+        if(__this->led7_var.bShowIcon &= LED7_2POINT){
+            PIN2_H;
+        }
+        if (bufdat[3]&LED_C) {
+            PIN3_H;
+        }
+        if (bufdat[3]&LED_F) {
+            PIN4_H;
+        }
+        break;
+
+    case 6:
+        PIN7_L;
+        if (bufdat[1]&LED_F) {
+            PIN1_H;
+        }
+        if (bufdat[3]&LED_D) {
+            PIN3_H;
+        }
+        if (bufdat[3]&LED_G) {
+            PIN4_H;
+        }
+        break;        
+
+    default:
+        break;        
+    }
+}
 
 
 #endif /* #if TCFG_UI_LED7_ENABLE */

@@ -21,6 +21,7 @@ struct key_driver_para adkey_scan_para = {
     .key_type		  = KEY_DRIVER_TYPE_AD,
     .get_value 		  = ad_get_key_value,
 };
+#include "user_fun.h"
 u8 ad_get_key_value(void)
 {
     u8 i;
@@ -32,10 +33,11 @@ u8 ad_get_key_value(void)
 
     /* ad_data = adc_get_voltage(__this->ad_channel); */
     ad_data = adc_get_value(__this->ad_channel);
-    /* printf("ad_value = %d \n", ad_data); */
+    // printf("ad_value = %d \n", ad_data);
     for (i = 0; i < ADKEY_MAX_NUM; i++) {
         if ((ad_data <= __this->ad_value[i]) && (__this->ad_value[i] < 0x3ffL)) {
-            return __this->key_value[i];
+
+            return user_key_mapping( __this->key_value[i]);
         }
     }
     return NO_KEY;

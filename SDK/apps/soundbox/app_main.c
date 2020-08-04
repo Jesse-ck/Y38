@@ -98,16 +98,16 @@ void app_var_init(void)
 
 }
 
-void app_earphone_play_voice_file(const char *name);
 
+#include "user_fun.h"
 void clr_wdt(void);
-
 void check_power_on_key(void)
 {
     u32 delay_10ms_cnt = 0;
 
     while (1) {
         clr_wdt();
+void app_earphone_play_voice_file(const char *name);
         os_time_dly(1);
 
         extern u8 get_power_on_status(void);
@@ -121,7 +121,9 @@ void check_power_on_key(void)
             log_info("-");
             delay_10ms_cnt = 0;
             log_info("enter softpoweroff\n");
-            power_set_soft_poweroff();
+            user_power_off();
+            printf(">>>>>>>>>>>>>>>>>>>>\n");
+            //power_set_soft_poweroff();
         }
     }
 }
@@ -181,7 +183,7 @@ static void audio_module_probe(void)
     AUDIO_ENCODER_PROBE(cvsd);
 #endif
 }
-
+#include "user_fun.h"
 void app_charge_box_ctrl_init(void);
 void app_main()
 {
@@ -254,7 +256,7 @@ void app_main()
         app_task_switch(APP_NAME_IDLE, ACTION_APP_MAIN, NULL);
     } else {
         check_power_on_voltage();
-
+        // check_power_on_key();
 #if TCFG_POWER_ON_NEED_KEY
 #if (CONFIG_BT_MODE == BT_NORMAL)
         /*充电拔出,CPU软件复位, 不检测按键，直接开机*/
@@ -271,9 +273,13 @@ void app_main()
 #endif
         /* endless_loop_debug_int(); */
         ui_manage_init();
+        puts(">>>>>>>>>>>>>> app poweron 1\n");
         ui_update_status(STATUS_POWERON);
+        puts(">>>>>>>>>>>>>> app poweron 2\n");
         app_var.start_time = timer_get_ms();
 
+        user_fun_init();
+        puts(">>>>>>>>>>>>>> app poweron 3\n");
         app_task_switch(APP_NAME_POWERON, ACTION_APP_MAIN, NULL);
 
 

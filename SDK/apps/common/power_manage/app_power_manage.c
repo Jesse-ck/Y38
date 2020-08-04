@@ -465,8 +465,9 @@ void check_power_on_voltage(void)
     while (1) {
         clr_wdt();
         val = get_vbat_level();
-        printf("vbat: %d\n", val);
+        printf("vbat 0: %d %d\n", val,app_var.poweroff_tone_v);
         if (val < app_var.poweroff_tone_v) {
+            puts("L");
             low_power_cnt++;
             normal_power_cnt = 0;
             if (low_power_cnt > 10) {
@@ -476,6 +477,7 @@ void check_power_on_voltage(void)
                 power_set_soft_poweroff();
             }
         } else {
+            puts("H");
             normal_power_cnt++;
             low_power_cnt = 0;
             if (normal_power_cnt > 10) {

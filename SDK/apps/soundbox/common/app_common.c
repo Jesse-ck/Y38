@@ -508,7 +508,7 @@ int app_common_otg_devcie_event(struct sys_event *event)
     }
     return ret;
 }
-
+extern int tone_get_status();
 extern void reverb_eq_cal_coef(u8 filtN, u32 gainN, u8 sw);
 extern u8 app_common_key_event_get(struct key_event *key);
 static int app_common_key_event_handler(struct sys_event *event)
@@ -598,7 +598,9 @@ static int app_common_key_event_handler(struct sys_event *event)
         }
 #endif  // TCFG_UI_ENABLE
 #endif  // TCFG_APP_FM_EMITTER_EN
-        app_audio_volume_up(1);
+        if(!tone_get_status()){
+            app_audio_volume_up(1);
+        }
         printf("common vol+: %d", app_audio_get_volume(APP_AUDIO_CURRENT_STATE));
 
 #if (defined(TCFG_DEC2TWS_ENABLE) && (TCFG_DEC2TWS_ENABLE))
@@ -612,7 +614,7 @@ static int app_common_key_event_handler(struct sys_event *event)
 
     case KEY_VOL_DOWN:
 
-        log_info("COMMON KEY_VOL_DOWN\n");
+        printf("COMMON KEY_VOL_DOWN\n");
 #if (TCFG_SPI_LCD_ENABLE)
         /* if(key_is_ui_takeover()){ */
         /* ui_key_msg_post(KEY_DOWN); */
@@ -629,7 +631,9 @@ static int app_common_key_event_handler(struct sys_event *event)
         }
 #endif  // TCFG_UI_ENABLE
 #endif  // TCFG_APP_FM_EMITTER_EN
-        app_audio_volume_down(1);
+        if(!tone_get_status()){
+            app_audio_volume_down(1);
+        }
         printf("common vol-: %d", app_audio_get_volume(APP_AUDIO_CURRENT_STATE));
 
 #if (defined(TCFG_DEC2TWS_ENABLE) && (TCFG_DEC2TWS_ENABLE))
@@ -898,10 +902,30 @@ void app_default_event_handler(struct sys_event *event)
 }
 
 
-
+#include "user_fun.h"
+#include "user_pa.h"
 void app_common_user_msg_deal(int msg, int argc, int *argv)
 {
     switch (msg) {
+    case USER_MSG_SYS_SPK_STATUS:
+        printf("USER_MSG_SYS_SPK_STATUS get user msg %d, msg_val_count = %d, msg_val:\n", msg, argc);
+        for(int i = 0;i<argc;i++){
+            printf("%d",argv[i]);
+        }
+        user_mic_online(argv[0]);
+
+        #if TCFG_REVERB_ENABLE
+        if(argv[0]){
+            if(!reverb_if_working()){
+                start_reverb_mic2dac(NULL);
+            }
+        }else{
+            if(reverb_if_working()){
+                stop_reverb_mic2dac();
+            }
+        }
+        #endif              
+        break;
 #if TCFG_SLIDE_KEY_ENABLE
     case USER_MSG_SLIDE1:
         r_printf("slide1 post success  level = %d\n", argv[0]);

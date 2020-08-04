@@ -66,9 +66,9 @@ static const u8 app_common_key_io_table[KEY_IO_NUM_MAX][KEY_EVENT_MAX] = {
 static const u8 app_common_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     [0] =
     {
-        /*SHORT*/ KEY_NULL,
-        /*LONG*/  KEY_NULL,
-        /*HOLD*/  KEY_NULL,
+        /*SHORT*/ KEY_CHANGE_MODE,
+        /*LONG*/  KEY_POWEROFF,
+        /*HOLD*/  KEY_POWEROFF_HOLD,
         /*UP*/	  KEY_NULL,
         /*DOUBLE*/KEY_NULL,
         /*TRIBLE*/KEY_NULL,
@@ -76,17 +76,17 @@ static const u8 app_common_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     [1] =
     {
         /*SHORT*/ KEY_NULL,
-        /*LONG*/  KEY_NULL,
-        /*HOLD*/  KEY_NULL,
+        /*LONG*/  KEY_VOL_UP,
+        /*HOLD*/  KEY_VOL_UP,
         /*UP*/	  KEY_NULL,
         /*DOUBLE*/KEY_NULL,
         /*TRIBLE*/KEY_NULL,
     },
     [2] =
     {
-        /*SHORT*/ KEY_CHANGE_MODE,
-        /*LONG*/  KEY_POWEROFF,
-        /*HOLD*/  KEY_POWEROFF_HOLD,
+        /*SHORT*/ KEY_NULL,
+        /*LONG*/  KEY_VOL_DOWN,
+        /*HOLD*/  KEY_VOL_DOWN,
         /*UP*/	  KEY_NULL,
         /*DOUBLE*/KEY_NULL,
         /*TRIBLE*/KEY_NULL,

@@ -131,6 +131,7 @@ u8 get_max_sys_vol(void)
 #if TCFG_APP_FM_EMITTER_EN
     return FM_EMITTER_MAX_VOL;
 #else
+    printf("max sys vol %d\n",audio_cfg.max_sys_vol);
     return (audio_cfg.max_sys_vol);
 #endif
 }
@@ -313,7 +314,7 @@ void cfg_file_parse(u8 idx)
             default_volume = audio_cfg.max_sys_vol;
         }
         if (default_volume <= 0) {
-            default_volume = audio_cfg.max_sys_vol / 2;
+            default_volume = audio_cfg.max_sys_vol *2/ 2;
         }
 
         app_var.music_volume = music_volume <= 0 ? default_volume : music_volume;

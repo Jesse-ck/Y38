@@ -1044,6 +1044,14 @@ bool file_dec_is_pause(void)
     return false;
 }
 
+bool user_file_dec_is_pause(void)
+{
+    if ((file_dec) && (file_dec->status == FILE_DEC_STATUS_PAUSE)) {
+        return true;
+    }
+    return false;
+}
+
 int file_dec_pp(void)
 {
     int ret;

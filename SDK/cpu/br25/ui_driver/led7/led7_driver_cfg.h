@@ -6,8 +6,8 @@
 //LED7真值表选择
 //7脚LED7
 // #define UI_LED7_PIN7_TRUE_TABLE1
-//#define UI_LED7_PIN7_TRUE_TABLE2
-#define UI_LED7_PIN7_TRUE_TABLE3
+#define UI_LED7_PIN7_TRUE_TABLE2
+// #define UI_LED7_PIN7_TRUE_TABLE3
 
 //12脚LED7
 //#define UI_LED7_PIN12_TRUE_TABLE1
@@ -128,13 +128,13 @@ static const struct seg2pin led7_digit_seg2pin[28] = {
 // 数码管字母类转换表
 static const struct icon_seg2pin led7_icon_seg2pin[] = {
     //icon       	pinH, pinL
-    {LED7_PLAY, 	{3, 1}},
-    {LED7_PAUSE, 	{4, 1}},
-    {LED7_USB, 		{5, 1}},
-    {LED7_SD, 		{6, 1}},
-    {LED7_2POINT, 	{1, 3}},
-    {LED7_DOT, 	    {1, 4}},
-    {LED7_FM, 		{1, 5}},
+    {LED7_PLAY, 	{1, 6}},
+    {LED7_PAUSE, 	{1, 6}},
+    {LED7_USB, 		{1, 6}},
+    {LED7_SD, 		{1, 6}},
+    {LED7_2POINT, 	{1, 4}},
+    {LED7_DOT, 	    {5, 1}},
+    {LED7_FM, 		{1, 6}},
     {LED7_MP3, 		{1, 6}},
 };
 

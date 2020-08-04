@@ -67,16 +67,16 @@ static const u8 bt_key_io_table[KEY_IO_NUM_MAX][KEY_EVENT_MAX] = {
 static const u8 bt_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     [0] =
     {
-        /*SHORT*/ KEY_MUSIC_PP,
-        /*LONG*/  KEY_CALL_HANG_UP,
+        /*SHORT*/ KEY_NULL,
+        /*LONG*/  KEY_NULL,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
-        /*DOUBLE*/KEY_CALL_LAST_NO,
+        /*DOUBLE*/KEY_NULL,
         /*TRIBLE*/KEY_NULL,
     },
     [1] =
     {
-        /*SHORT*/ KEY_NULL,
+        /*SHORT*/ KEY_MUSIC_NEXT,
         /*LONG*/  KEY_NULL,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
@@ -85,7 +85,7 @@ static const u8 bt_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     },
     [2] =
     {
-        /*SHORT*/ KEY_CHANGE_MODE,
+        /*SHORT*/ KEY_MUSIC_PREV,
         /*LONG*/  KEY_NULL,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
@@ -94,11 +94,11 @@ static const u8 bt_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     },
     [3] =
     {
-        /*SHORT*/ KEY_NULL,
-        /*LONG*/  KEY_NULL,
+        /*SHORT*/ KEY_MUSIC_PP,
+        /*LONG*/  KEY_CALL_HANG_UP,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
-        /*DOUBLE*/KEY_SPEAKER_OPEN,
+        /*DOUBLE*/KEY_CALL_LAST_NO,
         /*TRIBLE*/KEY_NULL,
     },
     [4] =
@@ -107,7 +107,7 @@ static const u8 bt_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
         /*LONG*/  KEY_VOL_DOWN,
         /*HOLD*/  KEY_VOL_DOWN,
         /*UP*/	  KEY_NULL,
-        /*DOUBLE*/KEY_NULL,
+        /*DOUBLE*/KEY_SPEAKER_OPEN,
         /*TRIBLE*/KEY_NULL,
     },
     [5] =

@@ -12,7 +12,8 @@ enum {
     ///用户自定义消息从以下开始定义
     USER_MSG_TEST = 0x0,
     USER_MSG_SLIDE1 = 0x1,//滑动变阻器消息
-    USER_MSG_SLIDE2 = 0x2//滑动变阻器消息
+    USER_MSG_SLIDE2 = 0x2,//滑动变阻器消息
+    USER_MSG_SYS_SPK_STATUS,
 };
 
 
