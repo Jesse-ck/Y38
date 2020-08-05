@@ -29,6 +29,9 @@
 #include "audio_reverb.h"
 #include "clock_cfg.h"
 #include "loud_speaker.h"
+
+#include "user_fun_config.h"
+
 #if TCFG_APP_MUSIC_EN
 
 #define LOG_TAG_CONST       APP_MUSIC
@@ -77,7 +80,7 @@ PITCH_SHIFT_PARM *get_effect_parm(void)
 }
 #endif
 
-
+extern bool user_play_tone_dev_flag;
 #if (TCFG_SPI_LCD_ENABLE)
 #include "ui/ui_style.h"
 extern int ui_hide_main(int id);
@@ -105,6 +108,18 @@ static int _key_event_opr(struct sys_event *event)
     u8 key_event = music_key_event_get(key);
 
     switch (key_event) {
+    case KEY_CHANGE_MODE:
+        printf(">>>>>>>>> music mode change mode\n");
+        if(file_opr_available_dev_total()>1){
+            if(JL_USER_USB_OR_SD == music_play_get_cur_dev()){
+                user_play_tone_dev_flag = 1;
+                music_play_change_dev_next();
+                break;
+            }
+        }
+        ret = false;
+	break;
+
 
 #if (TCFG_SPI_LCD_ENABLE)//lcd屏使用
 
@@ -263,7 +278,8 @@ static int music_event_handler(struct application *app, struct sys_event *event)
 
     return false;
 }
-
+#include "tone_player.h"
+extern int tone_play_by_path(const char *name, u8 preemption);
 static void music_app_init(void *logo)
 {
     int err = 0;
@@ -298,6 +314,7 @@ static void music_app_uninit(void)
     /* clock_idle(MUSIC_IDLE_CLOCK); */
 }
 
+
 static int music_state_machine(struct application *app, enum app_state state,
                                struct intent *it)
 {
@@ -313,7 +330,17 @@ static int music_state_machine(struct application *app, enum app_state state,
         switch (it->action) {
         case ACTION_APP_MAIN:
             log_info("ACTION_APP_MAIN\n");
-            music_app_init((void *)it->exdata);
+            u8 *logo_flag = (u8 *)it->exdata;
+
+            extern bool user_play_tone_dev_flag;
+            user_play_tone_dev_flag = 1;
+            if(logo_flag == JL_USER_USB || logo_flag == JL_USER_SD0 || logo_flag == JL_USER_SD1){
+                // music_app_init((void *)it->exdata);
+            }else if(file_opr_available_dev_total()>1){
+                logo_flag = JL_USER_USB_OR_SD;                
+            }
+
+            music_app_init((void *)logo_flag);
             break;
         }
         break;
@@ -370,7 +397,7 @@ static int music_user_msg_deal(int msg, int argc, int *argv)
 }
 
 static const struct application_reg app_music_reg = {
-    .tone_name = TONE_MUSIC,
+    .tone_name = NULL,
     .tone_play_check = NULL,
     .tone_prepare = NULL,
     .enter_check = music_app_check,

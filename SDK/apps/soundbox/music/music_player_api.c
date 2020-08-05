@@ -200,19 +200,41 @@ int music_play_msg_post(int argc, ...)
     return 0;
 }
 
-
+bool user_play_tone_dev_flag = 0;
+static u16 user_file_num_flag = 0;
+static void user_dely_play_file_number(u8 menu){
+    ui_set_tmp_menu(MENU_FILENUM, 1000, user_file_num_flag, NULL);
+}
 static int _music_play_start(MUSIC_PLAYER *m_ply, struct audio_dec_breakpoint *bp)
 {
     /* printf("_music_play_start in\n"); */
+
     int ret = 	music_ply_start(m_ply, bp);
     printf(" _music_play_start out %d, cur dev = %s\n", ret, m_ply->fopr->dev->logo);
     if (!ret) {
         __this->err_cnt = 0;
 #if TCFG_UI_ENABLE
-        u16 file_num = music_play_get_file_number();
-        ui_set_tmp_menu(MENU_FILENUM, 1000, file_num, NULL);
+        user_file_num_flag = music_play_get_file_number();
+        // ui_set_tmp_menu(MENU_FILENUM, 1000, user_file_num_flag, NULL);
 #endif
+
+        extern int tone_play_by_path(const char *name, u8 preemption);
+        if(user_play_tone_dev_flag){
+            user_play_tone_dev_flag = 0;
+            if(!strcmp(__this->mplay->fopr->dev->logo,"udisk")) {
+                tone_play_by_path(TONE_MUSIC_USB,1);
+                ui_set_tmp_menu(MENU_USER_USB, 1000, 0, user_dely_play_file_number);
+            } else {
+                tone_play_by_path(TONE_MUSIC_SD,1);
+                ui_set_tmp_menu(MENU_USER_SD, 1000, 0, user_dely_play_file_number);
+            }        
+        }else{
+            ui_set_tmp_menu(MENU_FILENUM, 1000, user_file_num_flag, NULL);
+        }
+
     }
+
+  
     return ret;
 }
 
@@ -844,6 +866,7 @@ int music_play_first_start(const char *logo)
 
     printf("music_play_first_start , logo = %s\n", logo);
 
+    u8* tp_logo = logo;
     if (logo == NULL) {
         if (music_poweron_first_play == 1) {
             printf("first time play!!!!! _______fun = %s, _line = %d\n", __FUNCTION__, __LINE__);
@@ -853,16 +876,20 @@ int music_play_first_start(const char *logo)
             switch (last_dev) {
             case 0x01:
                 strcpy(last_dev_logo, "sd0");
+                tp_logo = "sd0";
                 break;
             case 0x02:
                 strcpy(last_dev_logo, "sd1");
+                tp_logo = "sd1";
                 break;
             case 0x03:
                 strcpy(last_dev_logo, "udisk");
+                tp_logo = "udisk";
                 break;
             default:
                 break;
             }
+
             if (file_opr_available_dev_check(last_dev_logo)) {
                 err = music_play_by_dev_bp(DEV_SEL_SPEC, (int)last_dev_logo);
             } else {
@@ -874,6 +901,13 @@ int music_play_first_start(const char *logo)
     } else {
         err = music_play_by_dev_bp(DEV_SEL_SPEC, (int)logo);
     }
+
+    // extern int tone_play_by_path(const char *name, u8 preemption);
+    // if("udisk" == music_play_get_cur_dev()){
+    //     tone_play_by_path(TONE_MUSIC_USB,1);
+    // }else if("sd0" == music_play_get_cur_dev() || "sd1" == music_play_get_cur_dev()){
+    //     tone_play_by_path(TONE_MUSIC_SD,1);
+    // }
 
     music_poweron_first_play = 0;
     return err;

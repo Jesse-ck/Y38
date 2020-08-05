@@ -94,7 +94,7 @@ static const u8 fm_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     },
     [3] =
     {
-        /*SHORT*/ KEY_FM_SCAN_ALL,
+        /*SHORT*/ KEY_FM_SCAN_ALL_DOWN,
         /*LONG*/  KEY_NULL,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,

@@ -99,7 +99,7 @@ void ui_set_tmp_menu(u8 app_menu, u16 ret_time, s32 arg, void (*timeout_cb)(u8 m
 {
 
 #if (TCFG_LED_LCD_ENABLE)
-    /* printf("ui_set_tmp_menu %d %d %d\n", app_menu, ret_time, arg); */
+    printf("ui_set_tmp_menu %d %d %d\n", app_menu, ret_time, arg);
     int msg[4];
     int count = 0;
     int err;

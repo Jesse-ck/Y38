@@ -159,6 +159,7 @@ extern int audio_enc_init();
 
 static void audio_module_probe(void)
 {
+
 #if 0       //debug
     /*解码器*/
     AUDIO_DECODER_PROBE(sbc);
@@ -184,6 +185,7 @@ static void audio_module_probe(void)
 #endif
 }
 #include "user_fun.h"
+#include "ui/ui_api.h"
 void app_charge_box_ctrl_init(void);
 void app_main()
 {
@@ -273,13 +275,11 @@ void app_main()
 #endif
         /* endless_loop_debug_int(); */
         ui_manage_init();
-        puts(">>>>>>>>>>>>>> app poweron 1\n");
+        ui_set_tmp_menu(MENU_POWER_UP, 0, 0, NULL);
         ui_update_status(STATUS_POWERON);
-        puts(">>>>>>>>>>>>>> app poweron 2\n");
         app_var.start_time = timer_get_ms();
 
         user_fun_init();
-        puts(">>>>>>>>>>>>>> app poweron 3\n");
         app_task_switch(APP_NAME_POWERON, ACTION_APP_MAIN, NULL);
 
 

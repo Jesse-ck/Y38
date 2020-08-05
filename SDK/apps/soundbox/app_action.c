@@ -435,7 +435,7 @@ int __app_task_switch(const char *name, int action, void *param)
                         app_reg->tone_prepare();
                     } else {
 #if TCFG_UI_ENABLE
-                        ui_set_tmp_menu(MENU_WAIT, 0, 0, NULL);
+                        // ui_set_tmp_menu(MENU_WAIT, 0, 0, NULL);
 #endif
                     }
 

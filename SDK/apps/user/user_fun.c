@@ -34,6 +34,8 @@ void user_sys_auto_mute(bool cmd){
     extern struct audio_automute *automute;
     extern void app_audio_output_ch_mute(u8 ch, u8 mute);
     
+    if(!automute)return;
+    
     u8 i = 0;
     u8 all_ch = 0;
 
@@ -54,15 +56,6 @@ void user_sys_auto_mute(bool cmd){
 #endif
 
 
-}
-
-
-
-void user_spk_init(void){
-    gpio_set_direction(USER_SPK_IO,1);
-    gpio_set_pull_down(USER_SPK_IO,0);
-    gpio_set_pull_up(USER_SPK_IO,1);
-    gpio_set_die(USER_SPK_IO,1);
 }
 
 u8 user_key_mapping(u8 key){
@@ -117,14 +110,13 @@ void user_power_off(void){
 }
 
 void user_fun_io_init(void){
-    user_power_io_keep(1);
     user_pa_strl(PA_INIT);//mute pa
 }
 
 void user_fun_init(void){
-    user_spk_init();
-    user_pa_init();
+    user_power_io_keep(1);
     user_dac_pupu();
+    user_pa_init();
 
     ex_dev_detect_init(&spk_dev);
     

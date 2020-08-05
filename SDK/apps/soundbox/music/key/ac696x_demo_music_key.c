@@ -66,7 +66,7 @@ static const u8 music_key_io_table[KEY_IO_NUM_MAX][KEY_EVENT_MAX] = {
 static const u8 music_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     [0] =
     {
-        /*SHORT*/ KEY_NULL,
+        /*SHORT*/ KEY_CHANGE_MODE,
         /*LONG*/  KEY_NULL,
         /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,

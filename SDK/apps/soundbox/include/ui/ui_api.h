@@ -50,6 +50,7 @@ enum {
     MENU_POWER_UP = 1,
     MENU_WAIT,
     MENU_BT,
+    MENU_FLASH_BT,
     MENU_PC,
     MENU_PC_VOL_UP,
     MENU_PC_VOL_DOWN,
@@ -92,6 +93,9 @@ enum {
 
 
     MENU_RECORD,
+
+    MENU_USER_USB,
+    MENU_USER_SD,
 
     MENU_SEC_REFRESH = 0x80,
     MENU_REFRESH,

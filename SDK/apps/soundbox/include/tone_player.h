@@ -86,6 +86,8 @@ enum {
 #define TONE_RING				SDFILE_RES_ROOT_PATH"tone/ring.*"
 #define TONE_MAX_VOL			SDFILE_RES_ROOT_PATH"tone/vol_max.*"
 #define TONE_MUSIC				SDFILE_RES_ROOT_PATH"tone/music.*"
+#define TONE_MUSIC_USB			SDFILE_RES_ROOT_PATH"tone/usb.*"
+#define TONE_MUSIC_SD			SDFILE_RES_ROOT_PATH"tone/sd.*"
 #define TONE_LINEIN				SDFILE_RES_ROOT_PATH"tone/linein.*"
 #define TONE_PC 				SDFILE_RES_ROOT_PATH"tone/pc.*"
 #define TONE_FM 				SDFILE_RES_ROOT_PATH"tone/fm.*"

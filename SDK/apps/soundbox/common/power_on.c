@@ -88,10 +88,10 @@ static int poweron_state_machine(struct application *app, enum app_state state,
 
 static int  poweron_tone_prepare()
 {
-
+    
 #if TCFG_UI_ENABLE
-    printf("~~~~~~~~~~~~ %s \n", __FUNCTION__, __LINE__);
-    ui_set_tmp_menu(MENU_POWER_UP, 0, 0, NULL);
+    // printf("~~~~~~~~~~~~ %s \n", __FUNCTION__, __LINE__);
+    // ui_set_tmp_menu(MENU_POWER_UP, 0, 0, NULL);
 #endif
     return 0;
 }

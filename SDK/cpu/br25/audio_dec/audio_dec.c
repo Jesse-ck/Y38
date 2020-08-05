@@ -20,6 +20,8 @@
 #include "clock_cfg.h"
 #include "audio_link.h"
 #include "audio_reverb.h"
+
+#include "user_fun.h"
 #if TCFG_USER_TWS_ENABLE
 #include "bt_tws.h"
 #endif
@@ -2370,24 +2372,24 @@ static int esco_wait_res_handler(struct audio_res_wait *wait, int event)
 {
     int err = 0;
     log_d("esco_wait_res_handler %d\n", event);
-#if (defined(AUDIO_OUTPUT_AUTOMUTE) && (AUDIO_OUTPUT_AUTOMUTE == ENABLE))
-    u8 i = 0;
-    u8 all_ch = 0;
-    for (i = 0; i < audio_output_channel_num(); i++) {
-        all_ch |= BIT(i);
-    }
-#endif
+// #if (defined(AUDIO_OUTPUT_AUTOMUTE) && (AUDIO_OUTPUT_AUTOMUTE == ENABLE))
+//     u8 i = 0;
+//     u8 all_ch = 0;
+//     for (i = 0; i < audio_output_channel_num(); i++) {
+//         all_ch |= BIT(i);
+//     }
+// #endif
     if (event == AUDIO_RES_GET) {
-#if (defined(AUDIO_OUTPUT_AUTOMUTE) && (AUDIO_OUTPUT_AUTOMUTE == ENABLE))
-        audio_automute_skip(automute, 1);
-        app_audio_output_ch_mute(all_ch, 0);
-#endif
+// #if (defined(AUDIO_OUTPUT_AUTOMUTE) && (AUDIO_OUTPUT_AUTOMUTE == ENABLE))
+//         audio_automute_skip(automute, 1);
+//         app_audio_output_ch_mute(all_ch, 0);
+// #endif
         err = esco_dec_start();
     } else if (event == AUDIO_RES_PUT) {
-#if (defined(AUDIO_OUTPUT_AUTOMUTE) && (AUDIO_OUTPUT_AUTOMUTE == ENABLE))
-        audio_automute_skip(automute, 0);
-        app_audio_output_ch_mute(all_ch, 1);
-#endif
+// #if (defined(AUDIO_OUTPUT_AUTOMUTE) && (AUDIO_OUTPUT_AUTOMUTE == ENABLE))
+//         audio_automute_skip(automute, 0);
+//         app_audio_output_ch_mute(all_ch, 1);
+// #endif
         if (esco_dec->start) {
             lmp_private_esco_suspend_resume(1);
             __esco_audio_res_close();
@@ -2451,7 +2453,8 @@ int esco_dec_open(void *param, u8 mute)
     if (esco_dec->start == 0) {
         lmp_private_esco_suspend_resume(1);
     }
-
+    
+    user_sys_auto_mute(0);
     return err;
 }
 
@@ -2464,6 +2467,7 @@ void esco_dec_close()
 
     __esco_audio_res_close();
     esco_dec_release();
+    user_sys_auto_mute(1);
     clock_set_cur();
     puts("esco_dec_close: exit\n");
 

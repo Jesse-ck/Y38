@@ -1190,7 +1190,7 @@ static int bt_connction_status_event_handler(struct bt_event *bt)
     case BT_STATUS_FIRST_CONNECTED:
         log_info("BT_STATUS_CONNECTED\n");
         sys_auto_shut_down_disable();
-
+        ui_set_tmp_menu(MENU_BT, 0, 0, NULL);
 
 #if (TCFG_BLE_DEMO_SELECT == DEF_BLE_DEMO_ADV)
         {
@@ -1262,6 +1262,7 @@ static int bt_connction_status_event_handler(struct bt_event *bt)
     case BT_STATUS_SECOND_DISCONNECT:
         __this->call_flag = 0;
         log_info("BT_STATUS_DISCONNECT\n");
+        ui_set_tmp_menu(MENU_FLASH_BT, 0, 0, NULL);
 
 #if (AUDIO_OUTPUT_WAY == AUDIO_OUTPUT_WAY_BT)
         bt_emitter_stu_set(0);
@@ -2884,7 +2885,7 @@ static int state_machine(struct application *app, enum app_state state, struct i
 
 #if TCFG_UI_ENABLE
             ui_set_main_menu(UI_BT_MENU_MAIN);
-            ui_set_tmp_menu(MENU_BT, 1000, 0, NULL);
+            ui_set_tmp_menu(MENU_FLASH_BT, 0, 0, NULL);
 #endif
 
 
@@ -2920,6 +2921,7 @@ static int state_machine(struct application *app, enum app_state state, struct i
             sys_auto_shut_down_enable();
             sys_auto_sniff_controle(1, NULL);
 
+            // __change_hci_class_type(BD_CLASS_HANDS_FREE);
             break;
         }
         break;

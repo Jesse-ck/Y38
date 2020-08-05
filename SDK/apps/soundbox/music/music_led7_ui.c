@@ -191,13 +191,15 @@ static void ui_music_main(void *hd, void *private) //主界面显示
 #else
     extern bool file_dec_is_play(void);
     extern bool file_dec_is_pause(void);
+    extern bool user_play_tone_dev_flag;
+
     if (true == file_dec_is_play()) {
         int music_play_get_cur_time(void);
         int sencond = music_play_get_cur_time();
         ui_led7_show_music_time(hd, sencond);
         led7_show_music_dev(hd);
         printf("sec = %d \n", sencond);
-    } else if (file_dec_is_pause()) {
+    } else if (file_dec_is_pause() && !user_play_tone_dev_flag) {
         led7_show_pause(hd);
     } else {
         printf("!!! %s %d\n", __FUNCTION__, __LINE__);
@@ -222,6 +224,9 @@ static int ui_music_user(void *hd, void *private, u8 menu, u32 arg)//子界面�
         break;
     case MENU_MUSIC_REPEATMODE:
         led7_show_repeat_mode(hd, arg);
+        break;
+    case MENU_WAIT:
+        printf(">>>> music ui\n");
         break;
     default:
         ret = false;

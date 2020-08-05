@@ -345,7 +345,7 @@ static int usb_mount_offline(usb_dev usb_id)
 
 }
 
-
+extern bool user_play_tone_dev_flag;
 void app_event_prepare_handler(struct sys_event *event)
 {
     const char *logo = NULL;
@@ -361,7 +361,15 @@ void app_event_prepare_handler(struct sys_event *event)
         }
 
         if (event->u.dev.event == DEVICE_EVENT_IN) {
+            user_play_tone_dev_flag = 1;
+
             printf("sd_online >>>>>>>>>>>>>>>>>> %s\n", logo);
+            // if(logo == "udisk"){
+            //     ui_set_tmp_menu(MENU_USER_USB, 0, 0, NULL);
+            // }else if(logo == "sd0" || logo == "sd1"){
+            //     ui_set_tmp_menu(MENU_USER_SD, 0, 0, NULL);
+            // }
+            
 #if TCFG_USB_DM_MULTIPLEX_WITH_SD_DAT0
             if (!sd_notify_enable()) {
                 flag_tp1 = 1;
@@ -379,6 +387,8 @@ void app_event_prepare_handler(struct sys_event *event)
                 sd_online_mount_after();
             }
         } else if (event->u.dev.event == DEVICE_EVENT_OUT) {
+            user_play_tone_dev_flag = 1;
+
             printf("sd_offline <<<<<<<<<<<<<<<<<< %s\n", logo);
 
 #if TCFG_USB_DM_MULTIPLEX_WITH_SD_DAT0
@@ -403,6 +413,8 @@ void app_event_prepare_handler(struct sys_event *event)
     case DEVICE_EVENT_FROM_USB_HOST:
 #if TCFG_UDISK_ENABLE
         if (event->u.dev.event == DEVICE_EVENT_IN) {
+            user_play_tone_dev_flag = 1;
+
             if (!strncmp((char *)event->u.dev.value, "udisk", 5)) {
                 ///if usb host mount ok, need check udisk fat mount, if mount err , do func music_play_usb_host_mount_after()
                 printf("udisk mount\n");
@@ -438,6 +450,8 @@ void app_event_prepare_handler(struct sys_event *event)
 #endif
 
         } else if (event->u.dev.event == DEVICE_EVENT_OUT) {
+            user_play_tone_dev_flag = 1;
+
             if (file_opr_dev_check("udisk")) {
                 printf("udisk unmount\n");
                 ret = file_opr_dev_del("udisk");
@@ -867,7 +881,7 @@ static void app_common_device_event_handler(struct sys_event *event)
 
                 } else
 #endif
-                {
+                {                
                     app_task_switch(app_name, ACTION_APP_MAIN, (void *)logo);
                 }
             }
