@@ -125,7 +125,7 @@ void user_pa_service(void){
 
     //自动mute
     if(user_is_auto_mute()){
-        puts(">> H\n");
+        // puts(">> H\n");
         tp_flag = 1;
     }
 
@@ -150,7 +150,7 @@ void user_pa_service(void){
 
     //音量为0
     if(!app_var.music_volume){
-        puts(">> L\n");
+        // puts(">> L\n");
         tp_flag = 1;
     }
 

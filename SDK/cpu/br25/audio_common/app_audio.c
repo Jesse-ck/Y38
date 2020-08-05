@@ -476,6 +476,7 @@ void app_audio_set_volume(u8 state, s8 volume, u8 fade)
         }
 #else
         app_var.wtone_volume = volume;
+        app_var.wtone_volume = SYS_DEFAULT_TONE_VOL;
 #endif
         if (app_var.wtone_volume > get_max_sys_vol()) {
             app_var.wtone_volume = get_max_sys_vol();
@@ -652,6 +653,7 @@ void app_audio_volume_up(u8 value)
     app_audio_set_volume(__this->state, volume, 1);
 }
 
+#include "tone_player.h"
 void app_audio_volume_down(u8 value)
 {
     s16 volume = 0;
@@ -661,6 +663,13 @@ void app_audio_volume_down(u8 value)
         app_var.music_volume -= value;
         if (app_var.music_volume < 0) {
             app_var.music_volume = 0;
+#if TCFG_MAX_VOL_PROMPT
+            if(!tone_get_status()){
+                puts(">>>>>>>>>> sys vol min tone\n");
+                STATUS *p_tone = get_tone_config();
+                tone_play_index(IDEX_TONE_MIN_VOL, 1);
+            }
+#endif              
         }
         volume = app_var.music_volume;
         break;

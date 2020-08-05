@@ -31,7 +31,15 @@ static void led7_show_sd(void *hd)
     ui_dis_var->dis->show_string((u8 *)" Sd ");
     ui_dis_var->dis->lock(0);
 }
-
+static void led7_show_cal(void *hd)
+{
+    UI_DIS_VAR *ui_dis_var = (UI_DIS_VAR *)hd;
+    ui_dis_var->dis->lock(1);
+    ui_dis_var->dis->clear();
+    ui_dis_var->dis->setXY(0, 0);
+    ui_dis_var->dis->show_string((u8 *)" CAL");
+    ui_dis_var->dis->lock(0);
+}
 static void led7_show_hi(void *hd)
 {
     UI_DIS_VAR *ui_dis_var = (UI_DIS_VAR *)hd;
@@ -105,6 +113,7 @@ static void led7_show_volume(void *hd, u8 vol)
     ui_dis_var->dis->setXY(0, 0);
     ui_dis_var->dis->show_char(' ');
     ui_dis_var->dis->show_char('V');
+    vol = vol/2;
     ui_dis_var->dis->show_number(vol / 10);
     ui_dis_var->dis->show_number(vol % 10);
     ui_dis_var->dis->lock(0);
@@ -188,10 +197,14 @@ void ui_common(void *hd, void *private, u8 menu, u32 arg)//公共显示
     case MENU_USER_SD:
         led7_show_sd(hd);
         break;
+    case MENU_USER_CAL:
+        led7_show_cal(hd);
+        break;
     case MENU_WAIT:
         led7_show_wait(hd);
         break;
-    case MENU_BT:
+    case MENU_BT:    
+        puts(">>>> MENU_BT 1\n");
         led7_show_bt(hd);
         break;
     case MENU_FLASH_BT:
@@ -278,6 +291,7 @@ static int ui_bt_user(void *hd, void *private, u8 menu, u32 arg)//子界面显�
     }
     switch (menu) {
     case MENU_BT:
+        puts(">>>> MENU_BT 0\n");
         led7_show_bt(hd);
         break;
     case MENU_FLASH_BT:
@@ -285,6 +299,9 @@ static int ui_bt_user(void *hd, void *private, u8 menu, u32 arg)//子界面显�
         led7_show_flashbt(hd);
         break;
 
+    case MENU_USER_CAL:
+        led7_show_cal(hd);
+        break;
     default:
         ret = false;
     }

@@ -986,6 +986,7 @@ obj\Release\apps\soundbox\bt\bt.o
 -r=obj\Release\apps\soundbox\bt\bt.o,app_task_next,l
 -r=obj\Release\apps\soundbox\bt\bt.o,get_tone_config,l
 -r=obj\Release\apps\soundbox\bt\bt.o,check_esco_state_via_addr,l
+-r=obj\Release\apps\soundbox\bt\bt.o,get_device_inband_ringtone_flag,l
 -r=obj\Release\apps\soundbox\bt\bt.o,lmp_private_esco_suspend_resume,l
 -r=obj\Release\apps\soundbox\bt\bt.o,app_audio_set_volume,l
 -r=obj\Release\apps\soundbox\bt\bt.o,memset,l
@@ -1844,6 +1845,7 @@ obj\Release\apps\soundbox\music\music_led7_ui.o
 -r=obj\Release\apps\soundbox\music\music_led7_ui.o,music_play_get_cur_dev,l
 -r=obj\Release\apps\soundbox\music\music_led7_ui.o,strcmp,l
 -r=obj\Release\apps\soundbox\music\music_led7_ui.o,itoa4,l
+-r=obj\Release\apps\soundbox\music\music_led7_ui.o,sprintf,l
 -r=obj\Release\apps\soundbox\music\music_led7_ui.o,free,l
 -r=obj\Release\apps\soundbox\music\music_led7_ui.o,music_main,pl
 -r=obj\Release\apps\soundbox\music\music_led7_ui.o,user_play_tone_dev_flag,l
@@ -2183,6 +2185,7 @@ obj\Release\cpu\br25\audio_common\app_audio.o
 -r=obj\Release\cpu\br25\audio_common\app_audio.o,get_tone_config,l
 -r=obj\Release\cpu\br25\audio_common\app_audio.o,tone_play_index,l
 -r=obj\Release\cpu\br25\audio_common\app_audio.o,app_audio_volume_down,pl
+-r=obj\Release\cpu\br25\audio_common\app_audio.o,puts,l
 -r=obj\Release\cpu\br25\audio_common\app_audio.o,app_audio_state_switch,pl
 -r=obj\Release\cpu\br25\audio_common\app_audio.o,app_audio_state_exit,pl
 -r=obj\Release\cpu\br25\audio_common\app_audio.o,app_audio_get_state,pl
@@ -2375,6 +2378,7 @@ obj\Release\cpu\br25\audio_dec\audio_dec.o
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,audio_aec_init,l
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,esco_enc_open,l
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,esco_dec_open,pl
+-r=obj\Release\cpu\br25\audio_dec\audio_dec.o,ui_set_tmp_menu,l
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,user_sys_auto_mute,l
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,esco_dec_close,pl
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,bt_media_is_running,pl

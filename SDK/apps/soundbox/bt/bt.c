@@ -938,6 +938,9 @@ static void phone_num_play_start(void)
     if (!bt_user_priv_var.inband_ringtone) {
         bt_user_priv_var.phone_num_flag = 0;
         bt_user_priv_var.phone_timer_id = sys_timeout_add(NULL, phone_num_play_timer, 500);
+    }else{
+        bt_user_priv_var.inband_ringtone = 0;
+        sys_timeout_add(NULL, phone_num_play_start, 1000);
     }
 }
 
@@ -1317,6 +1320,7 @@ static int bt_connction_status_event_handler(struct bt_event *bt)
     //phone status deal
     case BT_STATUS_PHONE_INCOME:
         log_info("BT_STATUS_PHONE_INCOME\n");
+
         /* #if (defined(TCFG_REVERB_ENABLE) && (TCFG_REVERB_ENABLE)) */
         /* reverb_pause(); */
         /* #endif */

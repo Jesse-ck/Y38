@@ -42,6 +42,7 @@ enum {
     IDEX_TONE_POWER_ON,
     IDEX_TONE_RING,
     IDEX_TONE_MAX_VOL,
+    IDEX_TONE_MIN_VOL,
     IDEX_TONE_NORMAL,
 #if (defined(TCFG_APP_MUSIC_EN) && (TCFG_APP_MUSIC_EN))
     IDEX_TONE_MUSIC,
@@ -84,7 +85,8 @@ enum {
 #define TONE_POWER_OFF			SDFILE_RES_ROOT_PATH"tone/power_off.*"
 #define TONE_POWER_ON			SDFILE_RES_ROOT_PATH"tone/power_on.*"
 #define TONE_RING				SDFILE_RES_ROOT_PATH"tone/ring.*"
-#define TONE_MAX_VOL			SDFILE_RES_ROOT_PATH"tone/vol_max.*"
+#define TONE_MAX_VOL			SDFILE_RES_ROOT_PATH"tone/max.*"
+#define TONE_MIN_VOL			SDFILE_RES_ROOT_PATH"tone/min.*"
 #define TONE_MUSIC				SDFILE_RES_ROOT_PATH"tone/music.*"
 #define TONE_MUSIC_USB			SDFILE_RES_ROOT_PATH"tone/usb.*"
 #define TONE_MUSIC_SD			SDFILE_RES_ROOT_PATH"tone/sd.*"
@@ -132,8 +134,8 @@ enum {
 #undef TONE_TWS_DISCONN
 #define TONE_TWS_DISCONN        DEFAULT_SINE_TONE(SINE_WTONE_TWS_DISCONNECT)
 
-#undef TONE_MAX_VOL
-#define TONE_MAX_VOL            DEFAULT_SINE_TONE(SINE_WTONE_MAX_VOLUME)
+// #undef TONE_MAX_VOL
+// #define TONE_MAX_VOL            DEFAULT_SINE_TONE(SINE_WTONE_MAX_VOLUME)
 
 #undef TONE_NORMAL
 #define TONE_NORMAL            DEFAULT_SINE_TONE(SINE_WTONE_NORAML)

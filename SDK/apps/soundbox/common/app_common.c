@@ -613,16 +613,17 @@ static int app_common_key_event_handler(struct sys_event *event)
 #endif  // TCFG_UI_ENABLE
 #endif  // TCFG_APP_FM_EMITTER_EN
         if(!tone_get_status()){
-            app_audio_volume_up(1);
+            app_audio_volume_up(2);
         }
-        printf("common vol+: %d", app_audio_get_volume(APP_AUDIO_CURRENT_STATE));
+        printf("common vol+: %d", app_audio_get_volume(APP_AUDIO_STATE_MUSIC));
 
 #if (defined(TCFG_DEC2TWS_ENABLE) && (TCFG_DEC2TWS_ENABLE))
         bt_tws_sync_volume();
 #endif
 
 #if TCFG_UI_ENABLE
-        ui_set_tmp_menu(MENU_MAIN_VOL, 1000, app_audio_get_volume(APP_AUDIO_CURRENT_STATE), NULL);
+        // ui_set_tmp_menu(MENU_MAIN_VOL, 1000, app_audio_get_volume(APP_AUDIO_CURRENT_STATE), NULL);
+        ui_set_tmp_menu(MENU_MAIN_VOL, 1000, app_audio_get_volume(APP_AUDIO_STATE_MUSIC), NULL);
 #endif //TCFG_UI_ENABLE
         break;
 
@@ -646,16 +647,17 @@ static int app_common_key_event_handler(struct sys_event *event)
 #endif  // TCFG_UI_ENABLE
 #endif  // TCFG_APP_FM_EMITTER_EN
         if(!tone_get_status()){
-            app_audio_volume_down(1);
+            app_audio_volume_down(2);
         }
-        printf("common vol-: %d", app_audio_get_volume(APP_AUDIO_CURRENT_STATE));
+        printf("common vol-: %d", app_audio_get_volume(APP_AUDIO_STATE_MUSIC));
 
 #if (defined(TCFG_DEC2TWS_ENABLE) && (TCFG_DEC2TWS_ENABLE))
         bt_tws_sync_volume();
 #endif
 
 #if TCFG_UI_ENABLE
-        ui_set_tmp_menu(MENU_MAIN_VOL, 1000, app_audio_get_volume(APP_AUDIO_CURRENT_STATE), NULL);
+        // ui_set_tmp_menu(MENU_MAIN_VOL, 1000, app_audio_get_volume(APP_AUDIO_CURRENT_STATE), NULL);
+        ui_set_tmp_menu(MENU_MAIN_VOL, 1000, app_audio_get_volume(APP_AUDIO_STATE_MUSIC), NULL);
 #endif //TCFG_UI_ENABLE
         break;
 

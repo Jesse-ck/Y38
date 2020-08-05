@@ -1668,6 +1668,7 @@ static const char *const tone_index[] = {
     TONE_POWER_ON,
     TONE_RING,
     TONE_MAX_VOL,
+    TONE_MIN_VOL,
     TONE_NORMAL,
 #if (defined(TCFG_APP_MUSIC_EN) && (TCFG_APP_MUSIC_EN))
     TONE_MUSIC,
@@ -1700,7 +1701,7 @@ int tone_play_index_with_callback(u8 index, u8 preemption, void (*user_evt_handl
         log_info("tone dec busy now,tone stop first");
         tone_stop(END_ABNORMAL);
     }
-
+    printf(">>>>>>>>>> tone play file %s\n",tone_index[index]);
     single_file[0] = (char *)tone_index[index];
     single_file[1] = NULL;
     return tone_dec_open_with_callback(0, (const char **)single_file, preemption, user_evt_handler, priv);

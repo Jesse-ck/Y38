@@ -96,6 +96,7 @@ enum {
 
     MENU_USER_USB,
     MENU_USER_SD,
+    MENU_USER_CAL,
 
     MENU_SEC_REFRESH = 0x80,
     MENU_REFRESH,

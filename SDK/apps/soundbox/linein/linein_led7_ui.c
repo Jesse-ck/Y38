@@ -19,7 +19,7 @@ static void led7_show_aux(void *hd)
     ui_dis_var->dis->lock(1);
     ui_dis_var->dis->clear();
     ui_dis_var->dis->setXY(0, 0);
-    ui_dis_var->dis->show_string((u8 *)" AUX");
+    ui_dis_var->dis->show_string((u8 *)"LINE");
     ui_dis_var->dis->lock(0);
 }
 

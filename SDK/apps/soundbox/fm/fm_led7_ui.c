@@ -58,7 +58,7 @@ static void led7_fm_show_station(void *hd, u32 arg)
     ui_dis_var->dis->lock(1);
     ui_dis_var->dis->clear();
     ui_dis_var->dis->setXY(0, 0);
-    sprintf((char *)bcd_number, "P%03d", arg);
+    sprintf((char *)bcd_number, "P %02d", arg);
     ui_dis_var->dis->show_string(bcd_number);
     ui_dis_var->dis->lock(0);
 }

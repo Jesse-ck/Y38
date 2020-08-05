@@ -103,8 +103,8 @@ static const u8 linein_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     [4] =
     {
         /*SHORT*/ KEY_NULL,
-        /*LONG*/  KEY_VOL_DOWN,
-        /*HOLD*/  KEY_VOL_DOWN,
+        /*LONG*/  KEY_NULL,
+        /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
         /*DOUBLE*/KEY_NULL,
         /*TRIBLE*/KEY_NULL,
@@ -121,8 +121,8 @@ static const u8 linein_key_ad_table[KEY_AD_NUM_MAX][KEY_EVENT_MAX] = {
     [6] =
     {
         /*SHORT*/ KEY_NULL,
-        /*LONG*/  KEY_VOL_UP,
-        /*HOLD*/  KEY_VOL_UP,
+        /*LONG*/  KEY_NULL,
+        /*HOLD*/  KEY_NULL,
         /*UP*/	  KEY_NULL,
         /*DOUBLE*/KEY_NULL,
         /*TRIBLE*/KEY_NULL,
