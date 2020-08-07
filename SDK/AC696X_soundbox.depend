@@ -8508,7 +8508,7 @@
 1595313591 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\include_lib\system\crypto_toolbox\rijndael.h
 	<stdint.h>
 
-1596794705 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\include\app_config.h
+1596803589 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\include\app_config.h
 	"board_config.h"
 	"btcontroller_mode.h"
 
@@ -10972,7 +10972,7 @@
 	"app_config.h"
 	"board_config.h"
 
-1596628472 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\linein\key\ac696x_demo_linein_key.c
+1596801455 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\linein\key\ac696x_demo_linein_key.c
 	"key_event_deal.h"
 	"key_driver.h"
 	"app_config.h"
@@ -10984,7 +10984,7 @@
 	"app_config.h"
 	"board_config.h"
 
-1596510301 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\linein\linein.c
+1596803464 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\linein\linein.c
 	"system/app_core.h"
 	"system/includes.h"
 	"server/server_core.h"

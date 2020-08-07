@@ -263,16 +263,22 @@ static int _key_event_opr(struct sys_event *event)
             audio_linein_mute(0);
         }
 #endif
-        if (__this->volume < get_max_sys_vol()) {
-            __this->volume ++;
+        if ((__this->volume+2) <= get_max_sys_vol()) {
+            __this->volume +=2;
             linein_volume_set(__this->volume);
         } else {
             linein_volume_set(__this->volume);
             if (tone_get_status() == 0) {
                 /* tone_play(TONE_MAX_VOL); */
 #if TCFG_MAX_VOL_PROMPT
-                STATUS *p_tone = get_tone_config();
-                tone_play_index(p_tone->max_vol, 1);
+                // STATUS *p_tone = get_tone_config();
+                // tone_play_index(p_tone->max_vol, 1);
+
+        if(!tone_get_status()){
+            audio_linein_mute(1);
+            tone_play_index(IDEX_TONE_MAX_VOL, 1);
+        }
+             
 #endif
             }
         }
@@ -285,8 +291,8 @@ static int _key_event_opr(struct sys_event *event)
         break;
 
     case  KEY_VOL_DOWN:
-        if (__this->volume) {
-            __this->volume --;
+        if (__this->volume>=2) {
+            __this->volume -=2;
             linein_volume_set(__this->volume);
         }
 
@@ -301,6 +307,12 @@ static int _key_event_opr(struct sys_event *event)
         ui_set_tmp_menu(MENU_MAIN_VOL, 1000, vol, NULL);
 #endif //TCFG_UI_ENABLE
 
+#if TCFG_MAX_VOL_PROMPT
+        if(!tone_get_status()&&!__this->volume){           
+            audio_linein_mute(1);
+            tone_play_index(IDEX_TONE_MIN_VOL, 1);
+        }
+#endif 
         printf(">>>>>>>> linein vol:%d\n", __this->volume);
         break;
 
@@ -329,6 +341,16 @@ static int _linein_event_opr(struct device_event *dev)
     return ret;
 }
 
+u16 user_linein_umute_id = 0;
+void user_linein_umute(void){
+
+    if(__this->onoff && __this->volume && !tone_get_status()){
+        audio_linein_mute(0);
+        user_linein_umute_id = 0;    
+    }else{
+        user_linein_umute_id = sys_timeout_add(NULL, user_linein_umute, 600);
+    }
+}
 // tone play event
 static int _tone_event_opr(struct device_event *dev)
 {
@@ -336,6 +358,13 @@ static int _tone_event_opr(struct device_event *dev)
 
     switch (dev->event) {
     case AUDIO_PLAY_EVENT_END:
+        puts(">>>>>>>>>>>>>>>>>>>> AUDIO_PLAY_EVENT_END\n");
+
+        if(user_linein_umute_id){
+            sys_timeout_del(user_linein_umute_id);
+        }
+        user_linein_umute_id = sys_timeout_add(NULL, user_linein_umute, 600); 
+        
 #if (TCFG_LINEIN_INPUT_WAY == LINEIN_INPUT_WAY_DAC)
         app_audio_set_volume(APP_AUDIO_STATE_MUSIC, __this->volume, 1);
         // dac 做linein 会和原来音量系统不同步 -HB

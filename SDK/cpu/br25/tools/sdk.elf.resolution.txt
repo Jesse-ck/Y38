@@ -1294,6 +1294,9 @@ obj\Release\apps\soundbox\linein\linein.o
 -r=obj\Release\apps\soundbox\linein\linein.o,audio_linein1_open,l
 -r=obj\Release\apps\soundbox\linein\linein.o,audio_linein_gain,l
 -r=obj\Release\apps\soundbox\linein\linein.o,ui_menu_reflash,l
+-r=obj\Release\apps\soundbox\linein\linein.o,user_linein_umute,pl
+-r=obj\Release\apps\soundbox\linein\linein.o,tone_get_status,l
+-r=obj\Release\apps\soundbox\linein\linein.o,sys_timeout_add,l
 -r=obj\Release\apps\soundbox\linein\linein.o,linein_is_online,l
 -r=obj\Release\apps\soundbox\linein\linein.o,user_manual_mute,l
 -r=obj\Release\apps\soundbox\linein\linein.o,ui_set_main_menu,l
@@ -1306,10 +1309,11 @@ obj\Release\apps\soundbox\linein\linein.o
 -r=obj\Release\apps\soundbox\linein\linein.o,app_task_next,l
 -r=obj\Release\apps\soundbox\linein\linein.o,linein_key_event_get,l
 -r=obj\Release\apps\soundbox\linein\linein.o,printf,l
--r=obj\Release\apps\soundbox\linein\linein.o,tone_get_status,l
--r=obj\Release\apps\soundbox\linein\linein.o,get_tone_config,l
 -r=obj\Release\apps\soundbox\linein\linein.o,tone_play_index,l
+-r=obj\Release\apps\soundbox\linein\linein.o,puts,l
+-r=obj\Release\apps\soundbox\linein\linein.o,sys_timeout_del,l
 -r=obj\Release\apps\soundbox\linein\linein.o,log_tag_const_i_APP_LINEIN,l
+-r=obj\Release\apps\soundbox\linein\linein.o,user_linein_umute_id,pl
 obj\Release\apps\soundbox\linein\linein_dev.o
 -r=obj\Release\apps\soundbox\linein\linein_dev.o,linein_is_online,pl
 -r=obj\Release\apps\soundbox\linein\linein_dev.o,linein_set_online,pl
