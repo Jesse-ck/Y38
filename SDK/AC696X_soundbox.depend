@@ -8508,7 +8508,7 @@
 1595313591 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\include_lib\system\crypto_toolbox\rijndael.h
 	<stdint.h>
 
-1596635628 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\include\app_config.h
+1596783520 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\include\app_config.h
 	"board_config.h"
 	"btcontroller_mode.h"
 
@@ -8519,7 +8519,7 @@
 	"board_ac696x_tws_box.h"
 	"board_ac696x_tws.h"
 
-1596633279 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\board\br25\board_ac696x_demo_cfg.h
+1596781427 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\board\br25\board_ac696x_demo_cfg.h
 
 1595313591 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\board\br25\board_ac6969d_demo_cfg.h
 
@@ -9173,7 +9173,7 @@
 	"app_config.h"
 	"user_fun.h"
 
-1596528042 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\user\user_fun.h
+1596780283 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\user\user_fun.h
 	"system/includes.h"
 	"user_fun_config.h"
 	"app_config.h"
@@ -10348,7 +10348,7 @@
 	"debug.h"
 	"asm/ctmu.h"
 
-1596635410 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\bt\bt.c
+1596782373 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\bt\bt.c
 	"system/includes.h"
 	"media/includes.h"
 	"tone_player.h"
@@ -10472,7 +10472,7 @@
 	"app_config.h"
 	"board_config.h"
 
-1596635529 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\bt\bt_led7_ui.c
+1596768566 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\bt\bt_led7_ui.c
 	"includes.h"
 	"ui/ui_api.h"
 	"fm_emitter/fm_emitter_manage.h"
@@ -10702,7 +10702,7 @@
 	"device/chargebox.h"
 	"debug.h"
 
-1596632592 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\common\app_common.c
+1596780756 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\common\app_common.c
 	"common/app_common.h"
 	"app_action.h"
 	"app_main.h"
@@ -10734,6 +10734,7 @@
 	"charge_box/charge_ctrl.h"
 	"device/chargebox.h"
 	"app_online_cfg.h"
+	"user_fun.h"
 	"debug.h"
 	"user_fun.h"
 	"user_pa.h"
@@ -10842,7 +10843,7 @@
 	"btstack/avctp_user.h"
 	"debug.h"
 
-1596533646 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\common\power_on.c
+1596782138 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\common\power_on.c
 	"system/includes.h"
 	"media/includes.h"
 	"app_config.h"
@@ -10857,6 +10858,7 @@
 	"user_cfg.h"
 	"ui/ui_api.h"
 	"debug.h"
+	"user_fun.h"
 
 1595313591 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\dev_manager.c
 	"dev_manager.h"
@@ -10866,9 +10868,10 @@
 	"app_config.h"
 	"slidekey.h"
 
-1595313591 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\fm\fm.c
+1596781324 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\fm\fm.c
 	"fm_server.h"
 	"loud_speaker.h"
+	"user_pa.h"
 
 1595313591 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\fm\fm_server.h
 	"system/app_core.h"
@@ -11131,7 +11134,7 @@
 	"app_config.h"
 	"board_config.h"
 
-1596634700 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\music\music_led7_ui.c
+1596769366 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\music\music_led7_ui.c
 	"ui/ui_api.h"
 	"music/music_ui.h"
 	"fm_emitter/fm_emitter_manage.h"
@@ -11149,7 +11152,7 @@
 	"clock_cfg.h"
 	"debug.h"
 
-1596608838 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\music\music_player_api.c
+1596769830 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\music\music_player_api.c
 	"music/music_player_api.h"
 	<stdlib.h>
 	"system/app_core.h"
@@ -11427,7 +11430,7 @@
 	"generic/log.h"
 	"app_config.h"
 
-1596614962 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\user\user_fun.c
+1596783397 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\user\user_fun.c
 	"string.h"
 	"app_action.h"
 	"gpio.h"
@@ -11478,7 +11481,7 @@
 	"system/includes.h"
 	"media/includes.h"
 
-1596635565 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\cpu\br25\audio_dec\audio_dec.c
+1596768594 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\cpu\br25\audio_dec\audio_dec.c
 	"asm/includes.h"
 	"media/includes.h"
 	"system/includes.h"

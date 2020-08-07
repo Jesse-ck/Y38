@@ -159,7 +159,7 @@ static void fm_app_uninit(void)
     tone_play_stop();
 }
 
-
+#include "user_pa.h"
 static int fm_state_machine(struct application *app, enum app_state state,
                             struct intent *it)
 {
@@ -182,6 +182,7 @@ static int fm_state_machine(struct application *app, enum app_state state,
         switch (it->action) {
         case ACTION_APP_MAIN:
             printf(" ACTION_FM_MAIN\n");
+            user_pa_strl(PA_CLASS_AB);
             fm_app_init();
             break;
         }
@@ -194,9 +195,11 @@ static int fm_state_machine(struct application *app, enum app_state state,
         log_info("APP_STA_RESUME\n");
         break;
     case APP_STA_STOP:
+        user_pa_strl(PA_CLASS_D);
         log_info("APP_STA_STOP\n");
         break;
     case APP_STA_DESTROY:
+        user_pa_strl(PA_CLASS_D);
         log_info("APP_STA_DESTROY\n");
 #if (defined(TCFG_LOUDSPEAKER_ENABLE) && (TCFG_LOUDSPEAKER_ENABLE))		
 		if(speaker_if_working()){

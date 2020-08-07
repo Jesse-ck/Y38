@@ -986,7 +986,6 @@ obj\Release\apps\soundbox\bt\bt.o
 -r=obj\Release\apps\soundbox\bt\bt.o,app_task_next,l
 -r=obj\Release\apps\soundbox\bt\bt.o,get_tone_config,l
 -r=obj\Release\apps\soundbox\bt\bt.o,check_esco_state_via_addr,l
--r=obj\Release\apps\soundbox\bt\bt.o,get_device_inband_ringtone_flag,l
 -r=obj\Release\apps\soundbox\bt\bt.o,lmp_private_esco_suspend_resume,l
 -r=obj\Release\apps\soundbox\bt\bt.o,app_audio_set_volume,l
 -r=obj\Release\apps\soundbox\bt\bt.o,memset,l
@@ -1024,7 +1023,6 @@ obj\Release\apps\soundbox\bt\bt_led7_ui.o
 -r=obj\Release\apps\soundbox\bt\bt_led7_ui.o,ui_common,pl
 -r=obj\Release\apps\soundbox\bt\bt_led7_ui.o,puts,l
 -r=obj\Release\apps\soundbox\bt\bt_led7_ui.o,ui_set_auto_reflash,l
--r=obj\Release\apps\soundbox\bt\bt_led7_ui.o,get_bt_connect_status,l
 -r=obj\Release\apps\soundbox\bt\bt_led7_ui.o,free,l
 -r=obj\Release\apps\soundbox\bt\bt_led7_ui.o,bt_main,pl
 obj\Release\apps\soundbox\bt\bt_tws.o
@@ -1106,6 +1104,7 @@ obj\Release\apps\soundbox\common\app_common.o
 -r=obj\Release\apps\soundbox\common\app_common.o,app_power_event_handler,l
 -r=obj\Release\apps\soundbox\common\app_common.o,file_opr_available_dev_check,l
 -r=obj\Release\apps\soundbox\common\app_common.o,linein_sys_event_handler,l
+-r=obj\Release\apps\soundbox\common\app_common.o,jl_power_on_task_set,l
 -r=obj\Release\apps\soundbox\common\app_common.o,app_cur_task_check,l
 -r=obj\Release\apps\soundbox\common\app_common.o,timer_get_ms,l
 -r=obj\Release\apps\soundbox\common\app_common.o,app_task_switch,l
@@ -1146,6 +1145,7 @@ obj\Release\apps\soundbox\common\power_off.o
 -r=obj\Release\apps\soundbox\common\power_off.o,sys_enter_soft_poweroff,l
 -r=obj\Release\apps\soundbox\common\power_off.o,log_tag_const_i_APP_ACTION,l
 obj\Release\apps\soundbox\common\power_on.o
+-r=obj\Release\apps\soundbox\common\power_on.o,jl_power_on_task_goto,l
 -r=obj\Release\apps\soundbox\common\power_on.o,app_task_switch,l
 obj\Release\apps\soundbox\dev_manager.o
 -r=obj\Release\apps\soundbox\dev_manager.o,dev_manager_init,pl
@@ -1155,6 +1155,7 @@ obj\Release\apps\soundbox\dev_manager.o
 -r=obj\Release\apps\soundbox\dev_manager.o,os_task_pend,
 obj\Release\apps\soundbox\fm\fm.o
 -r=obj\Release\apps\soundbox\fm\fm.o,printf,l
+-r=obj\Release\apps\soundbox\fm\fm.o,user_pa_strl,l
 -r=obj\Release\apps\soundbox\fm\fm.o,log_print,l
 -r=obj\Release\apps\soundbox\fm\fm.o,fm_manage_close,l
 -r=obj\Release\apps\soundbox\fm\fm.o,sys_key_event_enable,l
@@ -2080,6 +2081,10 @@ obj\Release\apps\user\user_dev_check.o
 -r=obj\Release\apps\user\user_dev_check.o,app_task_msg_post,l
 -r=obj\Release\apps\user\user_dev_check.o,adc_get_value,l
 obj\Release\apps\user\user_fun.o
+-r=obj\Release\apps\user\user_fun.o,jl_power_on_task_set,pl
+-r=obj\Release\apps\user\user_fun.o,printf,l
+-r=obj\Release\apps\user\user_fun.o,jl_power_on_task_goto,pl
+-r=obj\Release\apps\user\user_fun.o,app_task_switch,l
 -r=obj\Release\apps\user\user_fun.o,user_sys_auto_mute,pl
 -r=obj\Release\apps\user\user_fun.o,audio_output_channel_num,l
 -r=obj\Release\apps\user\user_fun.o,audio_automute_skip,l
@@ -2378,7 +2383,6 @@ obj\Release\cpu\br25\audio_dec\audio_dec.o
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,audio_aec_init,l
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,esco_enc_open,l
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,esco_dec_open,pl
--r=obj\Release\cpu\br25\audio_dec\audio_dec.o,ui_set_tmp_menu,l
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,user_sys_auto_mute,l
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,esco_dec_close,pl
 -r=obj\Release\cpu\br25\audio_dec\audio_dec.o,bt_media_is_running,pl

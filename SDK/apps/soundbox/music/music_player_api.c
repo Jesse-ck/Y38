@@ -216,7 +216,6 @@ static int _music_play_start(MUSIC_PLAYER *m_ply, struct audio_dec_breakpoint *b
 #if TCFG_UI_ENABLE
         user_file_num_flag = music_play_get_file_number();
         // ui_set_tmp_menu(MENU_FILENUM, 1000, user_file_num_flag, NULL);
-#endif
 
         extern int tone_play_by_path(const char *name, u8 preemption);
         if(user_play_tone_dev_flag){
@@ -234,7 +233,7 @@ static int _music_play_start(MUSIC_PLAYER *m_ply, struct audio_dec_breakpoint *b
 
     }
 
-  
+  #endif
     return ret;
 }
 

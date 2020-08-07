@@ -12,4 +12,6 @@ void user_power_off(void);
 void user_fun_init(void);
 u8 user_key_mapping(u8 key);
 void user_sys_auto_mute(bool cmd);
+void jl_power_on_task_set(const u8 * name,const u8 * logo);
+u8 jl_power_on_task_goto(void);
 #endif

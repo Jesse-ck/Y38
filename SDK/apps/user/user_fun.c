@@ -29,6 +29,45 @@ static struct ex_dev_opr spk_dev = {
 };
 
 
+//task anme -- dev -- onlin flag
+static u8* jl_goto_task[10][3]={
+    {APP_NAME_MUSIC,JL_USER_SD0,0},
+    {APP_NAME_MUSIC,JL_USER_SD1,0},
+    {APP_NAME_MUSIC,JL_USER_USB,0},
+    {APP_NAME_LINEIN,APP_NAME_LINEIN,0},
+};
+void jl_power_on_task_set(const u8 * name,const u8 * logo){
+
+    for(int i = 0;i<sizeof(jl_goto_task)/sizeof(jl_goto_task[0]);i++){
+        if(name == jl_goto_task[i][0]){
+            if(logo == jl_goto_task[i][1]){
+                jl_goto_task[i][2] = (u8 *)1;
+                printf(">>>>>>>>>>> power on dev onlin  0 %s\n",logo);
+                break;
+            }else if(name == jl_goto_task[i][1]){
+                jl_goto_task[i][1] = (u8 *)0;
+                jl_goto_task[i][2] = (u8 *)1;
+                printf(">>>>>>>>>>> power on dev onlin  1 %s\n",logo);
+                break;
+            }
+        }
+    }
+}
+
+u8 jl_power_on_task_goto(void){
+    for(int i = 0;i<sizeof(jl_goto_task)/sizeof(jl_goto_task[0]);i++){
+        if(jl_goto_task[i][2]){
+            app_task_switch(jl_goto_task[i][0], ACTION_APP_MAIN, jl_goto_task[i][1]);
+            printf(">>>>>>>>>>> power on dev to task  1 %s %s\n",jl_goto_task[i][0],jl_goto_task[i][1]);
+            return 0;
+        }
+    }
+    return 1;
+}
+
+
+
+
 void user_sys_auto_mute(bool cmd){
 #if (defined(AUDIO_OUTPUT_AUTOMUTE) && (AUDIO_OUTPUT_AUTOMUTE == ENABLE))
     extern struct audio_automute *automute;

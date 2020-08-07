@@ -33,7 +33,7 @@
 
 
 #include "app_online_cfg.h"
-
+#include "user_fun.h"
 
 #define LOG_TAG_CONST       APP_ACTION
 #define LOG_TAG             "[APP_ACTION]"
@@ -870,6 +870,7 @@ static void app_common_device_event_handler(struct sys_event *event)
     }
 
     if (app_name) {
+         jl_power_on_task_set(app_name,(u8 *)logo);
         if ((true != app_cur_task_check(APP_NAME_PC)) || alarm_flag) {
 
             //PC 不响应因为设备上线引发的模式切换

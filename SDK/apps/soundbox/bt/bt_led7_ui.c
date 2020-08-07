@@ -273,11 +273,12 @@ static void ui_bt_main(void *hd, void *private) //主界面显示
         }
     }
 #else
-    if (BT_STATUS_TAKEING_PHONE == get_bt_connect_status()) {
-        led7_show_call(hd);
-    } else {
-        led7_show_bt(hd);
-    }
+    // if (BT_STATUS_TAKEING_PHONE == get_bt_connect_status()) {
+    //     led7_show_call(hd);
+    // } else {
+    //     led7_show_bt(hd);
+    // }
+    led7_show_bt(hd);
 #endif
 }
 

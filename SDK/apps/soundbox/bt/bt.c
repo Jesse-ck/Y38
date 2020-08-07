@@ -897,10 +897,26 @@ REGISTER_LP_TARGET(phone_incom_lp_target) = {
     .is_idle    = check_phone_income_idle,
 };
 
-static void number_to_play_list(char *num, u32 *lst)
+static void user_number_to_play_list(char *num, u32 *lst)
 {
     u8 i = 0;
 
+    if (num) {
+        for (; i < strlen(num); i++) {
+            lst[i] = num0_9[num[i] - '0'] ;
+        }
+    }
+    lst[i++] = (u32)TONE_REPEAT_BEGIN(-1);
+    lst[i++] = (u32)TONE_RING;
+    lst[i++] = (u32)TONE_REPEAT_END();
+    lst[i++] = (u32)NULL;
+}
+
+static void number_to_play_list(char *num, u32 *lst)
+{
+    u8 i = 0;
+    lst[i++] = (u32)TONE_REPEAT_BEGIN(-1);
+    lst[i++] = (u32)TONE_RING;
     if (num) {
         for (; i < strlen(num); i++) {
             lst[i] = num0_9[num[i] - '0'] ;
@@ -938,9 +954,6 @@ static void phone_num_play_start(void)
     if (!bt_user_priv_var.inband_ringtone) {
         bt_user_priv_var.phone_num_flag = 0;
         bt_user_priv_var.phone_timer_id = sys_timeout_add(NULL, phone_num_play_timer, 500);
-    }else{
-        bt_user_priv_var.inband_ringtone = 0;
-        sys_timeout_add(NULL, phone_num_play_start, 1000);
     }
 }
 

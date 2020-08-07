@@ -53,12 +53,7 @@ static void led7_show_filenumber(void *hd, u16 file_num)
     ui_dis_var->dis->lock(1);
     ui_dis_var->dis->clear();
     ui_dis_var->dis->setXY(0, 0);
-    // if (file_num > 999 && file_num <= 1999) {
-    //     bcd_number[0] = '1';
-    // } else {
-    //     bcd_number[0] = ' ';
-    // }
-    sprintf((char *)bcd_number, " %03d", file_num);
+    sprintf((char *)bcd_number, "%04d", file_num);
     ui_dis_var->dis->show_string(bcd_number);
     ui_dis_var->dis->lock(0);
 }

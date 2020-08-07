@@ -38,13 +38,16 @@ static int poweron_event_handler(struct application *app, struct sys_event *even
     return false;
 }
 
+#include "user_fun.h"
 static int power_on_init(void)
 {
     ///有些需要在开机提示完成之后再初始化的东西， 可以在这里初始化
 #if(defined TCFG_APP_BOX_EN) && (TCFG_APP_BOX_EN)
     app_task_switch(APP_NAME_BOX, ACTION_APP_MAIN, NULL);
 #else
-    app_task_switch(APP_NAME_BT, ACTION_APP_MAIN, NULL);
+    if(jl_power_on_task_goto()){
+        app_task_switch(APP_NAME_BT, ACTION_APP_MAIN, NULL);
+    }
     /* app_task_switch(APP_NAME_MUSIC, ACTION_APP_MAIN, NULL); */
 #endif
 

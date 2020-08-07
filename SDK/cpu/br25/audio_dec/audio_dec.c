@@ -2414,7 +2414,7 @@ int esco_dec_open(void *param, u8 mute)
         return -ENOMEM;
     }
 
-    ui_set_tmp_menu(MENU_USER_CAL, 0, 0, NULL);
+    // ui_set_tmp_menu(MENU_USER_CAL, 0, 0, NULL);
 
 #if (AUDIO_OUTPUT_WAY == AUDIO_OUTPUT_WAY_FM)
 #if FM_AEC_REF_TYPE == 1
@@ -2473,7 +2473,7 @@ void esco_dec_close()
     clock_set_cur();
     puts("esco_dec_close: exit\n");
 
-    ui_set_tmp_menu(MENU_BT, 0, 0, NULL);
+    // ui_set_tmp_menu(MENU_BT, 0, 0, NULL);
 #if (defined(TCFG_DEC2TWS_ENABLE) && (TCFG_DEC2TWS_ENABLE))
     dec2tws_media_enable();
 #endif
