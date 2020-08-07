@@ -93,6 +93,7 @@ static int fm_volume_set(u8 vol)
 
 
 
+void fm_next_station();
 static void fm_timer_handler_down(void)
 {
     if ((!__this) || (__this->scan_flag != SCANE_DOWN)) {
@@ -103,7 +104,9 @@ static void fm_timer_handler_down(void)
 
     if (__this->scan_fre > VIRTUAL_FREQ(REAL_FREQ_MAX)) {
         __this->scan_fre = VIRTUAL_FREQ(REAL_FREQ_MIN);
-
+        __this->scan_flag = 0;
+        fm_next_station();
+        return;
         fm_app_mute(1);
         fm_manage_set_fre(REAL_FREQ(__this->fm_freq_cur));
         __this->scan_flag = 0;
@@ -668,7 +671,7 @@ static void fm_prev_station()
 }
 
 
-static void fm_next_station()
+void fm_next_station()
 {
     log_info("KEY_FM_NEXT_STATION\n");
     if (__this->scan_flag || (!__this->fm_total_channel)) {

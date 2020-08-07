@@ -915,8 +915,8 @@ static void user_number_to_play_list(char *num, u32 *lst)
 static void number_to_play_list(char *num, u32 *lst)
 {
     u8 i = 0;
-    lst[i++] = (u32)TONE_REPEAT_BEGIN(-1);
-    lst[i++] = (u32)TONE_RING;
+    lst[i] = (u32)TONE_RING;
+    lst++;
     if (num) {
         for (; i < strlen(num); i++) {
             lst[i] = num0_9[num[i] - '0'] ;
@@ -940,6 +940,7 @@ void phone_num_play_timer(void *priv)
 
     if (bt_user_priv_var.phone_num_flag) {
         tone_play_stop();
+        // bt_user_priv_var.income_phone_len +=1;
         number_to_play_list((char *)(bt_user_priv_var.income_phone_num), len_lst);
         tone_file_list_play(len_lst, 1);
     } else {
