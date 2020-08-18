@@ -67,7 +67,7 @@
 #endif
 
 #define SYS_DEFAULT_VOL         0//(SYS_MAX_VOL/2)
-#define SYS_DEFAULT_TONE_VOL    (25)//(SYS_MAX_VOL)
+#define SYS_DEFAULT_TONE_VOL    (12)//(SYS_MAX_VOL)
 
 //#define AUDIO_MIC_TEST
 

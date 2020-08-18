@@ -314,14 +314,18 @@ void cfg_file_parse(u8 idx)
             default_volume = audio_cfg.max_sys_vol;
         }
         if (default_volume <= 0) {
-            default_volume = audio_cfg.max_sys_vol *2/ 2;
+            default_volume = audio_cfg.max_sys_vol *2/ 3;
         }
+        
+        //每次开机音量重新设置
+        default_volume = 20;
 
         app_var.music_volume = music_volume <= 0 ? default_volume : music_volume;
         app_var.wtone_volume = audio_cfg.tone_vol;
         app_var.call_volume = app_var.aec_dac_gain;
         app_var.opid_play_vol_sync = app_var.music_volume * 127 / audio_cfg.max_sys_vol;
 
+        printf(">>>>>>>>>>>>>>>>> music_volume %d\n",app_var.music_volume);
         log_info("max vol:%d default vol:%d tone vol:%d vol_sync:%d\n", audio_cfg.max_sys_vol, default_volume, audio_cfg.tone_vol, app_var.opid_play_vol_sync);
     }
 

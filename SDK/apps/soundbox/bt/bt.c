@@ -2938,8 +2938,16 @@ static int state_machine(struct application *app, enum app_state state, struct i
             sys_key_event_enable();
             sys_auto_shut_down_enable();
             sys_auto_sniff_controle(1, NULL);
-
-            // __change_hci_class_type(BD_CLASS_HANDS_FREE);
+                        
+            // __change_hci_class_type(BD_CLASS_WEARABLE_HEADSET);//耳机 电量
+            // __change_hci_class_type(BD_CLASS_HANDS_FREE);//扬声器与电视 无电量
+            // __change_hci_class_type(BD_CLASS_MICROPHONE);//耳机 无电量
+            // __change_hci_class_type(BD_CLASS_LOUDSPEAKER);//蓝牙耳机 无电量
+            // __change_hci_class_type(BD_CLASS_HEADPHONES);//耳机 电量
+            // __change_hci_class_type(BD_CLASS_CAR_AUDIO);//扬声器与电视 无电量
+            // __change_hci_class_type(BD_CLASS_HIFI_AUDIO);//耳机 无电量
+            // __change_hci_class_type(BD_CLASS_PHONEBOOK);//耳机 无电量
+            
             break;
         }
         break;

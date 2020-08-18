@@ -213,7 +213,9 @@ int app_power_event_handler(struct device_event *dev)
 u16 get_vbat_level(void)
 {
     //return 370;     //debug
-    return (adc_get_voltage(AD_CH_VBAT) * 4 / 10);
+    u32 vb_ad = adc_get_voltage(AD_CH_VBAT);
+    printf(">>>VBAT: %d\n",vb_ad* 4 / 10);
+    return (vb_ad * 4 / 10);
 }
 
 u8 get_vbat_percent(void)
@@ -347,6 +349,7 @@ void vbat_check(void *priv)
     cur_battery_level = battery_value_to_phone_level(bat_val);
 
     /* printf("bv:%d, bl:%d\n", bat_val, cur_battery_level); */
+    // printf("bv:%d, bl:%d\n", bat_val, cur_battery_level);
 
     unit_cnt++;
 

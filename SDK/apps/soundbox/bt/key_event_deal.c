@@ -346,7 +346,7 @@ int app_earphone_key_event_handler(struct sys_event *event)
     r_printf("bt key_event:%d %d %d %d\n", key_event, key->value, key->event, key->init);
 
     switch (key_event) {
-#if (defined(TCFG_LOUDSPEAKER_ENABLE) && (TCFG_LOUDSPEAKER_ENABLE))		
+#if (defined(TCFG_LOUDSPEAKER_ENABLE) && (TCFG_LOUDSPEAKER_ENABLE))
 		case KEY_SPEAKER_OPEN:
 			if ((get_call_status() == BT_CALL_ACTIVE) ||
 					(get_call_status() == BT_CALL_OUTGOING) ||
@@ -356,9 +356,9 @@ int app_earphone_key_event_handler(struct sys_event *event)
 				break;
 			}
 			if(speaker_if_working()){
-				stop_loud_speaker();	
+				stop_loud_speaker();
 			}else{
-				start_loud_speaker(NULL);	
+				start_loud_speaker(NULL);
 			}
 			return true;
 #endif
@@ -410,7 +410,7 @@ int app_earphone_key_event_handler(struct sys_event *event)
         if (get_call_status() == BT_CALL_ACTIVE && bt_sco_state() == 0) {
             break;
         }
-        
+
         volume_down();
         printf(">>>>>> vol %d\n",app_audio_get_volume(APP_AUDIO_CURRENT_STATE));
 #if TCFG_UI_ENABLE
@@ -422,10 +422,10 @@ int app_earphone_key_event_handler(struct sys_event *event)
 //充电仓不支持 双击回播电话,也不支持 双击配对和取消配对
 #if (!TCFG_CHARGESTORE_ENABLE)
 #if TCFG_USER_TWS_ENABLE
-        if (bt_tws_start_search_sibling()) {
-            tone_play_index(IDEX_TONE_NORMAL, 1);
-            break;
-        }
+        // if (bt_tws_start_search_sibling()) {
+        //     tone_play_index(IDEX_TONE_NORMAL, 1);
+        //     break;
+        // }
 #endif
 
         if ((get_call_status() == BT_CALL_ACTIVE) ||
@@ -444,6 +444,12 @@ int app_earphone_key_event_handler(struct sys_event *event)
 #endif
         break;
     case  KEY_CALL_HANG_UP:
+#if TCFG_USER_TWS_ENABLE
+        if (bt_tws_start_search_sibling()) {
+            tone_play_index(IDEX_TONE_NORMAL, 1);
+            break;
+        }
+#endif
         printf("KEY_CALL_HANG_UP\n");
         user_send_cmd_prepare(USER_CTRL_HFP_CALL_HANGUP, 0, NULL);
         break;

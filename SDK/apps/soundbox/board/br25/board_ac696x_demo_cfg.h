@@ -634,7 +634,7 @@ DAC硬件上的连接方式,可选的配置：
 //*********************************************************************************//
 //                                  系统配置                                         //
 //*********************************************************************************//
-#define TCFG_AUTO_SHUT_DOWN_TIME		    0   //没有蓝牙连接自动关机时间
+#define TCFG_AUTO_SHUT_DOWN_TIME		    1800   //没有蓝牙连接自动关机时间
 #define TCFG_SYS_LVD_EN						1   //电量检测使能
 #define TCFG_POWER_ON_NEED_KEY				1	  //是否需要按按键开机配置
 #define TWFG_APP_POWERON_IGNORE_DEV         4000//上电忽略挂载设备，0时不忽略，非0则n毫秒忽略
@@ -642,7 +642,7 @@ DAC硬件上的连接方式,可选的配置：
 //*********************************************************************************//
 //                                  蓝牙配置                                       //
 //*********************************************************************************//
-#define TCFG_USER_TWS_ENABLE                0   //tws功能使能
+#define TCFG_USER_TWS_ENABLE                1   //tws功能使能
 #define TCFG_USER_BLE_ENABLE                0   //BLE功能使能
 #define TCFG_USER_BT_CLASSIC_ENABLE         1   //经典蓝牙功能使能
 #define TCFG_BT_SUPPORT_AAC                 0   //AAC格式支持
@@ -661,7 +661,7 @@ DAC硬件上的连接方式,可选的配置：
 
 #define BT_INBAND_RINGTONE                  0   //是否播放手机自带来电铃声
 #define BT_PHONE_NUMBER                     1   //是否播放来电报号
-#define BT_SUPPORT_DISPLAY_BAT              0   //是否使能电量检测
+#define BT_SUPPORT_DISPLAY_BAT              1   //是否使能电量显示
 #define BT_SUPPORT_MUSIC_VOL_SYNC           0   //是否使能音量同步
 
 #define TCFG_BLUETOOTH_BACK_MODE			0	//不支持后台模式

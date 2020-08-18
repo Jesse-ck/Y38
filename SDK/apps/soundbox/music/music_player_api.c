@@ -203,7 +203,9 @@ int music_play_msg_post(int argc, ...)
 bool user_play_tone_dev_flag = 0;
 static u16 user_file_num_flag = 0;
 static void user_dely_play_file_number(u8 menu){
+    #if TCFG_UI_ENABLE
     ui_set_tmp_menu(MENU_FILENUM, 1000, user_file_num_flag, NULL);
+    #endif
 }
 static int _music_play_start(MUSIC_PLAYER *m_ply, struct audio_dec_breakpoint *bp)
 {
@@ -213,7 +215,7 @@ static int _music_play_start(MUSIC_PLAYER *m_ply, struct audio_dec_breakpoint *b
     printf(" _music_play_start out %d, cur dev = %s\n", ret, m_ply->fopr->dev->logo);
     if (!ret) {
         __this->err_cnt = 0;
-#if TCFG_UI_ENABLE
+
         user_file_num_flag = music_play_get_file_number();
         // ui_set_tmp_menu(MENU_FILENUM, 1000, user_file_num_flag, NULL);
 
@@ -222,18 +224,22 @@ static int _music_play_start(MUSIC_PLAYER *m_ply, struct audio_dec_breakpoint *b
             user_play_tone_dev_flag = 0;
             if(!strcmp(__this->mplay->fopr->dev->logo,"udisk")) {
                 tone_play_by_path(TONE_MUSIC_USB,1);
+                #if TCFG_UI_ENABLE
                 ui_set_tmp_menu(MENU_USER_USB, 1000, 0, user_dely_play_file_number);
+                #endif
             } else {
                 tone_play_by_path(TONE_MUSIC_SD,1);
+                #if TCFG_UI_ENABLE
                 ui_set_tmp_menu(MENU_USER_SD, 1000, 0, user_dely_play_file_number);
+                #endif
             }        
         }else{
             ui_set_tmp_menu(MENU_FILENUM, 1000, user_file_num_flag, NULL);
         }
-
+  
     }
 
-  #endif
+
     return ret;
 }
 

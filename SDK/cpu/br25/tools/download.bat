@@ -56,7 +56,7 @@ copy /b text.bin+data.bin+data_code.bin+aec.bin+wav.bin+ape.bin+flac.bin+m4a.bin
 
 
 
-isd_download.exe -tonorflash -dev br25 -boot 0x12000 -div8 -wait 300 -uboot uboot.boot -app app.bin cfg_tool.bin -res tone.cfg -uboot_compress
+isd_download.exe -tonorflash -dev br25 -boot 0x12000 -div8 -wait 300 -uboot uboot.boot -app app.bin cfg_tool.bin -res tone.cfg -uboot_compress -key 141°¬ÂêÍþAC690X-41C3.key
 :: -format all
 ::-reboot 2500
 

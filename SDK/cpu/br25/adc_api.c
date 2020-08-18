@@ -119,6 +119,9 @@ static u32 adc_value_to_voltage(u32 adc_vbg, u32 adc_ch_val)
     u32 tmp, tmp1;
 
     tmp1 = adc_trim & 0x1f;
+
+    printf("P3_ANA_CON2 = 0x%x\n", p33_rx_1byte(P3_ANA_CON2));
+    printf(">>>>>>>>>> adc_vbg 0x%x adc_ch_val 0x%x ==== adc trim 0x%x bit 0x%x\n",adc_vbg,adc_ch_val,adc_trim,adc_trim & BIT(5));
     tmp = (adc_trim & BIT(5)) ? CENTER - tmp1 * 3.2 : CENTER + tmp1 * 3.2;
     adc_res = adc_res * tmp / adc_vbg;
     return adc_res;

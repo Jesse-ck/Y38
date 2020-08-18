@@ -922,9 +922,9 @@ SECTIONS
 
         tws_bulk_pool = .;
 
+        tws_bulk_pool_end = tws_bulk_pool + (4 * 1024);
 
 
-        tws_bulk_pool_end = tws_bulk_pool;
 
         . = tws_bulk_pool_end;
 
