@@ -318,7 +318,7 @@ void cfg_file_parse(u8 idx)
         }
         
         //每次开机音量重新设置
-        default_volume = 20;
+        music_volume = default_volume = 20;
 
         app_var.music_volume = music_volume <= 0 ? default_volume : music_volume;
         app_var.wtone_volume = audio_cfg.tone_vol;

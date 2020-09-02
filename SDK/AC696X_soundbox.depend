@@ -8508,7 +8508,7 @@
 1595313591 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\include_lib\system\crypto_toolbox\rijndael.h
 	<stdint.h>
 
-1597655885 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\include\app_config.h
+1598925474 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\include\app_config.h
 	"board_config.h"
 	"btcontroller_mode.h"
 
@@ -9152,7 +9152,7 @@
 	"typedef.h"
 	"event.h"
 
-1596628367 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\include\tone_player.h
+1597721952 f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\include\tone_player.h
 	"app_config.h"
 	"audio_config.h"
 
@@ -10348,7 +10348,7 @@
 	"debug.h"
 	"asm/ctmu.h"
 
-1597305957 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\bt\bt.c
+1597716157 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\bt\bt.c
 	"system/includes.h"
 	"media/includes.h"
 	"tone_player.h"
@@ -11408,7 +11408,7 @@
 	"user_cfg.h"
 	"debug.h"
 
-1597714513 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\user_cfg.c
+1597722189 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\apps\soundbox\user_cfg.c
 	"app_config.h"
 	"user_cfg.h"
 	"fs.h"
@@ -11452,7 +11452,7 @@
 	"jiffies.h"
 	"app_config.h"
 
-1596632506 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\cpu\br25\audio_common\app_audio.c
+1597722145 source:f:\2020\amw\amw[y-38]-6966b\source_code\sdk\cpu\br25\audio_common\app_audio.c
 	"system/includes.h"
 	"media/includes.h"
 	"app_config.h"

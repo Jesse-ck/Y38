@@ -12,7 +12,7 @@
 #define LIB_DEBUG    1
 #endif
 
-// #define CONFIG_DEBUG_ENABLE
+#define CONFIG_DEBUG_ENABLE
 
 #ifndef CONFIG_DEBUG_ENABLE
 //#define CONFIG_DEBUG_LITE_ENABLE  //轻量级打印开关, 默认关闭
